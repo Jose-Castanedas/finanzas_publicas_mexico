@@ -7,7 +7,7 @@ library(readxl)
 
 gasto <- read_excel("data/raw/gasto_neto_presupuestario.xlsx", skip = 2, na = "n.d.")
 ingreso <- read_excel("data/raw/ingreso_presupuestario.xlsx", skip = 2, na = "n.d.")
-saldo <- read_excel("data/raw/saldo_rquerimientos_financieros.xlsx", na = "n.d.")
+saldo <- read_excel("data/raw/saldo_rquerimientos_financieros.xlsx", skip = 2, na = "n.d.")
 
 # Parte 1. Gasto Neto Presupuestario
 
@@ -51,6 +51,61 @@ gasto_largo <- gasto_largo %>%
 # 4. Usar pivot_wider() para pasar de filas a columnas
 
 df_gasto <- gasto_largo %>%
+  pivot_wider(
+    names_from = nombre_fila,
+    values_from = valor
+  )
+
+# Parte 2. Ingreso Presupuestario
+
+# 1. Limpiar de los registros de las filas
+
+ingreso <- ingreso %>%
+  rename(nombre_fila = 1) %>%
+  mutate(nombre_fila = str_squish(nombre_fila),
+         nombre_fila = str_remove(nombre_fila, "\\s*\\d+_/"))
+
+# 1.1. Distinguir los nombres repetidos en los datos
+
+ingreso <- ingreso %>%
+  mutate(nombre_fila = make.unique(nombre_fila))
+
+# 2. Usar pivot_longer() para tener un DataFrame con años y valores de cada registro en columnas
+
+ingreso_largo <- ingreso %>%
+  pivot_longer(
+    cols = -nombre_fila,
+    names_to = "año",
+    values_to = "valor",
+    names_transform = \(x) as.integer(str_squish(x))
+  )
+
+# 3. Filtrar y renombrar únicamente los datos que se necesitan
+
+# 3.1. Crear vector con los datos a buscar y su nuevo nombre
+
+nombres_ingreso <- c(
+  "Total" = "ingreso_total",
+  "Petroleros" = "petroleros",
+  "No petroleros" = "no_petroleros",
+  "Tributarios" = "tributarios",
+  "No tributarios" = "no_tributarios",
+  "Impuesto sobre la renta" = "isr",
+  "Impuesto al valor agregado" = "iva",
+  "Impuesto especial sobre producción y servicios" = "ieps",
+  "IEPS gasolinas y diesel" = "ieps_gasolinas",
+  "IEPS distinto de gasolinas y diesel" = "ieps_distinto"
+)
+
+# 3.2. Filtrar y renombrar
+
+ingreso_largo <- ingreso_largo %>%
+  filter(nombre_fila %in% names(nombres_ingreso)) %>%
+  mutate(nombre_fila = recode(nombre_fila, !!!nombres_ingreso))
+
+# 4. Usar pivot_wider() para pasar de filas a columnas
+
+df_ingreso <- ingreso_largo %>%
   pivot_wider(
     names_from = nombre_fila,
     values_from = valor
