@@ -11,29 +11,48 @@ saldo <- read_excel("data/raw/saldo_rquerimientos_financieros.xlsx", na = "n.d."
 
 # Parte 1. Gasto Neto Presupuestario
 
-# 1. Función para convertir fila en un vector númerico
+# 1. Limpiar el nombre de los registros de las filas
 
-g_fila_a_vector <- function(fila) {
-  as.numeric(unlist(gasto[fila, -1]))
-}
+gasto <- gasto %>%
+  rename(nombre_fila = 1) %>%
+  mutate(nombre_fila = str_squish(nombre_fila), 
+         nombre_fila = str_remove(nombre_fila, "\\s*\\d+_/"))
 
-# 2. Crear vector de años
 
-años <- 1990:2025
+# 2. Usar pivot_longer() para tener un DataFrame con años y valores de cada registro en columnas
 
-# 3. Unir en un DataFrame
+gasto_largo <- gasto %>%
+  pivot_longer(
+    cols = -nombre_fila,
+    names_to = "año",
+    values_to = "valor"
+  )
 
-df_gasto <- data.frame(
-  año = años,
-  gasto_total = g_fila_a_vector(1),
-  programable = g_fila_a_vector(2),
-  no_programable = g_fila_a_vector(19),
-  corriente = g_fila_a_vector(3),
-  capital = g_fila_a_vector(12),
-  inversion_fisica = g_fila_a_vector(13),
-  gasto_pensiones = g_fila_a_vector(26)
+# 3. Filtrar y renombrar únicamente los datos que se necesitan
+
+# 3.1. Crear vector con los datos a buscar y su nuevo nombre
+
+nuevos_nombres <- c(
+  "Total"            = "gasto_total",
+  "Programable"      = "programable",
+  "No programable"   = "no_programable",
+  "Corriente"        = "corriente",
+  "Capital"          = "capital",
+  "Inversión física" = "inversion_fisica",
+  "Gasto de pensiones" = "gasto_pensiones"
 )
 
-# Parte 2. Ingreso Presupuestario
+# 3.2. Filtrar y renombrar
 
-# 1. Función para convertir fila en un vector númerico
+gasto_largo <- gasto_largo %>%
+  filter(nombre_fila %in% names(nuevos_nombres)) %>%
+  mutate(nombre_fila = recode(nombre_fila, !!!nuevos_nombres))
+
+# 4. Usar pivot_wider() para pasar de filas a columnas
+
+df_gasto <- gasto_largo %>%
+  pivot_wider(
+    names_from = nombre_fila,
+    values_from = valor
+  )
+
