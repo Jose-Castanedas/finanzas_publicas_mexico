@@ -32,7 +32,7 @@ gasto_largo <- gasto %>%
 
 # 3.1. Crear vector con los datos a buscar y su nuevo nombre
 
-nuevos_nombres <- c(
+nombres_gasto <- c(
   "Total"            = "gasto_total",
   "Programable"      = "programable",
   "No programable"   = "no_programable",
@@ -45,8 +45,8 @@ nuevos_nombres <- c(
 # 3.2. Filtrar y renombrar
 
 gasto_largo <- gasto_largo %>%
-  filter(nombre_fila %in% names(nuevos_nombres)) %>%
-  mutate(nombre_fila = recode(nombre_fila, !!!nuevos_nombres))
+  filter(nombre_fila %in% names(nombres_gasto)) %>%
+  mutate(nombre_fila = recode(nombre_fila, !!!nombres_gasto))
 
 # 4. Usar pivot_wider() para pasar de filas a columnas
 
