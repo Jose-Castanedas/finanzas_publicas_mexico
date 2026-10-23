@@ -111,3 +111,49 @@ df_ingreso <- ingreso_largo %>%
     values_from = valor
   )
 
+# Parte 3. Saldo Hitórico de los RFSP
+
+# 1. Limpiar el nombre de los registros de las filas
+
+saldo <- saldo %>%
+  rename(nombre_fila = 1) %>%
+  mutate(nombre_fila = str_squish(nombre_fila))
+
+# 1.1. Distinguir los nombres repetidos en los datos
+
+saldo <- saldo %>%
+  mutate(nombre_fila = make.unique(nombre_fila))
+
+# 2. Usar pivot_longer() para tener un DataFrame con años y valores de cada registro en columnas
+
+saldo_largo <- saldo %>%
+  pivot_longer(
+    cols = -nombre_fila,
+    names_to = "año",
+    values_to = "valor",
+    names_transform = \(x) as.integer(str_squish(x))
+  )
+
+# 3. Filtrar y renombrar únicamente los datos que se necesitan
+
+# 3.1. Crear vector con los datos a buscar y su nuevo nombre
+
+nombres_saldo <- c(
+  "Saldo histórico de los RFSP" = "saldo_historico",
+  "Interno" = "interno",
+  "Externos" = "externo"
+)
+
+# 3.2. Filtrar y renombrar
+
+saldo_largo <- saldo_largo %>%
+  filter(nombre_fila %in% names(nombres_saldo)) %>%
+  mutate(nombre_fila = recode(nombre_fila, !!!nombres_saldo))
+
+# 4. Usar pivot_wider() para pasar de filas a columnas
+
+df_saldo <- saldo_largo %>%
+  pivot_wider(
+    names_from = nombre_fila,
+    values_from = valor
+  )
