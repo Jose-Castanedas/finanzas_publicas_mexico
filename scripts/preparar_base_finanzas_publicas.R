@@ -157,3 +157,9 @@ df_saldo <- saldo_largo %>%
     names_from = nombre_fila,
     values_from = valor
   )
+
+# Parte 4. Unir los 3 DataFrames en uno solo
+
+df_finanzas <- df_gasto %>%
+  left_join(df_ingreso, by="año") %>%
+  left_join(df_saldo, by="año")
