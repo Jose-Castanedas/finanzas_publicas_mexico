@@ -56,6 +56,7 @@ pib_corriente_anual <- pib_corriente %>%
   summarise(pib = mean(pib, na.rm = TRUE))
 
 # Parte 4. Unir ambos DataFrames
+# left_join conserva la cobertura de años de pib_anual_2018
 
 # 4.1. Renombrar columnas en ambos DataFrames
 
@@ -69,3 +70,13 @@ pib_corriente_anual <- pib_corriente_anual %>%
 
 pib_anual <- pib_anual_2018 %>%
   left_join(pib_corriente_anual, by = "anio")
+
+# Parte 5. Exportar pib_anual a un archivo csv
+
+# 5.1. Especificar ruta y nombre de archivo
+
+ruta <- file.path("data/processed/", "pib_real_nominal_anual.csv")
+
+# 5.2. Exportar DataFrame a csv
+
+write.csv(pib_anual, ruta, row.names = FALSE)
