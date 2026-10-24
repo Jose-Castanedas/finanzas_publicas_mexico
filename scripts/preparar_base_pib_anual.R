@@ -44,10 +44,3 @@ pib_2018 <- pib_2018 %>%
 pib_corriente <- pib_corriente %>%
   mutate(anio = as.integer(str_sub(Periodos, 1, 4))) %>%
   filter(between(anio, 1993, 2025))
-
-# 2.2. Extraer únicamente los años
-# Se guardan como vectores para usarlos como insumo de la función que se definirá después
-
-años_2018 <- unique(pib_2018$anio)
-
-años_corriente <- unique(pib_corriente$anio)
