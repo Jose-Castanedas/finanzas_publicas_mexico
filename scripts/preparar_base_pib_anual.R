@@ -35,7 +35,7 @@ pib_corriente <- pib_corriente %>%
 # Cada DataFrame del PIB tiene una periodicidad diferente
 
 # 2.1. Extraer únicamente el año y agregarlo en una columna llamada anio
-# Los rangos de filter acotan cada serie a su cobertura histórica real
+# Los rangos de filter limitan cada serie a únicamente a los años a usar
 
 pib_2018 <- pib_2018 %>%
   mutate(anio = as.integer(str_sub(Periodos, 1, 4))) %>%
@@ -44,3 +44,13 @@ pib_2018 <- pib_2018 %>%
 pib_corriente <- pib_corriente %>%
   mutate(anio = as.integer(str_sub(Periodos, 1, 4))) %>%
   filter(between(anio, 1993, 2025))
+
+# Parte 3. Tranformar PIB trimestral a anual mediante el promedio de los trimestres
+
+pib_anual_2018 <- pib_2018 %>%
+  group_by(anio) %>%
+  summarise(pib = mean(pib, na.rm = TRUE))
+
+pib_corriente_anual <- pib_corriente %>%
+  group_by(anio) %>%
+  summarise(pib = mean(pib, na.rm = TRUE))
