@@ -54,3 +54,18 @@ pib_anual_2018 <- pib_2018 %>%
 pib_corriente_anual <- pib_corriente %>%
   group_by(anio) %>%
   summarise(pib = mean(pib, na.rm = TRUE))
+
+# Parte 4. Unir ambos DataFrames
+
+# 4.1. Renombrar columnas en ambos DataFrames
+
+pib_anual_2018 <- pib_anual_2018 %>%
+  rename(pib_real = 2)
+
+pib_corriente_anual <- pib_corriente_anual %>%
+  rename(pib_nominal = 2)
+
+# 4.2. Unir ambos DataFrames en uno
+
+pib_anual <- pib_anual_2018 %>%
+  left_join(pib_corriente_anual, by = "anio")
