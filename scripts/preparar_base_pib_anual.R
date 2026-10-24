@@ -9,6 +9,7 @@ guess_encoding("data/raw/pib_precios_corrientes.csv")
 
 
 # Cargar archivos de datos
+# Se fuerza UTF-16LE porque es la codificación real de los archivos
 
 pib_2018 <- read_csv("data/raw/pib_precios_2018.csv", locale = locale(encoding = "UTF-16LE"))
 pib_corriente <- read_csv("data/raw/pib_precios_corrientes.csv", locale = locale(encoding = "UTF-16LE"))
@@ -16,6 +17,7 @@ pib_corriente <- read_csv("data/raw/pib_precios_corrientes.csv", locale = locale
 # Parte 1. Limpiar datos y renombrar columnas
 
 # 1.1. PIB 2018
+# Se renombra por posición (3) porque los nombres originales no son estables; el regex quita el sufijo " r1"
 
 pib_2018 <- pib_2018 %>%
   rename(pib = 3) %>%
@@ -30,9 +32,10 @@ pib_corriente <- pib_corriente %>%
          Periodos = str_remove(Periodos, "\\s*r\\d+$"))
 
 # Parte 2. Extraer los años de cada DataFrame
-# Cada DataFrame del PIB tiene una periocidad diferente
+# Cada DataFrame del PIB tiene una periodicidad diferente
 
-# 1.1. Extraer el unicamente el año y agregarlo en una columna llamada anio
+# 2.1. Extraer únicamente el año y agregarlo en una columna llamada anio
+# Los rangos de filter acotan cada serie a su cobertura histórica real
 
 pib_2018 <- pib_2018 %>%
   mutate(anio = as.integer(str_sub(Periodos, 1, 4))) %>%
@@ -42,7 +45,8 @@ pib_corriente <- pib_corriente %>%
   mutate(anio = as.integer(str_sub(Periodos, 1, 4))) %>%
   filter(between(anio, 1993, 2025))
 
-# 1.2. Extrar unicamente los años
+# 2.2. Extraer únicamente los años
+# Se guardan como vectores para usarlos como insumo de la función que se definirá después
 
 años_2018 <- unique(pib_2018$anio)
 

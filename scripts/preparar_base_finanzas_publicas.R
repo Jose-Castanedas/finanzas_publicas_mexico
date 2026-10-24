@@ -1,9 +1,12 @@
+# Preparar base de finanzas públicas
+
 # Cargar librerías
 
 library(tidyverse)
 library(readxl)
 
 # Cargar archivos de datos
+# skip = 2 omite los encabezados de las hojas; "n.d." se trata como NA
 
 gasto <- read_excel("data/raw/gasto_neto_presupuestario.xlsx", skip = 2, na = "n.d.")
 ingreso <- read_excel("data/raw/ingreso_presupuestario.xlsx", skip = 2, na = "n.d.")
@@ -12,14 +15,14 @@ saldo <- read_excel("data/raw/saldo_rquerimientos_financieros.xlsx", skip = 2, n
 # Parte 1. Gasto Neto Presupuestario
 
 # 1. Limpiar el nombre de los registros de las filas
+# El regex quita el sufijo numérico tipo "1_/" que traen los nombres
 
 gasto <- gasto %>%
   rename(nombre_fila = 1) %>%
   mutate(nombre_fila = str_squish(nombre_fila), 
          nombre_fila = str_remove(nombre_fila, "\\s*\\d+_/"))
 
-
-# 2. Usar pivot_longer() para tener un DataFrame con años y valores de cada registro en columnas
+# 2. Pasar de formato ancho a largo: un año por fila
 
 gasto_largo <- gasto %>%
   pivot_longer(
@@ -43,13 +46,13 @@ nombres_gasto <- c(
   "Gasto de pensiones" = "gasto_pensiones"
 )
 
-# 3.2. Filtrar y renombrar
+# 3.2. Filtrar y renombrar usando el mapeo anterior
 
 gasto_largo <- gasto_largo %>%
   filter(nombre_fila %in% names(nombres_gasto)) %>%
   mutate(nombre_fila = recode(nombre_fila, !!!nombres_gasto))
 
-# 4. Usar pivot_wider() para pasar de filas a columnas
+# 4. Volver a formato ancho: una columna por indicador
 
 df_gasto <- gasto_largo %>%
   pivot_wider(
@@ -59,19 +62,19 @@ df_gasto <- gasto_largo %>%
 
 # Parte 2. Ingreso Presupuestario
 
-# 1. Limpiar de los registros de las filas
+# 1. Limpiar el nombre de los registros de las filas
 
 ingreso <- ingreso %>%
   rename(nombre_fila = 1) %>%
   mutate(nombre_fila = str_squish(nombre_fila),
          nombre_fila = str_remove(nombre_fila, "\\s*\\d+_/"))
 
-# 1.1. Distinguir los nombres repetidos en los datos
+# 1.1. Distinguir los nombres repetidos (make.unique añade .1, .2, ...)
 
 ingreso <- ingreso %>%
   mutate(nombre_fila = make.unique(nombre_fila))
 
-# 2. Usar pivot_longer() para tener un DataFrame con años y valores de cada registro en columnas
+# 2. Pasar de formato ancho a largo: un año por fila
 
 ingreso_largo <- ingreso %>%
   pivot_longer(
@@ -98,13 +101,13 @@ nombres_ingreso <- c(
   "IEPS distinto de gasolinas y diesel" = "ieps_distinto"
 )
 
-# 3.2. Filtrar y renombrar
+# 3.2. Filtrar y renombrar usando el mapeo anterior
 
 ingreso_largo <- ingreso_largo %>%
   filter(nombre_fila %in% names(nombres_ingreso)) %>%
   mutate(nombre_fila = recode(nombre_fila, !!!nombres_ingreso))
 
-# 4. Usar pivot_wider() para pasar de filas a columnas
+# 4. Volver a formato ancho: una columna por indicador
 
 df_ingreso <- ingreso_largo %>%
   pivot_wider(
@@ -112,7 +115,7 @@ df_ingreso <- ingreso_largo %>%
     values_from = valor
   )
 
-# Parte 3. Saldo Hitórico de los RFSP
+# Parte 3. Saldo Histórico de los RFSP
 
 # 1. Limpiar el nombre de los registros de las filas
 
@@ -120,12 +123,12 @@ saldo <- saldo %>%
   rename(nombre_fila = 1) %>%
   mutate(nombre_fila = str_squish(nombre_fila))
 
-# 1.1. Distinguir los nombres repetidos en los datos
+# 1.1. Distinguir los nombres repetidos (make.unique añade .1, .2, ...)
 
 saldo <- saldo %>%
   mutate(nombre_fila = make.unique(nombre_fila))
 
-# 2. Usar pivot_longer() para tener un DataFrame con años y valores de cada registro en columnas
+# 2. Pasar de formato ancho a largo: un año por fila
 
 saldo_largo <- saldo %>%
   pivot_longer(
@@ -145,13 +148,13 @@ nombres_saldo <- c(
   "Externos" = "externo"
 )
 
-# 3.2. Filtrar y renombrar
+# 3.2. Filtrar y renombrar usando el mapeo anterior
 
 saldo_largo <- saldo_largo %>%
   filter(nombre_fila %in% names(nombres_saldo)) %>%
   mutate(nombre_fila = recode(nombre_fila, !!!nombres_saldo))
 
-# 4. Usar pivot_wider() para pasar de filas a columnas
+# 4. Volver a formato ancho: una columna por indicador
 
 df_saldo <- saldo_largo %>%
   pivot_wider(
@@ -160,6 +163,7 @@ df_saldo <- saldo_largo %>%
   )
 
 # Parte 4. Unir los 3 DataFrames en uno solo
+# left_join conserva la cobertura de años de df_gasto
 
 df_finanzas <- df_gasto %>%
   left_join(df_ingreso, by="año") %>%
@@ -167,15 +171,15 @@ df_finanzas <- df_gasto %>%
 
 # Parte 5. Exportar df_finanzas a un archivo csv
 
-# 1.1. Especificar ruta y nombre de archivo
+# 5.1. Especificar ruta y nombre de archivo
 
 ruta <- file.path("data/processed", "base_finanzas_publicas.csv")
 
-# 1.2. Renombrar columna año por anio
+# 5.2. Renombrar la columna "año" a "anio" (se renombra por posición 1)
 
 df_finanzas <- df_finanzas %>%
   rename(anio = 1)
 
-# 1.3. Exportar DataFrame a csv
+# 5.3. Exportar DataFrame a csv
 
 write.csv(df_finanzas, ruta, row.names = FALSE)
