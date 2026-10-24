@@ -164,3 +164,13 @@ df_saldo <- saldo_largo %>%
 df_finanzas <- df_gasto %>%
   left_join(df_ingreso, by="año") %>%
   left_join(df_saldo, by="año")
+
+# Parte 5. Exportar df_finanzas a un archivo csv
+
+# 1.1. Especificar ruta y nombre de archivo
+
+ruta <- file.path("data/processed", "base_finanzas_publicas.csv")
+
+# 1.2. Exportar DataFrame a csv
+
+write.csv(df_finanzas, ruta, row.names = FALSE)
