@@ -171,6 +171,11 @@ df_finanzas <- df_gasto %>%
 
 ruta <- file.path("data/processed", "base_finanzas_publicas.csv")
 
-# 1.2. Exportar DataFrame a csv
+# 1.2. Renombrar columna año por anio
+
+df_finanzas <- df_finanzas %>%
+  rename(anio = 1)
+
+# 1.3. Exportar DataFrame a csv
 
 write.csv(df_finanzas, ruta, row.names = FALSE)

@@ -1,4 +1,4 @@
-"año","gasto_total","programable","corriente","capital","inversion_fisica","no_programable","gasto_pensiones","ingreso_total","petroleros","no_petroleros","tributarios","isr","iva","ieps","ieps_gasolinas","ieps_distinto","no_tributarios","saldo_historico","interno","externo"
+"anio","gasto_total","programable","corriente","capital","inversion_fisica","no_programable","gasto_pensiones","ingreso_total","petroleros","no_petroleros","tributarios","isr","iva","ieps","ieps_gasolinas","ieps_distinto","no_tributarios","saldo_historico","interno","externo"
 1990,204215.324,112676.277,85293.209,27383.068,22843.102,91539.047,NA,187701.593,51428.353,136273.24,79317.27,32972.12,26635.576,11202.762,5163.392,6039.37,13393.808,NA,NA,NA
 1991,227933.15,143666.79,108907.198,34759.592,31836.364,84266.36,NA,254383.031,56050.346,198332.685,101641.46,42990.452,32532.6,12875.912,6950.98,5924.932,46880.827,NA,NA,NA
 1992,249287.323,170704.346,128930.966,41773.38,37832.913,78582.977,NA,295478.182,59726.346,235751.836,126763.7,57944.7,30451.65,18189.8,12669.1,5520.7,50204.454,NA,NA,NA
