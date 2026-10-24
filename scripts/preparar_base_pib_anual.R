@@ -29,3 +29,21 @@ pib_corriente <- pib_corriente %>%
   mutate(Periodos = str_squish(Periodos),
          Periodos = str_remove(Periodos, "\\s*r\\d+$"))
 
+# Parte 2. Extraer los años de cada DataFrame
+# Cada DataFrame del PIB tiene una periocidad diferente
+
+# 1.1. Extraer el unicamente el año y agregarlo en una columna llamada anio
+
+pib_2018 <- pib_2018 %>%
+  mutate(anio = as.integer(str_sub(Periodos, 1, 4))) %>%
+  filter(between(anio, 1980, 2025))
+
+pib_corriente <- pib_corriente %>%
+  mutate(anio = as.integer(str_sub(Periodos, 1, 4))) %>%
+  filter(between(anio, 1993, 2025))
+
+# 1.2. Extrar unicamente los años
+
+años_2018 <- unique(pib_2018$anio)
+
+años_corriente <- unique(pib_corriente$anio)
