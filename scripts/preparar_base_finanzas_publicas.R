@@ -25,7 +25,8 @@ gasto_largo <- gasto %>%
   pivot_longer(
     cols = -nombre_fila,
     names_to = "año",
-    values_to = "valor"
+    values_to = "valor",
+    names_transform = \(x) as.integer(str_squish(x))
   )
 
 # 3. Filtrar y renombrar únicamente los datos que se necesitan
