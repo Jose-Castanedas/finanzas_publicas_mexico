@@ -26,4 +26,81 @@ Jose Guadalupe Castañeda Soto
 
 ## Fuente
 
+**1. Instituciones y fuentes:**
+
+- Secretaria de Hacienda y Crédito Público (SHCP), Estadísticas
+  Oportunas de Finanzas Públicas.
+- INEGI, Banco de Información Económica.
+
+**2. Canales de consulta:**
+
+- Estadísticas Oportunas
+  - URL: <http://presto.hacienda.gob.mx/EstoporLayout/estadisticas.jsp>
+- Banco Información Económica
+  - URL: <https://www.inegi.org.mx/app/indicadores/?tm=3>
+
+**3. Datos consultados:**
+
+- SHCP
+  1.  Ingresos Presupuestarios del Sector Público
+  2.  Gasto Neto del Sector Público Presupuestario
+  3.  Saldo Histórico de los Requerimientos Financieros del Sector
+      Público (2000-2026)
+- INEGI
+  1.  Producto Interno Bruto valores a precios de 2018
+  2.  Producto Interno Bruto valores a precios corrientes
+
+**4. Fecha de consulta:** 22 de octubre de 2026
+
+**5. Parámetros de consulta:**
+
+- **Ingreso y Gasto Neto Presupuestario**
+  - Cuadro: Pesos corrientes multianual
+  - Cifras en: Millones de pesos
+  - De: 1990
+  - A: 2025
+  - Opción lateral: Anual
+- **Saldo Histórico de los RFSP**
+  - Cuadro: Saldo multianual
+  - Cifras en: Millones de pesos
+  - De: 1990
+  - A: 2025
+  - Periodo: Diciembre
+
+**6. Rutas de descarga:**
+
+- **Ingresos Presupuestarios del Sector Público**
+
+Estadísticas Oportunas de Finanzas Públicas \> Ingreso, gasto y
+financiamiento del sector público \> Ingresos Presupuestarios \>
+Ingresos Presupuestarios del Sector Público
+
+- **Gasto Neto del Sector Público Presupuestario**
+
+Estadísticas Oportunas de Finanzas Públicas \> Ingreso, gasto y
+financiamiento del sector público \> Gastos Presupuestarios \> Gasto
+Neto del Sector Público Presupuestario
+
+- **Saldo Histórico de los Requerimientos Financieros del Sector Público
+  (2000-2026)**
+
+Estadísticas Oportunas de Finanzas Públicas \> Requerimientos
+Financieros del Sector Público \> Saldo Histórico de los Requerimientos
+Financieros del Sector Público \> Saldo Histórico de los Requerimientos
+Financieros del Sector Público (2000–2026)
+
+- **Producto Interno Bruto valores a precios de 2018**
+
+Indicadores económicos de coyuntura \> Producto interno bruto
+trimestral, base 2018 \> Series originales \> Valores a precios de 2018
+\> Producto Interno Bruto (Millones de pesos a precios de 2018)
+Trimestral.
+
+- **Producto Interno Bruto valores a precios corrientes**
+
+Indicadores económicos de coyuntura \> Producto interno bruto
+trimestral, base 2018 \> Series originales \> Valores a precios
+corrientes \> Producto Interno Bruto (Millones de pesos a precios de
+2018) Trimestral
+
 ## Notas de datos
