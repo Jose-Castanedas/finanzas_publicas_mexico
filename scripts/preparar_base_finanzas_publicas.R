@@ -22,6 +22,11 @@ gasto <- gasto %>%
   mutate(nombre_fila = str_squish(nombre_fila), 
          nombre_fila = str_remove(nombre_fila, "\\s*\\d+_/"))
 
+# 1.1. Distinguir los nombres repetidos (make.unique añade .1, .2, ...)
+
+gasto <- gasto %>%
+  mutate(nombre_fila = make.unique(nombre_fila))
+
 # 2. Pasar de formato ancho a largo: un año por fila
 
 gasto_largo <- gasto %>%
@@ -43,6 +48,8 @@ nombres_gasto <- c(
   "Corriente"        = "corriente",
   "Capital"          = "capital",
   "Inversión física" = "inversion_fisica",
+  "Directo" = "inversion_directa",
+  "Indirecto" = "inversion_indirecta",
   "Gasto de pensiones" = "gasto_pensiones"
 )
 
@@ -92,8 +99,8 @@ nombres_ingreso <- c(
   "Total" = "ingreso_total",
   "Petroleros" = "petroleros",
   "No petroleros" = "no_petroleros",
-  "Tributarios" = "tributarios",
-  "No tributarios" = "no_tributarios",
+  "Tributarios" = "tributarios_gf",
+  "No tributarios" = "no_tributarios_gf",
   "Impuesto sobre la renta" = "isr",
   "Impuesto al valor agregado" = "iva",
   "Impuesto especial sobre producción y servicios" = "ieps",
@@ -143,9 +150,9 @@ saldo_largo <- saldo %>%
 # 3.1. Crear vector con los datos a buscar y su nuevo nombre
 
 nombres_saldo <- c(
-  "Saldo histórico de los RFSP" = "saldo_historico",
-  "Interno" = "interno",
-  "Externos" = "externo"
+  "Saldo histórico de los RFSP" = "shrfsp",
+  "Interno" = "shrfsp_interno",
+  "Externos" = "shrfsp_externo"
 )
 
 # 3.2. Filtrar y renombrar usando el mapeo anterior
