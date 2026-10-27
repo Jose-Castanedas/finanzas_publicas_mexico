@@ -293,10 +293,10 @@ base_completa <- base_finanzas_publicas %>%
 ```
 
 ``` r
-# Calcular cada concepto concepto como % del PIB nominal y redondear a 1 decimal
+# Calcular cada concepto concepto como % del PIB nominal (pct_pib)
 
 base_completa <- base_completa %>%
-  mutate(across(gasto_total:shrfsp_externo, ~ round(.x / pib_nominal * 100, 1), .names = "{.col}_%_pib"))
+  mutate(across(gasto_total:shrfsp_externo, ~ .x / pib_nominal * 100, .names = "{.col}_pct_pib"))
 ```
 
 ## Referencias
