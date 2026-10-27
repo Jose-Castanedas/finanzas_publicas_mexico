@@ -291,3 +291,10 @@ base_pib_anual <- base_pib_anual %>%
 base_completa <- base_finanzas_publicas %>%
   left_join(base_pib_anual, by = "anio")
 ```
+
+``` r
+# Calcular cada concepto concepto como % del PIB nominal y redondear a 1 decimal
+
+base_completa <- base_completa %>%
+  mutate(across(gasto_total:shrfsp_externo, ~ round(.x / pib_nominal * 100, 1), .names = "{.col}_%_pib"))
+```
