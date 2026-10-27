@@ -212,7 +212,7 @@ Los archivos conservan todos los años disponibles. Para el análisis se toma el
 
 ## Código
 
-```{r Preparar datos, message=FALSE}
+```{r Preparar-datos, message=FALSE}
 # Cargar librerías
 
 library(tidyverse)
@@ -236,7 +236,7 @@ base_completa <- base_finanzas_publicas %>%
   left_join(base_pib_anual, by = "anio")
 ```
 
-```{r Calcular conceptos como % del PIB, echo=TRUE}
+```{r Calcular-conceptos-como-pct-del-pib, echo=TRUE}
 # Calcular cada concepto concepto como % del PIB nominal (pct_pib)
 
 base_completa <- base_completa %>%
