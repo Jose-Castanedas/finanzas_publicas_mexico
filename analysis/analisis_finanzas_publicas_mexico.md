@@ -254,7 +254,7 @@ se guardan en data/processed/.
 | base_finanzas_publicas.csv | Ingreso, gasto y saldo, con las variables renombradas (ver Conceptos y renombres). Millones de pesos corrientes. | 36 filas × 23 columnas | 1990-2025 |
 | pib_real_nominal_anual.csv | pib_real y pib_nominal, ambos como promedio anual de los cuatro trimestres. | 46 filas × 3 columnas | 1980-2025 |
 
-Ambos archivos comparten la columna aniom que sirve como clave para
+Ambos archivos comparten la columna anio que sirve como clave para
 unirlos.
 
 **Valores faltantes (NA)**
@@ -272,20 +272,7 @@ toma el periodo de 1993-2025.
 # Cargar librerías
 
 library(tidyverse)
-```
 
-    ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-    ## ✔ dplyr     1.2.1     ✔ readr     2.2.0
-    ## ✔ forcats   1.0.1     ✔ stringr   1.6.0
-    ## ✔ ggplot2   4.0.3     ✔ tibble    3.3.1
-    ## ✔ lubridate 1.9.5     ✔ tidyr     1.3.2
-    ## ✔ purrr     1.2.2     
-    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ dplyr::filter() masks stats::filter()
-    ## ✖ dplyr::lag()    masks stats::lag()
-    ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
-
-``` r
 # Cargar bases de datos procesadas
 
 base_finanzas_publicas <- read.csv("../data/processed/base_finanzas_publicas.csv")

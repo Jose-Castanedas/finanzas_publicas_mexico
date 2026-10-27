@@ -200,7 +200,7 @@ Dos scripts de R, ubicados en la carpeta scripts/, procesan los datos originales
 | base_finanzas_publicas.csv | Ingreso, gasto y saldo, con las variables renombradas (ver Conceptos y renombres). Millones de pesos corrientes. | 36 filas × 23 columnas | 1990-2025 |
 | pib_real_nominal_anual.csv | pib_real y pib_nominal, ambos como promedio anual de los cuatro trimestres. | 46 filas × 3 columnas | 1980-2025 |
 
-Ambos archivos comparten la columna aniom que sirve como clave para unirlos.
+Ambos archivos comparten la columna anio que sirve como clave para unirlos.
 
 **Valores faltantes (NA)**
 
@@ -212,7 +212,7 @@ Los archivos conservan todos los años disponibles. Para el análisis se toma el
 
 ## Código
 
-```{r Preparar datos}
+```{r Preparar datos, message=FALSE}
 # Cargar librerías
 
 library(tidyverse)
