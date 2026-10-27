@@ -265,3 +265,42 @@ unirlos.
 
 Los archivos conservan todos los años disponibles. Para el análisis se
 toma el periodo de 1993-2025.
+
+## Código
+
+``` r
+# Cargar librerías
+
+library(tidyverse)
+```
+
+    ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+    ## ✔ dplyr     1.2.1     ✔ readr     2.2.0
+    ## ✔ forcats   1.0.1     ✔ stringr   1.6.0
+    ## ✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+    ## ✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+    ## ✔ purrr     1.2.2     
+    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+    ## ✖ dplyr::filter() masks stats::filter()
+    ## ✖ dplyr::lag()    masks stats::lag()
+    ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+``` r
+# Cargar bases de datos procesadas
+
+base_finanzas_publicas <- read.csv("../data/processed/base_finanzas_publicas.csv")
+base_pib_anual <- read.csv("../data/processed/pib_real_nominal_anual.csv")
+
+# Filtrar ambas bases al periodo 1993-2025
+
+base_finanzas_publicas <- base_finanzas_publicas %>%
+  filter(between(anio, 1993, 2025))
+
+base_pib_anual <- base_pib_anual %>%
+  filter(between(anio, 1993, 2025))
+
+# Unir ambas bases por año en una sola
+
+base_completa <- base_finanzas_publicas %>%
+  left_join(base_pib_anual, by = "anio")
+```

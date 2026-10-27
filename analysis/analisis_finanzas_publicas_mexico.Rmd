@@ -209,3 +209,30 @@ Ambos archivos comparten la columna aniom que sirve como clave para unirlos.
 - pib_nominal: 1980-1992
 
 Los archivos conservan todos los años disponibles. Para el análisis se toma el periodo de 1993-2025.
+
+## Código
+
+```{r Preparar datos}
+# Cargar librerías
+
+library(tidyverse)
+
+# Cargar bases de datos procesadas
+
+base_finanzas_publicas <- read.csv("../data/processed/base_finanzas_publicas.csv")
+base_pib_anual <- read.csv("../data/processed/pib_real_nominal_anual.csv")
+
+# Filtrar ambas bases al periodo 1993-2025
+
+base_finanzas_publicas <- base_finanzas_publicas %>%
+  filter(between(anio, 1993, 2025))
+
+base_pib_anual <- base_pib_anual %>%
+  filter(between(anio, 1993, 2025))
+
+# Unir ambas bases por año en una sola
+
+base_completa <- base_finanzas_publicas %>%
+  left_join(base_pib_anual, by = "anio")
+```
+
