@@ -298,3 +298,15 @@ base_completa <- base_finanzas_publicas %>%
 base_completa <- base_completa %>%
   mutate(across(gasto_total:shrfsp_externo, ~ round(.x / pib_nominal * 100, 1), .names = "{.col}_%_pib"))
 ```
+
+## Referencias
+
+- Cámara de Diputados del H. Congreso de la Unión. (s. f.). Las finanzas
+  públicas. Recuperado el 27 de octubre de 2026, de
+  <https://www.diputados.gob.mx/bibliot/publica/inveyana/econycom/reportes/finpubli.htm>
+- Heath, J. (2012). Lo que indican los indicadores: cómo utilizar la
+  información estadística para entender la realidad económica de México.
+  Instituto Nacional de Estadística y Geografía (INEGI).
+- Instituto Nacional de Estadística y Geografía. (2026). ABC de las
+  finanzas públicas estatales y municipales.
+  <https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/889463929697.pdf>
