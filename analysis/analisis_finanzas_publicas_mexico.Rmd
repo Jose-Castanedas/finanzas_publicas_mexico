@@ -5,9 +5,26 @@ date: "2026-10-25"
 output: github_document
 ---
 
-## Introducción
+Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda del sector público, con el que el Estado cumple sus objetivos y funciones.
 
+En México, los instrumentos de las finanzas públicas son:
 
+- Los ingresos públicos
+- El gasto público
+- El endeudamiento interno y externo del Estado
+- Los precios y las tarifas de los bienes y servicios
+
+Este análisis utiliza datos de los ingresos y gastos presupuestarios y del saldo histórico de los requerimientos financieros del sector público, que se definen de la siguiente manera:
+
+- **Ingresos presupuestarios del sector público:** recursos monetarios que el Estado obtiene y registra en su presupuesto.
+
+- **Gasto neto del sector público presupuestario:** recursos que el sector público gasta para cumplir sus funciones y proveer bienes y servicios a la población.
+
+- **Saldo histórico de los requerimientos financieros del sector público:** saldo acumulado de las obligaciones financieras netas del sector público; constituye la medida más amplia de la deuda pública.
+
+La importancia de las finanzas públicas radica en que permiten entender cómo se usan los recursos públicos y cómo incide esta gestión en la calidad de vida de las personas. Además, permiten evaluar el desempeño del gobierno y fomentan una cultura de rendición de cuentas (INEGI, 2026).
+
+El objetivo del proyecto es analizar la evolución de las finanzas públicas de 1993 a 2025.
 
 **Preguntas de investigación**
 
@@ -23,12 +40,12 @@ output: github_document
 
 ## Fuente
 
-**1. Instituciones y fuentes:**
+**Instituciones y fuentes:**
 
 - Secretaria de Hacienda y Crédito Público (SHCP), Estadísticas Oportunas de Finanzas Públicas.
 - INEGI, Banco de Información Económica.
 
-**2. Canales de consulta:**
+**Canales de consulta:**
 
 - Estadísticas Oportunas
   - URL: http://presto.hacienda.gob.mx/EstoporLayout/estadisticas.jsp
@@ -36,20 +53,20 @@ output: github_document
 - Banco Información Económica
   - URL: https://www.inegi.org.mx/app/indicadores/?tm=3
 
-**3. Datos consultados:**
+**Datos consultados:**
 
 - SHCP
-  1. Ingresos Presupuestarios del Sector Público
-  2. Gasto Neto del Sector Público Presupuestario
-  3. Saldo Histórico de los Requerimientos Financieros del Sector Público (2000-2026)
+  - Ingresos Presupuestarios del Sector Público
+  - Gasto Neto del Sector Público Presupuestario
+  - Saldo Histórico de los Requerimientos Financieros del Sector Público (2000-2026)
 
 - INEGI
-  1. Producto Interno Bruto valores a precios de 2018
-  2. Producto Interno Bruto valores a precios corrientes
+  - Producto Interno Bruto valores a precios de 2018
+  - Producto Interno Bruto valores a precios corrientes
 
-**4. Fecha de consulta:** 22 de octubre de 2026
+**Fecha de consulta:** 22 de octubre de 2026
 
-**5. Parámetros de consulta:**
+**Parámetros de consulta:**
 
 - **Ingreso y Gasto Neto Presupuestario**
   - Cuadro: Pesos corrientes multianual
@@ -65,7 +82,7 @@ output: github_document
   - A: 2025
   - Periodo: Diciembre
 
-**6. Rutas de descarga:**
+**Rutas de descarga:**
 
 - **Ingresos Presupuestarios del Sector Público**
 
