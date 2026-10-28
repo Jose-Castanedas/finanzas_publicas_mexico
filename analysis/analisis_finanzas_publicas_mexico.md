@@ -64,7 +64,7 @@ causas.
 
 **Instituciones y fuentes:**
 
-- Secretaria de Hacienda y Crédito Público (SHCP), Estadísticas
+- Secretaría de Hacienda y Crédito Público (SHCP), Estadísticas
   Oportunas de Finanzas Públicas.
 - INEGI, Banco de Información Económica.
 
@@ -185,7 +185,7 @@ en pensiones.
 
 **Gasto**
 
-- El Gasto de pensiones pertenecen a Partidas informativas y no tienen
+- El Gasto de pensiones pertenece a Partidas informativas y no tiene
   datos para 1990-1994.
 - Para no contabilizar dos veces el ingreso y el gasto público, el
   concepto Programable excluye las operaciones compensadas, es decir,
@@ -204,7 +204,7 @@ en pensiones.
 **PIB**
 
 - Las cifras de los dos trimestres de 2026 son revisadas (r1).
-- El PIB anual es el promedio simple de los cautro trimestres del año
+- El PIB anual es el promedio simple de los cuatro trimestres del año
   (Heath, 2012, p.72). El cálculo es igual para ambas series.
 - La serie a precios de 2018 se renombra pib_real y la de precios
   corrientes, pib_nominal.
@@ -212,7 +212,7 @@ en pensiones.
 **Valores faltantes (NA)**
 
 - gasto_pensiones: 1990-1994
-- shrfsp, shrfsp_interno y shrfsp_extrno: 1990-1999
+- shrfsp, shrfsp_interno y shrfsp_externo: 1990-1999
 - pib_nominal: 1980-1992
 
 Los archivos conservan todos los años disponibles. Para el análisis se
@@ -245,7 +245,7 @@ base_completa <- base_finanzas_publicas %>%
 ```
 
 ``` r
-# Calcular cada concepto concepto como % del PIB nominal (pct_pib)
+# Calcular cada concepto como % del PIB nominal (pct_pib)
 
 base_completa <- base_completa %>%
   mutate(across(gasto_total:shrfsp_externo, ~ .x / pib_nominal * 100, .names = "{.col}_pct_pib"))
