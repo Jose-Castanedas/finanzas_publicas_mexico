@@ -152,56 +152,6 @@ El PIB nominal es el denominador de la mayoría de los cálculos, por lo que el 
 - El PIB anual es el promedio simple de los cautro trimestres del año (Heath, 2012, p.72). El cálculo es igual para ambas series.
 - La serie a precios de 2018 se renombra pib_real y la de precios corrientes, pib_nominal.
 
-**Conceptos y renombres**
-
-**Gasto**
-
-| Concepto en la fuente | Variable | Rama |
-| :--- | :--- | :--- |
-| Total | gasto_total | |
-| Programable | programable | |
-| No programable | no_programable | |
-| Corriente | corriente | Programable |
-| Capital | capital | Programable |
-| Inversión física | inversion_fisica | Programable > Capital |
-| Directo | inversion_directa | Inversión física |
-| Indirecto | inversion_indirecta | Inversión física |
-| Gasto de pensiones | gasto_pensiones | Partidas informativas |
-
-**Ingreso**
-
-| Concepto en la fuente | Variable | Rama |
-| :--- | :--- | :--- |
-| Total | ingreso_total | |
-| Petroleros | petroleros | |
-| No petroleros | no_petroleros | |
-| Tributarios | tributarios_gf | No petroleros > Gobierno Federal |
-| No tributarios | no_tributarios_gf | No petroleros > Gobierno Federal |
-| Impuesto sobre la renta | isr | Tributarios |
-| Impuesto al valor agregado | iva | Tributarios |
-| Impuesto especial sobre producción y servicios | ieps | Tributarios |
-| IEPS gasolinas y diesel | ieps_gasolina | Tributarios |
-| IEPS distinto de gasolinas y diesel | ieps_distinto | Tributarios |
-
-**Saldo**
-
-| Concepto en la fuente | Variable |
-| :--- | :--- |
-| Saldo histórico de los RFSP | shrfsp |
-| Interno | shrfsp_interno |
-| Externos | shrfsp_externo |
-
-**Archivos procesados**
-
-Dos scripts de R, ubicados en la carpeta scripts/, procesan los datos originales, en la carpeta raw/, y generan dos archivos CSV. Los archivos se guardan en data/processed/.
-
-| Archivo | Contenido | Dimensiones | Periodo |
-| :--- | :--- | :--- | :--- |
-| base_finanzas_publicas.csv | Ingreso, gasto y saldo, con las variables renombradas (ver Conceptos y renombres). Millones de pesos corrientes. | 36 filas × 23 columnas | 1990-2025 |
-| pib_real_nominal_anual.csv | pib_real y pib_nominal, ambos como promedio anual de los cuatro trimestres. | 46 filas × 3 columnas | 1980-2025 |
-
-Ambos archivos comparten la columna anio que sirve como clave para unirlos.
-
 **Valores faltantes (NA)**
 
 - gasto_pensiones: 1990-1994
@@ -242,6 +192,58 @@ base_completa <- base_finanzas_publicas %>%
 base_completa <- base_completa %>%
   mutate(across(gasto_total:shrfsp_externo, ~ .x / pib_nominal * 100, .names = "{.col}_pct_pib"))
 ```
+
+## Anexos
+
+**Conceptos y renombres**
+
+**Gasto**
+
+| Concepto en la fuente | Variable | Rama |
+| :--- | :--- | :--- |
+| Total | gasto_total | |
+| Programable | programable | |
+| No programable | no_programable | |
+| Corriente | corriente | Programable |
+| Capital | capital | Programable |
+| Inversión física | inversion_fisica | Programable > Capital |
+| Directo | inversion_directa | Inversión física |
+| Indirecto | inversion_indirecta | Inversión física |
+| Gasto de pensiones | gasto_pensiones | Partidas informativas |
+
+**Ingreso**
+
+| Concepto en la fuente | Variable | Rama |
+| :--- | :--- | :--- |
+| Total | ingreso_total | |
+| Petroleros | petroleros | |
+| No petroleros | no_petroleros | |
+| Tributarios | tributarios_gf | No petroleros > Gobierno Federal |
+| No tributarios | no_tributarios_gf | No petroleros > Gobierno Federal |
+| Impuesto sobre la renta | isr | Tributarios |
+| Impuesto al valor agregado | iva | Tributarios |
+| Impuesto especial sobre producción y servicios | ieps | Tributarios |
+| IEPS gasolinas y diesel | ieps_gasolinas | Tributarios |
+| IEPS distinto de gasolinas y diesel | ieps_distinto | Tributarios |
+
+**Saldo**
+
+| Concepto en la fuente | Variable |
+| :--- | :--- |
+| Saldo histórico de los RFSP | shrfsp |
+| Interno | shrfsp_interno |
+| Externos | shrfsp_externo |
+
+**Archivos procesados**
+
+Dos scripts de R, ubicados en la carpeta scripts/, procesan los datos originales, en la carpeta raw/, y generan dos archivos CSV. Los archivos se guardan en data/processed/.
+
+| Archivo | Contenido | Dimensiones | Periodo |
+| :--- | :--- | :--- | :--- |
+| base_finanzas_publicas.csv | Ingreso, gasto y saldo, con las variables renombradas (ver Conceptos y renombres). Millones de pesos corrientes. | 36 filas × 23 columnas | 1990-2025 |
+| pib_real_nominal_anual.csv | pib_real y pib_nominal, ambos como promedio anual de los cuatro trimestres. | 46 filas × 3 columnas | 1980-2025 |
+
+Ambos archivos comparten la columna anio que sirve como clave para unirlos.
 
 ## Referencias
 
