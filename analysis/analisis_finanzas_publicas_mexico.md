@@ -7,7 +7,8 @@ Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
 funciones.
 
-En México, los instrumentos de las finanzas públicas son:
+En México, los instrumentos de las finanzas públicas son (Cámara de
+Diputados, s.f.):
 
 - Los ingresos públicos
 - El gasto público
@@ -35,8 +36,10 @@ calidad de vida de las personas. Además, permiten evaluar el desempeño
 del gobierno y fomentan una cultura de rendición de cuentas (INEGI,
 2026).
 
-El objetivo del proyecto es analizar la evolución de las finanzas
-públicas de 1993 a 2025.
+El objetivo del análisis es decribir cómo cambian, entre 1993 y 2025, la
+composición de los ingresos, del gasto y de la inversión física, y el
+peso del gasto en pensiones. El enfoque es descriptivo y no establece
+causas.
 
 **Preguntas de investigación**
 
