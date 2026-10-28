@@ -192,6 +192,8 @@ en pensiones.
   las transacciones que representan un ingreso para las entidades bajo
   control presupuestario directo y un gasto para el Gobierno Federal
   (subsidios, transferencias y aportaciones al ISSSTE).
+- capital incluye en 2019 un apoyo extraordinario a Pemex de 97,131
+  millones (nota del cuadro).
 
 **Saldo**
 

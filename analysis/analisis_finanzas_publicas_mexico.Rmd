@@ -140,6 +140,7 @@ El PIB nominal es el denominador de la mayoría de los cálculos, por lo que el 
 
 - El Gasto de pensiones pertenecen a Partidas informativas y no tienen datos para 1990-1994.
 - Para no contabilizar dos veces el ingreso y el gasto público, el concepto Programable excluye las operaciones compensadas, es decir, las transacciones que representan un ingreso para las entidades bajo control presupuestario directo y un gasto para el Gobierno Federal (subsidios, transferencias y aportaciones al ISSSTE).
+- capital incluye en 2019 un apoyo extraordinario a Pemex de 97,131 millones (nota del cuadro).
 
 **Saldo**
 
