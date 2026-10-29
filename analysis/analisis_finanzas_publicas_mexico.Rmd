@@ -167,6 +167,7 @@ Los archivos conservan todos los años disponibles. Para el análisis se toma el
 # Cargar librerías
 
 library(tidyverse)
+library(knitr)
 
 # Cargar bases de datos procesadas
 
@@ -193,6 +194,39 @@ base_completa <- base_finanzas_publicas %>%
 base_completa <- base_completa %>%
   mutate(across(gasto_total:shrfsp_externo, ~ .x / pib_nominal * 100, .names = "{.col}_pct_pib"))
 ```
+
+## Preguntas
+
+### 1. ¿Qué proporción de los ingresos presupuestarios han aportado los ingresos petroleros, los tributarios no petroleros y el resto entre 1993 y 2025, y cómo cambió?
+
+```{r Pregunta-1, echo=TRUE}
+# Filtrar solo las columnas a usar: anio, ingreso_total, petroleros, no_petroleros y trubutarios_gf
+
+pct_ingresos <- base_completa %>%
+  select(anio, ingreso_total:tributarios_gf)
+
+# Calcular columna resto
+
+pct_ingresos <- pct_ingresos %>%
+  mutate(resto = ingreso_total - petroleros - tributarios_gf)
+
+# Calcular el porcentaje de propoción de los ingresos presupuestarios
+
+pct_ingresos <- pct_ingresos %>%
+  mutate(across(petroleros:resto, ~ .x / ingreso_total * 100, .names = "{.col}_pct_ingresos"))
+
+# Mostrar datos
+
+pct_ingresos %>%
+  select(anio, petroleros_pct_ingresos, tributarios_gf_pct_ingresos, resto_pct_ingresos) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "Petroleros (%)", "No Petroleros (%)", "Resto (%)"),
+    caption = "Composición de los ingresos presupuestarios"
+  )
+  
+```
+
 
 ## Anexos
 
