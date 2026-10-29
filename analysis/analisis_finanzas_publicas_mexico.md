@@ -278,48 +278,88 @@ pct_ingresos %>%
   select(anio, petroleros_pct_ingresos, tributarios_gf_pct_ingresos, resto_pct_ingresos) %>%
   kable(
     digits = 1,
-    col.names = c("Año", "Petroleros (%)", "No Petroleros (%)", "Resto (%)"),
-    caption = "Composición de los ingresos presupuestarios"
+    col.names = c("Año", "Petroleros (%)", "Tributarios (%)", "Resto (%)")
   )
 ```
 
-|  Año | Petroleros (%) | No Petroleros (%) | Resto (%) |
-|-----:|---------------:|------------------:|----------:|
-| 1993 |           21.6 |              49.3 |      29.1 |
-| 1994 |           19.1 |              49.0 |      31.9 |
-| 1995 |           29.1 |              40.7 |      30.2 |
-| 1996 |           32.2 |              39.0 |      28.8 |
-| 1997 |           29.2 |              42.5 |      28.3 |
-| 1998 |           21.9 |              51.7 |      26.4 |
-| 1999 |           20.9 |              54.6 |      24.5 |
-| 2000 |           27.1 |              49.3 |      23.6 |
-| 2001 |           23.5 |              51.5 |      24.9 |
-| 2002 |           21.5 |              52.5 |      26.0 |
-| 2003 |           27.8 |              48.0 |      24.2 |
-| 2004 |           33.0 |              43.4 |      23.6 |
-| 2005 |           36.4 |              41.6 |      22.0 |
-| 2006 |           39.8 |              39.3 |      20.8 |
-| 2007 |           37.2 |              40.3 |      22.4 |
-| 2008 |           44.3 |              34.8 |      20.9 |
-| 2009 |           30.9 |              40.1 |      29.0 |
-| 2010 |           34.7 |              42.6 |      22.7 |
-| 2011 |           38.0 |              39.6 |      22.4 |
-| 2012 |           39.4 |              37.4 |      23.2 |
-| 2013 |           35.4 |              41.1 |      23.5 |
-| 2014 |           30.7 |              45.4 |      24.0 |
-| 2015 |           19.8 |              55.3 |      24.9 |
-| 2016 |           16.3 |              56.1 |      27.7 |
-| 2017 |           16.7 |              57.7 |      25.6 |
-| 2018 |           19.1 |              59.9 |      21.0 |
-| 2019 |           17.7 |              59.5 |      22.8 |
-| 2020 |           11.3 |              62.5 |      26.1 |
-| 2021 |           19.4 |              59.8 |      20.8 |
-| 2022 |           22.4 |              57.7 |      19.9 |
-| 2023 |           15.3 |              64.2 |      20.5 |
-| 2024 |           12.8 |              66.1 |      21.1 |
-| 2025 |           14.8 |              65.0 |      20.1 |
+|  Año | Petroleros (%) | Tributarios (%) | Resto (%) |
+|-----:|---------------:|----------------:|----------:|
+| 1993 |           21.6 |            49.3 |      29.1 |
+| 1994 |           19.1 |            49.0 |      31.9 |
+| 1995 |           29.1 |            40.7 |      30.2 |
+| 1996 |           32.2 |            39.0 |      28.8 |
+| 1997 |           29.2 |            42.5 |      28.3 |
+| 1998 |           21.9 |            51.7 |      26.4 |
+| 1999 |           20.9 |            54.6 |      24.5 |
+| 2000 |           27.1 |            49.3 |      23.6 |
+| 2001 |           23.5 |            51.5 |      24.9 |
+| 2002 |           21.5 |            52.5 |      26.0 |
+| 2003 |           27.8 |            48.0 |      24.2 |
+| 2004 |           33.0 |            43.4 |      23.6 |
+| 2005 |           36.4 |            41.6 |      22.0 |
+| 2006 |           39.8 |            39.3 |      20.8 |
+| 2007 |           37.2 |            40.3 |      22.4 |
+| 2008 |           44.3 |            34.8 |      20.9 |
+| 2009 |           30.9 |            40.1 |      29.0 |
+| 2010 |           34.7 |            42.6 |      22.7 |
+| 2011 |           38.0 |            39.6 |      22.4 |
+| 2012 |           39.4 |            37.4 |      23.2 |
+| 2013 |           35.4 |            41.1 |      23.5 |
+| 2014 |           30.7 |            45.4 |      24.0 |
+| 2015 |           19.8 |            55.3 |      24.9 |
+| 2016 |           16.3 |            56.1 |      27.7 |
+| 2017 |           16.7 |            57.7 |      25.6 |
+| 2018 |           19.1 |            59.9 |      21.0 |
+| 2019 |           17.7 |            59.5 |      22.8 |
+| 2020 |           11.3 |            62.5 |      26.1 |
+| 2021 |           19.4 |            59.8 |      20.8 |
+| 2022 |           22.4 |            57.7 |      19.9 |
+| 2023 |           15.3 |            64.2 |      20.5 |
+| 2024 |           12.8 |            66.1 |      21.1 |
+| 2025 |           14.8 |            65.0 |      20.1 |
 
-Composición de los ingresos presupuestarios
+``` r
+# Gráfica composición del ingreso presupuestario
+
+# 1. Pasar a formato largo
+
+ingresos_largo <- pct_ingresos %>%
+  select(anio, petroleros_pct_ingresos, tributarios_gf_pct_ingresos, resto_pct_ingresos) %>%
+  pivot_longer(
+    cols = -anio,
+    names_to = "concepto",
+    values_to = "pct"
+  ) %>%
+  mutate(concepto = recode(concepto,
+    petroleros_pct_ingresos = "Petroleros",
+    tributarios_gf_pct_ingresos = "Tributarios",
+    resto_pct_ingresos = "Resto"))
+
+# 2. Configurar áreas apiladas
+
+grafica_composicion <- ggplot(ingresos_largo, aes(x = anio, y = pct, fill = concepto)) +
+  geom_col() +
+  labs(
+    title = "Gráfica 1. México. Composición de los ingresos presupuestarios",
+    x = NULL,
+    y = "Porcentaje del ingreso total",
+    fill = NULL
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+# 3. Guardar gráfica en el directorio figures
+
+ggsave("../figures/grafica_01_ingresos_composicion.png",
+       plot = grafica_composicion,
+       width = 8, height = 5, dpi = 300)
+
+# 4. Mostrar gráfica
+
+grafica_composicion
+```
+
+![](analisis_finanzas_publicas_mexico_files/figure-gfm/Pregunta-1-grafica-1.png)<!-- -->
 
 ## Anexos
 

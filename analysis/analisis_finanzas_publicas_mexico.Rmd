@@ -221,12 +221,50 @@ pct_ingresos %>%
   select(anio, petroleros_pct_ingresos, tributarios_gf_pct_ingresos, resto_pct_ingresos) %>%
   kable(
     digits = 1,
-    col.names = c("Año", "Petroleros (%)", "No Petroleros (%)", "Resto (%)"),
-    caption = "Composición de los ingresos presupuestarios"
+    col.names = c("Año", "Petroleros (%)", "Tributarios (%)", "Resto (%)")
   )
-  
 ```
 
+```{r Pregunta-1-grafica, echo=TRUE}
+# Gráfica composición del ingreso presupuestario
+
+# 1. Pasar a formato largo
+
+ingresos_largo <- pct_ingresos %>%
+  select(anio, petroleros_pct_ingresos, tributarios_gf_pct_ingresos, resto_pct_ingresos) %>%
+  pivot_longer(
+    cols = -anio,
+    names_to = "concepto",
+    values_to = "pct"
+  ) %>%
+  mutate(concepto = recode(concepto,
+    petroleros_pct_ingresos = "Petroleros",
+    tributarios_gf_pct_ingresos = "Tributarios",
+    resto_pct_ingresos = "Resto"))
+
+# 2. Configurar áreas apiladas
+
+grafica_composicion <- ggplot(ingresos_largo, aes(x = anio, y = pct, fill = concepto)) +
+  geom_col() +
+  labs(
+    title = "Gráfica 1. México. Composición de los ingresos presupuestarios",
+    x = NULL,
+    y = "Porcentaje del ingreso total",
+    fill = NULL
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+# 3. Guardar gráfica en el directorio figures
+
+ggsave("../figures/grafica_01_ingresos_composicion.png",
+       plot = grafica_composicion,
+       width = 8, height = 5, dpi = 300)
+
+# 4. Mostrar gráfica
+
+grafica_composicion
+```
 
 ## Anexos
 
