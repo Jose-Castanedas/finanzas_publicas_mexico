@@ -36,8 +36,8 @@ calidad de vida de las personas. Además, permiten evaluar el desempeño
 del gobierno y fomentan una cultura de rendición de cuentas (INEGI,
 2026).
 
-El objetivo del análisis es decribir cómo cambian, entre 1993 y 2025, la
-composición de los ingresos, del gasto y de la inversión física, y el
+El objetivo del análisis es describir cómo cambian, entre 1993 y 2025,
+la composición de los ingresos, del gasto y de la inversión física, y el
 peso del gasto en pensiones. El enfoque es descriptivo y no establece
 causas.
 
@@ -232,7 +232,7 @@ toma el periodo de 1993-2025.
 
   concepto (% de composición) = concepto / total \* 100
 
-  Donde total es el agregado que pertenece el concepto.
+  Donde total es el agregado al que pertenece el concepto.
 
 ## Código
 
@@ -273,7 +273,7 @@ base_completa <- base_completa %>%
 ### 1. ¿Qué proporción de los ingresos presupuestarios han aportado los ingresos petroleros, los tributarios no petroleros y el resto entre 1993 y 2025, y cómo cambió?
 
 ``` r
-# Filtrar solo las columnas a usar: anio, ingreso_total, petroleros, no_petroleros y trubutarios_gf
+# Filtrar solo las columnas a usar: anio, ingreso_total, petroleros, no_petroleros y tributarios_gf
 
 pct_ingresos <- base_completa %>%
   select(anio, ingreso_total:tributarios_gf)
@@ -283,7 +283,7 @@ pct_ingresos <- base_completa %>%
 pct_ingresos <- pct_ingresos %>%
   mutate(resto = ingreso_total - petroleros - tributarios_gf)
 
-# Calcular el porcentaje de propoción de los ingresos presupuestarios
+# Calcular el porcentaje de proporción de los ingresos presupuestarios
 
 pct_ingresos <- pct_ingresos %>%
   mutate(across(petroleros:resto, ~ .x / ingreso_total * 100, .names = "{.col}_pct_ingresos"))
