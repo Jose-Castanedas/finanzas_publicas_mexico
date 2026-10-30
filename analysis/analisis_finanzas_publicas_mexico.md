@@ -350,7 +350,7 @@ grafica_composicion <- ggplot(ingresos_largo, aes(x = anio, y = pct, fill = conc
     data = filter(ingresos_largo, anio %in% c(1993, 2025)),
     aes(label = paste0(round(pct), "%")),
     position = position_stack(vjust = 0.5, reverse = TRUE),
-    color = "white", size = 2.5, fontface = "bold"
+    color = "black", size = 2.5, fontface = "bold"
   ) +
   scale_fill_manual(values = colores) +
   scale_x_continuous(breaks = seq(1993, 2025, 4), expand = c(0, 0)) +
