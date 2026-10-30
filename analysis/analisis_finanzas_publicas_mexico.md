@@ -292,6 +292,7 @@ pct_ingresos <- pct_ingresos %>%
 
 pct_ingresos %>%
   select(anio, petroleros_pct_ingresos, tributarios_gf_pct_ingresos, resto_pct_ingresos) %>%
+  filter(anio %in% c(2006, 2008, 2012, 2015:2025)) %>%
   kable(
     digits = 1,
     col.names = c("Año", "Petroleros (%)", "Tributarios (%)", "Resto (%)")
@@ -300,28 +301,9 @@ pct_ingresos %>%
 
 |  Año | Petroleros (%) | Tributarios (%) | Resto (%) |
 |-----:|---------------:|----------------:|----------:|
-| 1993 |           21.6 |            49.3 |      29.1 |
-| 1994 |           19.1 |            49.0 |      31.9 |
-| 1995 |           29.1 |            40.7 |      30.2 |
-| 1996 |           32.2 |            39.0 |      28.8 |
-| 1997 |           29.2 |            42.5 |      28.3 |
-| 1998 |           21.9 |            51.7 |      26.4 |
-| 1999 |           20.9 |            54.6 |      24.5 |
-| 2000 |           27.1 |            49.3 |      23.6 |
-| 2001 |           23.5 |            51.5 |      24.9 |
-| 2002 |           21.5 |            52.5 |      26.0 |
-| 2003 |           27.8 |            48.0 |      24.2 |
-| 2004 |           33.0 |            43.4 |      23.6 |
-| 2005 |           36.4 |            41.6 |      22.0 |
 | 2006 |           39.8 |            39.3 |      20.8 |
-| 2007 |           37.2 |            40.3 |      22.4 |
 | 2008 |           44.3 |            34.8 |      20.9 |
-| 2009 |           30.9 |            40.1 |      29.0 |
-| 2010 |           34.7 |            42.6 |      22.7 |
-| 2011 |           38.0 |            39.6 |      22.4 |
 | 2012 |           39.4 |            37.4 |      23.2 |
-| 2013 |           35.4 |            41.1 |      23.5 |
-| 2014 |           30.7 |            45.4 |      24.0 |
 | 2015 |           19.8 |            55.3 |      24.9 |
 | 2016 |           16.3 |            56.1 |      27.7 |
 | 2017 |           16.7 |            57.7 |      25.6 |
@@ -401,12 +383,13 @@ ggsave("../figures/grafica_01_ingresos_composicion.png",
 include_graphics("../figures/grafica_01_ingresos_composicion.png")
 ```
 
-![](../figures/grafica_01_ingresos_composicion.png)<!-- --> Los ingresos
-tributarios del Gobierno Federal son el componente más grande de los
-ingresos presupuestarios en 30 de los 33 años del periodo 1993-2025. Los
-ingresos petroleros lo superan solo en 2006, 2008 y 2012, con 39.8%,
-44.3% y 39.4% del total, respectivamente. En 2006 superaron a los
-tributarios (39.3%) por 0.5 puntos porcentuales.
+![](../figures/grafica_01_ingresos_composicion.png)<!-- -->
+
+Los ingresos tributarios del Gobierno Federal son el componente más
+grande de los ingresos presupuestarios en 30 de los 33 años del periodo
+1993-2025. Los ingresos petroleros lo superan solo en 2006, 2008 y 2012,
+con 39.8%, 44.3% y 39.4% del total, respectivamente. En 2006 superaron a
+los tributarios (39.3%) por 0.5 puntos porcentuales.
 
 **Composición del ingreso (participación %)**
 

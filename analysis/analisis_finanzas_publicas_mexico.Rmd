@@ -235,6 +235,7 @@ pct_ingresos <- pct_ingresos %>%
 
 pct_ingresos %>%
   select(anio, petroleros_pct_ingresos, tributarios_gf_pct_ingresos, resto_pct_ingresos) %>%
+  filter(anio %in% c(2006, 2008, 2012, 2015:2025)) %>%
   kable(
     digits = 1,
     col.names = c("Año", "Petroleros (%)", "Tributarios (%)", "Resto (%)")
@@ -307,6 +308,7 @@ ggsave("../figures/grafica_01_ingresos_composicion.png",
 
 include_graphics("../figures/grafica_01_ingresos_composicion.png")
 ```
+
 Los ingresos tributarios del Gobierno Federal son el componente más grande de los ingresos presupuestarios en 30 de los 33 años del periodo 1993-2025. Los ingresos petroleros lo superan solo en 2006, 2008 y 2012, con 39.8%, 44.3% y 39.4% del total, respectivamente. En 2006 superaron a los tributarios (39.3%) por 0.5 puntos porcentuales.
 
 **Composición del ingreso (participación %)**
