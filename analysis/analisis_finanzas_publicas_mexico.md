@@ -192,7 +192,7 @@ en pensiones.
   las transacciones que representan un ingreso para las entidades bajo
   control presupuestario directo y un gasto para el Gobierno Federal
   (subsidios, transferencias y aportaciones al ISSSTE).
-- capital incluye en 2019 un apoyo extraordinario a Pemex de 97,131
+- Capital incluye en 2019 un apoyo extraordinario a Pemex de 97,131
   millones (nota del cuadro).
 
 **Saldo**
@@ -217,6 +217,22 @@ en pensiones.
 
 Los archivos conservan todos los años disponibles. Para el análisis se
 toma el periodo de 1993-2025.
+
+## Fórmula
+
+- Porcentaje del PIB
+
+  concepto (% del PIB) = concepto / pib_nominal \* 100
+
+- Resto de los ingresos presupuestarios
+
+  Resto = Ingreso Total - Petroleros - Tributarios del Gobierno Federal
+
+- Composición porcentual
+
+  concepto (% de composición) = concepto / total \* 100
+
+  Donde total es el agregado que pertenece el concepto.
 
 ## Código
 
