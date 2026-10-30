@@ -30,11 +30,13 @@ público, que se definen de la siguiente manera:
   público:** saldo acumulado de las obligaciones financieras netas del
   sector público; constituye la medida más amplia de la deuda pública.
 
-La importancia de las finanzas públicas radica en que permiten entender
-cómo se usan los recursos públicos y cómo incide esta gestión en la
-calidad de vida de las personas. Además, permiten evaluar el desempeño
-del gobierno y fomentan una cultura de rendición de cuentas (INEGI,
-2026).
+Las finanzas públicas permiten entender el uso de los recursos públicos
+y su impacto en la calidad de vida, además de evaluar al gobierno y
+fomentar la rendición de cuentas(INEGI, 2026, p.1).
+
+El gobierno federal obtiene la mayor parte de sus ingresos a través del
+cobro de impuestos y los recursos generados por el petróleo, que son sus
+principales fuentes de financiamiento (INEGI, 2026, p.3)
 
 El objetivo del análisis es describir cómo cambian, entre 1993 y 2025,
 la composición de los ingresos, del gasto y de la inversión física, y el
