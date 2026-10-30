@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-10-25
+2026-10-30
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
