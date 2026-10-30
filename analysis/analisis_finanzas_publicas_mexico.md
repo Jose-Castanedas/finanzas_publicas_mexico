@@ -335,18 +335,23 @@ ingresos_largo <- pct_ingresos %>%
     tributarios_gf_pct_ingresos = "Tributarios",
     resto_pct_ingresos = "Resto"))
 
-# 2. Configurar áreas apiladas
+# 2. Configurar barras apiladas
 
 grafica_composicion <- ggplot(ingresos_largo, aes(x = anio, y = pct, fill = concepto)) +
   geom_col() +
+  scale_x_continuous(breaks = scales::breaks_width(5)) +
   labs(
-    title = "Gráfica 1. México. Composición de los ingresos presupuestarios",
-    x = NULL,
+    title = "Gráfica 1. México. Composición de los ingresos presupuestarios, 1993-2025",
+    subtitle = "Porcentaje del ingreso total",
+    x = "Año",
     y = "Porcentaje del ingreso total",
-    fill = NULL
+    fill = NULL,
+    caption = "Nota: Resto = ingreso total - petroleros - tributarios. \nFuente: Elaboración propia en base a datos de Estadísticas Oportunas."
   ) +
   theme_minimal() +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        plot.caption = element_text(hjust = 0, size = 8, color = "gray40"),
+        plot.caption.position = "plot")
 
 # 3. Guardar gráfica en el directorio figures
 
@@ -356,10 +361,10 @@ ggsave("../figures/grafica_01_ingresos_composicion.png",
 
 # 4. Mostrar gráfica
 
-grafica_composicion
+include_graphics("../figures/grafica_01_ingresos_composicion.png")
 ```
 
-![](analisis_finanzas_publicas_mexico_files/figure-gfm/Pregunta-1-grafica-1.png)<!-- -->
+![](../figures/grafica_01_ingresos_composicion.png)<!-- -->
 
 ## Anexos
 
