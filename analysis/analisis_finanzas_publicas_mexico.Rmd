@@ -247,7 +247,7 @@ ingresos_largo <- pct_ingresos %>%
 
 # 2.1. Definir paleta de colores
 
-colores <- c("Petroleros" = "#2B2B2B", "Tributarios" = "#2A7F9E", "Resto" = "#C9B037")
+colores <- c("Petroleros" = "#A1A1A1", "Tributarios" = "#1F4E79", "Resto" = "#7FB3D5")
 
 # 2.2. Configurar diseño de gráfica
 
