@@ -244,7 +244,7 @@ pct_ingresos %>%
   )
 ```
 
-```{r Pregunta-1-grafica, echo=TRUE}
+```{r Pregunta-1-grafica, echo=TRUE, fig.alt="Barras apiladas con la composición porcentual de los ingresos presupuestarios de México entre 1993 y 2025: petroleros, tributarios y resto."}
 # Gráfica composición del ingreso presupuestario
 
 # 1. Pasar a formato largo

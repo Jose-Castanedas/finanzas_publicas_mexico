@@ -385,7 +385,7 @@ ggsave("../figures/grafica_01_ingresos_composicion.png",
 include_graphics("../figures/grafica_01_ingresos_composicion.png")
 ```
 
-![](../figures/grafica_01_ingresos_composicion.png)<!-- -->
+<img src="../figures/grafica_01_ingresos_composicion.png" alt="Barras apiladas con la composición porcentual de los ingresos presupuestarios de México entre 1993 y 2025: petroleros, tributarios y resto."  />
 
 Los ingresos tributarios del Gobierno Federal son el componente más
 grande de los ingresos presupuestarios en 30 de los 33 años del periodo
