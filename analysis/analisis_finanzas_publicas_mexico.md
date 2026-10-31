@@ -340,7 +340,7 @@ ingresos_largo <- pct_ingresos %>%
 
 # 2.1. Definir paleta de colores
 
-colores <- c("Petroleros" = "#A1A1A1", "Tributarios" = "#1F4E79", "Resto" = "#7FB3D5")
+colores <- c("Petroleros" = "#C05621", "Tributarios" = "#1F4E78", "Resto" = "#94A3B8")
 
 # 2.2. Configurar diseño de gráfica
 
@@ -352,7 +352,7 @@ grafica_composicion <- ggplot(ingresos_largo, aes(x = anio, y = pct, fill = conc
     data = filter(ingresos_largo, anio %in% c(1993, 2025)),
     aes(label = paste0(round(pct), "%")),
     position = position_stack(vjust = 0.5, reverse = TRUE),
-    color = "black", size = 2.5, fontface = "bold"
+    color = "#FFFFFF", size = 2.5, fontface = "bold"
   ) +
   scale_fill_manual(values = colores) +
   scale_x_continuous(breaks = seq(1993, 2025, 4), expand = c(0, 0)) +
@@ -371,7 +371,7 @@ grafica_composicion <- ggplot(ingresos_largo, aes(x = anio, y = pct, fill = conc
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
     plot.title = element_text(face = "bold"),
-    plot.caption = element_text(hjust = 0, size = 8, color = "gray40"),
+    plot.caption = element_text(hjust = 0, size = 8, color = "#0F172A"),
     plot.caption.position = "plot")
 
 # 3. Guardar gráfica en el directorio figures
