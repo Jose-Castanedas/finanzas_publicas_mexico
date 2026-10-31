@@ -21,7 +21,10 @@ público, que se definen de la siguiente manera:
 
 - **Ingresos presupuestarios del sector público:** son los recursos que
   obtiene el Estado de las contribuciones obligatorias y que usa para
-  sufragar el gasto público (SHCP, 2019, p.14).
+  sufragar el gasto público. Inlcuye también productos,
+  aprovechamientos, financiamiento y los ingresos de organismos
+  descentralizados y empresas de participación estatal (SHCP, 2019,
+  p.14).
 
 - **Gasto neto del sector público presupuestario:** es el total de
   erogaciones que realiza el sector público para proveer bienes y
@@ -431,7 +434,7 @@ La composición de los ingresos presupuestarios pasa por tres etapas:
     en que los ingresos petroleros superan a los tributarios (2006, 2008
     y 2012).
 
-3.  **2015-2025:** el prediminio de los ingresos tributarios. Los
+3.  **2015-2025:** el predominio de los ingresos tributarios. Los
     petroleros bajan a un promedio cercano a 17% (mínimo de 11.3% en
     2020), y los tributarios suben a un promedio cercano a 60%, con un
     máximo de 66.1% en 2024. Esta etapa inicia con el cambio en la
@@ -441,7 +444,7 @@ La composición de los ingresos presupuestarios pasa por tres etapas:
 Entre 1993 y 2025, los ingresos tributarios ganan 15.8 puntos
 porcentuales (de 49.3% a 65.0%), los ingresos petroleros pierden 6.8 (de
 21.6% a 14.8%) y el resto pierde 9.0 (de 29.1% a 20.1%). El resto se
-mantienen en un rango relativamente estable (20%-32%) y tienden a la
+mantiene en un rango relativamente estable (20%-32%) y tienden a la
 baja, con su mínimo en 2022 (19.9%).
 
 De manera que, los ingresos presupuestarios pasan de un peso petrolero
