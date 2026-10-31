@@ -236,16 +236,6 @@ pct_ingresos <- pct_ingresos %>%
 
 pct_ingresos <- pct_ingresos %>%
   mutate(across(petroleros:resto, ~ .x / ingreso_total * 100, .names = "{.col}_pct_ingresos"))
-
-# Mostrar datos
-
-pct_ingresos %>%
-  select(anio, petroleros_pct_ingresos, tributarios_gf_pct_ingresos, resto_pct_ingresos) %>%
-  filter(anio %in% c(2006, 2008, 2012, 2015:2025)) %>%
-  kable(
-    digits = 1,
-    col.names = c("Año", "Petroleros (%)", "Tributarios (%)", "Resto (%)")
-  )
 ```
 
 ```{r Pregunta-1-grafica, echo=TRUE, fig.alt="Barras apiladas con la composición porcentual de los ingresos presupuestarios de México entre 1993 y 2025: petroleros, tributarios y resto."}
@@ -390,6 +380,20 @@ Dos scripts de R, ubicados en la carpeta scripts/, procesan los datos originales
 | pib_real_nominal_anual.csv | pib_real y pib_nominal, ambos como promedio anual de los cuatro trimestres. | 46 filas × 3 columnas | 1980-2025 |
 
 Ambos archivos comparten la columna anio que sirve como clave para unirlos.
+
+**Composición de los ingresos presupuestarios**
+
+```{r Composicion-ingresos-presupuestarios, echo=TRUE}
+# Mostrar tabla de composición de los ingresos presupuestarios
+
+pct_ingresos %>%
+  select(anio, petroleros_pct_ingresos, tributarios_gf_pct_ingresos, resto_pct_ingresos) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "Petroleros (%)", "Tributarios (%)", "Resto (%)")
+  )
+```
+
 
 ## Referencias
 
