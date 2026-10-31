@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-10-30
+2026-10-31
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -222,6 +222,13 @@ en pensiones.
 
 Los archivos conservan todos los años disponibles. Para el análisis se
 toma el periodo de 1993-2025.
+
+**Archivos de ingreso, gasto y saldo histórico**
+
+Los archivos originales se descargaron en formato .xls. Al intentar
+leerlos en R se produjo un error, por lo que se copió su contenido, sin
+cambios, a archivos Excel en formato .xlsx. El proyecto conserva y usa
+solo los archivos .xlsx, ubicados en data/raw/.
 
 ## Fórmula
 
