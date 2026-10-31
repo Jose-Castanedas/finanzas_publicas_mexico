@@ -16,13 +16,13 @@ En México, los instrumentos de las finanzas públicas son (Cámara de Diputados
 
 Este análisis utiliza datos de los ingresos y gastos presupuestarios y del saldo histórico de los requerimientos financieros del sector público, que se definen de la siguiente manera:
 
-- **Ingresos presupuestarios del sector público:** recursos monetarios que el Estado obtiene y registra en su presupuesto.
+- **Ingresos presupuestarios del sector público:** son los recursos que obtiene el Estado de las contribuciones obligatorias y que usa para sufragar el gasto público (SHCP, 2019, p.14).
 
-- **Gasto neto del sector público presupuestario:** recursos que el sector público gasta para cumplir sus funciones y proveer bienes y servicios a la población.
+- **Gasto neto del sector público presupuestario:** es el total de erogaciones que realiza el sector público para proveer bienes y servicios (SHCP, 2019, p.15).
 
-- **Saldo histórico de los requerimientos financieros del sector público:** saldo acumulado de las obligaciones financieras netas del sector público; constituye la medida más amplia de la deuda pública.
+- **Saldo histórico de los requerimientos financieros del sector público:** mide la deuda neta acumulada del sector público e incluye las obligaciones del IPAB, el FONADIN, los PIDIREGAS y los programas de apoyo a deudores, junto con la pérdida esperada de la banca de desarrollo (SHCP, 2026).
 
-Las finanzas públicas permiten entender el uso de los recursos públicos y su impacto en la calidad de vida, además de evaluar al gobierno y fomentar la rendición de cuentas(INEGI, 2026, p.1).
+Las finanzas públicas permiten entender el uso de los recursos públicos y su impacto en la calidad de vida, además de evaluar al gobierno y fomentar la rendición de cuentas (INEGI, 2026, p.1).
 
 El gobierno federal obtiene la mayor parte de sus ingresos a través del cobro de impuestos y los recursos generados por el petróleo, que son sus principales fuentes de financiamiento (INEGI, 2026, p.3) 
 
@@ -382,3 +382,7 @@ https://www.diputados.gob.mx/bibliot/publica/inveyana/econycom/reportes/finpubli
 - Heath, J. (2012). Lo que indican los indicadores: cómo utilizar la información estadística para entender la realidad económica de México. Instituto Nacional de Estadística y Geografía (INEGI).
 - Instituto Nacional de Estadística y Geografía. (2026). ABC de las finanzas públicas estatales y municipales.
 https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/889463929697.pdf
+- Secretaría de Hacienda y Crédito Público. (2019, abril). Balance fiscal en México: Definición y metodología. 
+https://gaceta.diputados.gob.mx/Gaceta/64/2019/may/SHCP_BF-20190521.pdf
+- Secretaría de Hacienda y Crédito Público. (2026). Saldo histórico de los requerimientos financieros del sector público (SHRFSP), deuda amplia, 2000–2014 [Conjunto de datos]. Datos.gob.mx. 
+https://www.datos.gob.mx/dataset/saldo_historico_requerimientos_financieros_sector_publico_shrfsp_deuda_amplia_2000_2014
