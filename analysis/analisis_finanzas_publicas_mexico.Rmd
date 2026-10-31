@@ -289,7 +289,7 @@ grafica_composicion <- ggplot(ingresos_largo, aes(x = anio, y = pct, fill = conc
     x = NULL,
     y = "Porcentaje del ingreso total",
     fill = NULL,
-    caption = "Notas: Tributarios = ingresos tributarios del Gobierno Federal. Resto = ingreso total - petroleros - tributarios. \nFuente: Elaboración propia con datos de SHCP, Estadísticas Oportunas."
+    caption = "Notas: Petroleros: cambio metodológico en 2015 (ver Notas de datos). Tributarios = ingresos tributarios del Gobierno Federal. \nResto = ingreso total - petroleros - tributarios. \nFuente: Elaboración propia con datos de SHCP, Estadísticas Oportunas."
   ) +
   theme_minimal(base_size = 12) +
   theme(
@@ -311,7 +311,7 @@ ggsave("../figures/grafica_01_ingresos_composicion.png",
 include_graphics("../figures/grafica_01_ingresos_composicion.png")
 ```
 
-Los ingresos tributarios del Gobierno Federal son el componente más grande de los ingresos presupuestarios en 30 de los 33 años del periodo 1993-2025. Los ingresos petroleros lo superan solo en 2006, 2008 y 2012, con 39.8%, 44.3% y 39.4% del total, respectivamente. En 2006 superaron a los tributarios (39.3%) por 0.5 puntos porcentuales.
+Los ingresos tributarios del Gobierno Federal son el componente más grande de los ingresos presupuestarios en 30 de los 33 años del periodo 1993-2025. Los ingresos petroleros lo superan solo en 2006, 2008 y 2012, con 39.8%, 44.3% y 39.4% del total, respectivamente. En 2006 superaron a los tributarios (39.3%) por 0.5 puntos porcentuales (el concepto Petroleros cambia de composición en 2015, ver Notas de datos para más detalles).
 
 **Composición del ingreso (participación %)**
 
