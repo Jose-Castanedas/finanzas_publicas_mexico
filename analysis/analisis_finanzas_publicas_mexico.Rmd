@@ -323,6 +323,18 @@ Los ingresos tributarios del Gobierno Federal son el componente más grande de l
 
 Los ingresos tributarios representan más del 60% de los ingresos presupuestarios en los últimos tres años: 64.2% en 2023, 66.1% en 2024 y 65.0% en 2025. Superan el 50% de manera continua desde 2015.
 
+La composición de los ingresos presupuestarios pasa por tres etapas:
+
+1. **1993-2003:** los ingresos tributarios son predominantes y los petroleros moderados. Los tributarios promedian cerca de 48% y los petroleros cerca de 25%. En 1995-1997 los tributarios caen entre 39% y 43%, y los petroleros suben entre 29% y 32%.
+  
+2. **2004-2014:** el mayor peso de los ingresos petroleros. Los petroleros promedian cerca de 36% y alcanzan su máximo en 2008 (44.3%), mientras que los tributarios bajan a un promedio cercano a 40% y registran su mínimo ese mismo año (34.8%). Es la única etapa en que los ingresos petroleros superan a los tributarios (2006, 2008 y 2012).
+  
+3. **2015-2025:** el prediminio de los ingresos tributarios. Los petroleros bajan a un promedio cercano a 17% (mínimo de 11.3% en 2020), y los tributarios suben a un promedio cercano a 60%, con un máximo de 66.1% en 2024. Esta etapa inicia con el cambio en la composición del concepto Petroleros (ver Notas de datos para más detalle).
+
+Entre 1993 y 2025, los ingresos tributarios ganan 15.8 puntos porcentuales (de 49.3% a 65.0%), los ingresos petroleros pierden 6.8 (de 21.6% a 14.8%) y el resto pierde 9.0 (de 29.1% a 20.1%). El resto se mantienen en un rango relativamente estable (20%-32%) y tienden a la baja, con su mínimo en 2022 (19.9%).
+
+De manera que, los ingresos presupuestarios pasan de un peso petrolero de hasta 44.3% en 2008 a sostenerse principalmente en la recaudación tributaria, que en 2025 aporta casi dos de cada tres pesos (65.0%).
+
 ## Anexos
 
 **Conceptos y renombres**
