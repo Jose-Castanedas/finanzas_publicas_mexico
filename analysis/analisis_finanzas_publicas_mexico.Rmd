@@ -24,7 +24,7 @@ Este análisis utiliza datos de los ingresos y gastos presupuestarios y del sald
 
 Las finanzas públicas permiten entender el uso de los recursos públicos y su impacto en la calidad de vida, además de evaluar al gobierno y fomentar la rendición de cuentas (INEGI, 2026, p.1).
 
-El gobierno federal obtiene la mayor parte de sus ingresos a través del cobro de impuestos y los recursos generados por el petróleo, que son sus principales fuentes de financiamiento (INEGI, 2026, p.3) 
+El gobierno federal obtiene la mayor parte de sus ingresos a través del cobro de impuestos y los recursos generados por el petróleo, que son sus principales fuentes de financiamiento (INEGI, 2026, p.3). 
 
 El objetivo del análisis es describir cómo cambian, entre 1993 y 2025, la composición de los ingresos, del gasto y de la inversión física, y el peso del gasto en pensiones. El enfoque es descriptivo y no establece causas.
 
@@ -114,7 +114,7 @@ Los datos incluyen el total de periodos disponibles en cada fuente:
 
 - Ingresos presupuestarios: 1990-2025
 - Gasto neto presupuestario: 1990-2025
-- Saldo histórico de los RFSP: 1990-2025
+- Saldo histórico de los RFSP: 2000-2025
 - PIB a precios de 2018: 1T-1980 – 2T-2026
 - PIB a precios corrientes: 1T-1993 – 2T-2026
 
@@ -327,7 +327,9 @@ La composición de los ingresos presupuestarios pasa por tres etapas:
   
 3. **2015-2025:** el predominio de los ingresos tributarios. Los petroleros bajan a un promedio cercano a 17% (mínimo de 11.3% en 2020), y los tributarios suben a un promedio cercano a 60%, con un máximo de 66.1% en 2024. Esta etapa inicia con el cambio en la composición del concepto Petroleros (ver Notas de datos para más detalle).
 
-Entre 1993 y 2025, los ingresos tributarios ganan 15.8 puntos porcentuales (de 49.3% a 65.0%), los ingresos petroleros pierden 6.8 (de 21.6% a 14.8%) y el resto pierde 9.0 (de 29.1% a 20.1%). El resto se mantiene en un rango relativamente estable (20%-32%) y tienden a la baja, con su mínimo en 2022 (19.9%).
+*Nota: Las etapas se definen a partir del peso de los petroleros (2004: sube 27.8% a 33.0%; 2015 cambio de definición).*
+
+Entre 1993 y 2025, los ingresos tributarios ganan 15.8 puntos porcentuales (de 49.3% a 65.0%), los ingresos petroleros pierden 6.8 (de 21.6% a 14.8%) y el resto pierde 9.0 (de 29.1% a 20.1%). El resto se mantiene en un rango relativamente estable (20%-32%) y tiende a la baja, con su mínimo en 2022 (19.9%).
 
 De manera que, los ingresos presupuestarios pasan de un peso petrolero de hasta 44.3% en 2008 a sostenerse principalmente en la recaudación tributaria, que en 2025 aporta casi dos de cada tres pesos (65.0%).
 

@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-10-31
+2026-11-01
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -42,7 +42,7 @@ fomentar la rendición de cuentas (INEGI, 2026, p.1).
 
 El gobierno federal obtiene la mayor parte de sus ingresos a través del
 cobro de impuestos y los recursos generados por el petróleo, que son sus
-principales fuentes de financiamiento (INEGI, 2026, p.3)
+principales fuentes de financiamiento (INEGI, 2026, p.3).
 
 El objetivo del análisis es describir cómo cambian, entre 1993 y 2025,
 la composición de los ingresos, del gasto y de la inversión física, y el
@@ -155,7 +155,7 @@ Los datos incluyen el total de periodos disponibles en cada fuente:
 
 - Ingresos presupuestarios: 1990-2025
 - Gasto neto presupuestario: 1990-2025
-- Saldo histórico de los RFSP: 1990-2025
+- Saldo histórico de los RFSP: 2000-2025
 - PIB a precios de 2018: 1T-1980 – 2T-2026
 - PIB a precios corrientes: 1T-1993 – 2T-2026
 
@@ -416,11 +416,14 @@ La composición de los ingresos presupuestarios pasa por tres etapas:
     composición del concepto Petroleros (ver Notas de datos para más
     detalle).
 
+*Nota: Las etapas se definen a partir del peso de los petroleros (2004:
+sube 27.8% a 33.0%; 2015 cambio de definición).*
+
 Entre 1993 y 2025, los ingresos tributarios ganan 15.8 puntos
 porcentuales (de 49.3% a 65.0%), los ingresos petroleros pierden 6.8 (de
 21.6% a 14.8%) y el resto pierde 9.0 (de 29.1% a 20.1%). El resto se
-mantiene en un rango relativamente estable (20%-32%) y tienden a la
-baja, con su mínimo en 2022 (19.9%).
+mantiene en un rango relativamente estable (20%-32%) y tiende a la baja,
+con su mínimo en 2022 (19.9%).
 
 De manera que, los ingresos presupuestarios pasan de un peso petrolero
 de hasta 44.3% en 2008 a sostenerse principalmente en la recaudación
