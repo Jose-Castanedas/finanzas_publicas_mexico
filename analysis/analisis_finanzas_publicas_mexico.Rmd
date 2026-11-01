@@ -16,7 +16,7 @@ En México, los instrumentos de las finanzas públicas son (Cámara de Diputados
 
 Este análisis utiliza datos de los ingresos y gastos presupuestarios y del saldo histórico de los requerimientos financieros del sector público, que se definen de la siguiente manera:
 
-- **Ingresos presupuestarios del sector público:** son los recursos que obtiene el Estado de las contribuciones obligatorias y que usa para sufragar el gasto público. Inlcuye también productos, aprovechamientos, financiamiento y los ingresos de organismos descentralizados y empresas de participación estatal (SHCP, 2019, p.14).
+- **Ingresos presupuestarios del sector público:** son los recursos que obtiene el Estado de las contribuciones obligatorias y que usa para sufragar el gasto público. Incluye también productos, aprovechamientos, financiamiento y los ingresos de organismos descentralizados y empresas de participación estatal (SHCP, 2019, p.14).
 
 - **Gasto neto del sector público presupuestario:** es el total de erogaciones que realiza el sector público para proveer bienes y servicios (SHCP, 2019, p.15).
 
@@ -316,6 +316,7 @@ Los ingresos tributarios del Gobierno Federal son el componente más grande de l
 | Petroleros | 11.3% (2020) | 44.3% (2008) |
 | Tributarios | 34.8% (2008) | 66.1% (2024) |
 | Resto | 19.9% (2022) | 31.9% (1994) |
+*Nota: tabla completa de composición del ingreso en anexos.*
 
 Los ingresos tributarios representan más del 60% de los ingresos presupuestarios en los últimos tres años: 64.2% en 2023, 66.1% en 2024 y 65.0% en 2025. Superan el 50% de manera continua desde 2015.
 
@@ -327,7 +328,7 @@ La composición de los ingresos presupuestarios pasa por tres etapas:
   
 3. **2015-2025:** el predominio de los ingresos tributarios. Los petroleros bajan a un promedio cercano a 17% (mínimo de 11.3% en 2020), y los tributarios suben a un promedio cercano a 60%, con un máximo de 66.1% en 2024. Esta etapa inicia con el cambio en la composición del concepto Petroleros (ver Notas de datos para más detalle).
 
-*Nota: Las etapas se definen a partir del peso de los petroleros (2004: sube 27.8% a 33.0%; 2015 cambio de definición).*
+*Nota: Las etapas se definen a partir del peso de los petroleros (2004: sube de 27.8% a 33.0%; 2015 cambio de definición).*
 
 Entre 1993 y 2025, los ingresos tributarios ganan 15.8 puntos porcentuales (de 49.3% a 65.0%), los ingresos petroleros pierden 6.8 (de 21.6% a 14.8%) y el resto pierde 9.0 (de 29.1% a 20.1%). El resto se mantiene en un rango relativamente estable (20%-32%) y tiende a la baja, con su mínimo en 2022 (19.9%).
 

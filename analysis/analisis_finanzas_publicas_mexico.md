@@ -21,7 +21,7 @@ público, que se definen de la siguiente manera:
 
 - **Ingresos presupuestarios del sector público:** son los recursos que
   obtiene el Estado de las contribuciones obligatorias y que usa para
-  sufragar el gasto público. Inlcuye también productos,
+  sufragar el gasto público. Incluye también productos,
   aprovechamientos, financiamiento y los ingresos de organismos
   descentralizados y empresas de participación estatal (SHCP, 2019,
   p.14).
@@ -391,6 +391,8 @@ detalles).
 | Tributarios | 34.8% (2008) | 66.1% (2024) |
 | Resto       | 19.9% (2022) | 31.9% (1994) |
 
+*Nota: tabla completa de composición del ingreso en anexos.*
+
 Los ingresos tributarios representan más del 60% de los ingresos
 presupuestarios en los últimos tres años: 64.2% en 2023, 66.1% en 2024 y
 65.0% en 2025. Superan el 50% de manera continua desde 2015.
@@ -417,7 +419,7 @@ La composición de los ingresos presupuestarios pasa por tres etapas:
     detalle).
 
 *Nota: Las etapas se definen a partir del peso de los petroleros (2004:
-sube 27.8% a 33.0%; 2015 cambio de definición).*
+sube de 27.8% a 33.0%; 2015 cambio de definición).*
 
 Entre 1993 y 2025, los ingresos tributarios ganan 15.8 puntos
 porcentuales (de 49.3% a 65.0%), los ingresos petroleros pierden 6.8 (de
