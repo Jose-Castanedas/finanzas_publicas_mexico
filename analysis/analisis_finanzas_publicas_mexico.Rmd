@@ -270,11 +270,13 @@ grafica_composicion <- ggplot(ingresos_largo, aes(x = anio, y = pct, fill = conc
   # 2.3. Mostrar etiquetas únicamente en el primer y último año
   geom_text(
     data = filter(ingresos_largo, anio %in% c(1993, 2025)),
-    aes(label = paste0(round(pct), "%")),
+    aes(label = paste0(round(pct), "%"), color = concepto),
     position = position_stack(vjust = 0.5, reverse = TRUE),
-    color = "#FFFFFF", size = 2.5, fontface = "bold"
+    size = 2.5, fontface = "bold",
+    show.legend = FALSE
   ) +
   scale_fill_manual(values = colores) +
+  scale_color_manual(values = c("Petroleros" = "#FFFFFF", "Tributarios" = "#FFFFFF", "Resto" = "#000000")) +
   scale_x_continuous(breaks = seq(1993, 2025, 4), expand = c(0, 0)) +
   scale_y_continuous(labels = scales::label_percent(scale = 1), expand = c(0, 0)) +
   labs(
