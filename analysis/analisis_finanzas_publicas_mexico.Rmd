@@ -334,6 +334,78 @@ Entre 1993 y 2025, los ingresos tributarios ganan 15.8 puntos porcentuales (de 4
 
 De manera que, los ingresos presupuestarios pasan de un peso petrolero de hasta 44.3% en 2008 a sostenerse principalmente en la recaudación tributaria, que en 2025 aporta casi dos de cada tres pesos (65.0%).
 
+### 2. ¿Cómo cambió la recaudación tributaria no petrolera como porcentaje del PIB entre 1993 y 2025, y cómo se compone entre ISR, IVA e IEPS?
+
+```{r Pregunta-2, echo=TRUE}
+# Filtrar solo las columnas a usar: anio, tributarios_gf_pct_pib, isr_pct_pib, iva_pct_pib e ieps_pct_pib
+
+recaudacion_tributaria <- base_completa %>%
+  select(anio, tributarios_gf_pct_pib:ieps_pct_pib)
+
+# Calcular columna "otros"
+
+recaudacion_tributaria <- recaudacion_tributaria %>%
+  mutate(otros = tributarios_gf_pct_pib - isr_pct_pib - iva_pct_pib - ieps_pct_pib)
+```
+
+```{r Pregunta-2-grafica, echo=TRUE}
+# Gráfica de la recaudación tributaria como porcentaje del PIB
+
+# 1. Pasar a formato largo
+
+recaudacion_largo <- recaudacion_tributaria %>%
+  select(anio, tributarios_gf_pct_pib, isr_pct_pib, iva_pct_pib, ieps_pct_pib, otros) %>%
+  pivot_longer(
+    cols = -anio,
+    names_to = "concepto_recaudacion",
+    values_to = "pct_pib"
+  ) %>%
+  mutate(concepto_recaudacion = recode(concepto_recaudacion,
+    tributarios_gf_pct_pib = "Tributarios",
+    isr_pct_pib = "ISR",
+    iva_pct_pib = "IVA",
+    ieps_pct_pib = "IEPS",
+    otros = "Otros"))
+
+# 2. Configurar gráfico de líneas
+
+# 2.1. Definir colores de las líneas
+
+colores_recaudacion <- c("Tributarios" = "#0F172A", "ISR" = "#1F4E78", "IVA" = "#0D9488", "IEPS" = "#C05621", "Otros" = "#94A3B8")
+
+# 2.2. Configurar diseño de gráfica
+
+grafica_recaudacion <- ggplot(recaudacion_largo, aes(x = anio, y = pct_pib, color = concepto_recaudacion)) +
+  geom_line(linewidth = 1) +
+  scale_color_manual(values = colores_recaudacion) +
+  scale_x_continuous(breaks = scales::breaks_width(5)) +
+  labs(
+    title = "Recaudación tributaria",
+    subtitle = "Porcentaje del PIB",
+    x = NULL,
+    y = "Porcentaje del PIB",
+    color = NULL,
+    caption = "Notas: Tributarios = ingresos tributarios del Gobierno Federal. \nOtros = ingresos tributarios - ISR - IVA - IEPS. \nFuente: Elaboración propia datos de la sHCP, Estadísticas Oportunas."
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    plot.caption = element_text(hjust = 0, size = 8, color = "#0F172A"),
+    plot.caption.position = "plot"
+  )
+
+# 3. Guardar gráfica en el directorio figures/
+
+ggsave("../figures/grafica_02_recaudacion_tributaria.png",
+       plot = grafica_recaudacion,
+       width = 8, height = 5, dpi = 200)
+
+# 4. Mostrar gráfica
+
+include_graphics("../figures/grafica_02_recaudacion_tributaria.png")
+```
+
+
 ## Anexos
 
 **Conceptos y renombres**
