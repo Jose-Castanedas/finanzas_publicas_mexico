@@ -475,6 +475,7 @@ tipo_lineas <- c("Tributarios" = "dashed", "ISR" = "solid", "IVA" = "solid", "IE
 # 2.2. Configurar diseño de gráfica
 
 grafica_recaudacion <- ggplot(recaudacion_largo, aes(x = anio, y = pct_pib, color = concepto_recaudacion, linetype = concepto_recaudacion)) +
+  geom_hline(yintercept = 0, color = "black") +
   geom_line(linewidth = 1) +
   geom_point(size = 2) +
   scale_color_manual(values = colores_recaudacion) +
@@ -508,7 +509,7 @@ ggsave("../figures/grafica_02_recaudacion_tributaria.png",
 include_graphics("../figures/grafica_02_recaudacion_tributaria.png")
 ```
 
-![](../figures/grafica_02_recaudacion_tributaria.png)<!-- -->
+<img src="../figures/grafica_02_recaudacion_tributaria.png" alt="Gráfica de líneas de la recaudación tributaria como porcentaje del PIB en México entre 1993 y 2025, desagregada en ISR, IVA, IEPS y otros."  />
 
 ## Anexos
 
