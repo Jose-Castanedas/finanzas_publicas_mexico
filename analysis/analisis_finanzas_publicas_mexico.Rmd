@@ -386,7 +386,7 @@ grafica_recaudacion <- ggplot(recaudacion_largo, aes(x = anio, y = pct_pib, colo
   scale_x_continuous(breaks = scales::breaks_width(5)) +
   scale_y_continuous(labels = scales::label_number(suffix = "%")) +
   labs(
-    title = "Recaudación tributaria",
+    title = "Recaudación tributaria, 1993-2025",
     subtitle = "Porcentaje del PIB",
     x = NULL,
     y = "Porcentaje del PIB",
@@ -397,6 +397,7 @@ grafica_recaudacion <- ggplot(recaudacion_largo, aes(x = anio, y = pct_pib, colo
   theme_minimal() +
   theme(
     legend.position = "bottom",
+    plot.title = element_text(face = "bold"),
     plot.caption = element_text(hjust = 0, size = 8, color = "#0F172A"),
     plot.caption.position = "plot"
   )
