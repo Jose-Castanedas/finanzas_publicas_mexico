@@ -466,23 +466,29 @@ recaudacion_largo <- recaudacion_tributaria %>%
 
 # 2. Configurar gráfico de líneas
 
-# 2.1. Definir colores de las líneas
+# 2.1. Definir colores y tipos de líneas
 
 colores_recaudacion <- c("Tributarios" = "#0F172A", "ISR" = "#1F4E78", "IVA" = "#0D9488", "IEPS" = "#C05621", "Otros" = "#94A3B8")
 
+tipo_lineas <- c("Tributarios" = "dashed", "ISR" = "solid", "IVA" = "solid", "IEPS" = "solid", "Otros" = "solid")
+
 # 2.2. Configurar diseño de gráfica
 
-grafica_recaudacion <- ggplot(recaudacion_largo, aes(x = anio, y = pct_pib, color = concepto_recaudacion)) +
+grafica_recaudacion <- ggplot(recaudacion_largo, aes(x = anio, y = pct_pib, color = concepto_recaudacion, linetype = concepto_recaudacion)) +
   geom_line(linewidth = 1) +
+  geom_point(size = 2) +
   scale_color_manual(values = colores_recaudacion) +
+  scale_linetype_manual(values = tipo_lineas) +
   scale_x_continuous(breaks = scales::breaks_width(5)) +
+  scale_y_continuous(labels = scales::label_number(suffix = "%")) +
   labs(
     title = "Recaudación tributaria",
     subtitle = "Porcentaje del PIB",
     x = NULL,
     y = "Porcentaje del PIB",
     color = NULL,
-    caption = "Notas: Tributarios = ingresos tributarios del Gobierno Federal. \nOtros = ingresos tributarios - ISR - IVA - IEPS. \nFuente: Elaboración propia datos de la sHCP, Estadísticas Oportunas."
+    linetype = NULL,
+    caption = "Notas: Tributarios = ingresos tributarios del Gobierno Federal. \nOtros = ingresos tributarios - ISR - IVA - IEPS. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
   ) +
   theme_minimal() +
   theme(
