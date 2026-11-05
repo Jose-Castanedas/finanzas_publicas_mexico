@@ -511,16 +511,16 @@ pct_ingresos %>%
   )
 ```
 
-**Participación de cada impuesto en los ingresos tributarios**
+**Participación de cada impuesto en los ingresos tributarios y su peso como porcentaje del PIB**
 
-```{r Participacion-de-cada-impuesto-en-los-tributarios, echo=TRUE}
+```{r Participacion-de-cada-impuesto-en-los-tributarios-y-porcentaje-del-pib, echo=TRUE}
 # Mostrar tabla de participación de ISR, IVA, IEPS y Otros en los ingresos tributarios
 
 pct_tributarios %>%
-  select(anio, isr_pct_pib_pct_tributarios:otros_pct_tributarios) %>%
+  select(anio, tributarios_gf_pct_pib:otros_pct_tributarios) %>%
   kable(
     digits = 1,
-    col.names = c("Año", "ISR (%)", "IVA (%)", "IEPS (%)", "Otros (%)")
+    col.names = c("Año", "Tributarios (% del PIB)",  "ISR (% del PIB)", "IVA (% del PIB)", "IEPS (% del PIB)", "Otros (% del PIB)","ISR (%)", "IVA (%)", "IEPS (%)", "Otros (%)")
   )
 ```
 
