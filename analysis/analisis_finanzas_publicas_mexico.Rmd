@@ -354,7 +354,7 @@ recaudacion_tributaria <- recaudacion_tributaria %>%
 
 # Calcular participación de ISR, IVA, IEPS y Otros en los ingresos tributarios
 
-recaudacion_tributaria <- recaudacion_tributaria %>%
+pct_tributarios <- recaudacion_tributaria %>%
   mutate(across(isr_pct_pib:otros, ~ .x / tributarios_gf_pct_pib * 100, .names = "{.col}_pct_tributarios"))
 ```
 
@@ -511,6 +511,18 @@ pct_ingresos %>%
   )
 ```
 
+**Participación de cada impuesto en los ingresos tributarios**
+
+```{r Participacion-de-cada-impuesto-en-los-tributarios, echo=TRUE}
+# Mostrar tabla de participación de ISR, IVA, IEPS y Otros en los ingresos tributarios
+
+pct_tributarios %>%
+  select(anio, isr_pct_pib_pct_tributarios:otros_pct_tributarios) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "ISR (%)", "IVA (%)", "IEPS (%)", "Otros (%)")
+  )
+```
 
 ## Referencias
 

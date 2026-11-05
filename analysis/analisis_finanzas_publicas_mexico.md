@@ -450,7 +450,7 @@ recaudacion_tributaria <- recaudacion_tributaria %>%
 
 # Calcular participación de ISR, IVA, IEPS y Otros en los ingresos tributarios
 
-recaudacion_tributaria <- recaudacion_tributaria %>%
+pct_tributarios <- recaudacion_tributaria %>%
   mutate(across(isr_pct_pib:otros, ~ .x / tributarios_gf_pct_pib * 100, .names = "{.col}_pct_tributarios"))
 ```
 
@@ -668,6 +668,55 @@ pct_ingresos %>%
 | 2023 |           15.3 |            64.2 |      20.5 |
 | 2024 |           12.8 |            66.1 |      21.1 |
 | 2025 |           14.8 |            65.0 |      20.1 |
+
+**Participación de cada impuesto en los ingresos tributarios**
+
+``` r
+# Mostrar tabla de participación de ISR, IVA, IEPS y Otros en los ingresos tributarios
+
+pct_tributarios %>%
+  select(anio, isr_pct_pib_pct_tributarios:otros_pct_tributarios) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "ISR (%)", "IVA (%)", "IEPS (%)", "Otros (%)")
+  )
+```
+
+|  Año | ISR (%) | IVA (%) | IEPS (%) | Otros (%) |
+|-----:|--------:|--------:|---------:|----------:|
+| 1993 |    48.4 |    23.1 |     13.5 |      15.0 |
+| 1994 |    45.5 |    24.0 |     17.4 |      13.1 |
+| 1995 |    43.3 |    30.4 |     14.5 |      11.8 |
+| 1996 |    43.0 |    31.9 |     13.1 |      12.0 |
+| 1997 |    43.3 |    31.3 |     14.5 |      10.9 |
+| 1998 |    41.9 |    29.7 |     18.9 |       9.5 |
+| 1999 |    41.4 |    29.0 |     20.5 |       9.1 |
+| 2000 |    44.5 |    32.6 |     14.0 |       8.9 |
+| 2001 |    43.6 |    31.8 |     16.9 |       7.7 |
+| 2002 |    43.7 |    30.0 |     18.7 |       7.6 |
+| 2003 |    43.9 |    33.1 |     15.3 |       7.7 |
+| 2004 |    44.9 |    37.0 |     11.1 |       7.0 |
+| 2005 |    47.4 |    39.3 |      6.1 |       7.1 |
+| 2006 |    50.3 |    42.8 |     -0.6 |       7.5 |
+| 2007 |    52.6 |    40.8 |     -0.7 |       7.3 |
+| 2008 |    63.0 |    46.0 |    -16.9 |       8.0 |
+| 2009 |    52.7 |    36.1 |      4.5 |       6.8 |
+| 2010 |    53.9 |    40.0 |      0.4 |       5.7 |
+| 2011 |    58.7 |    41.5 |     -5.9 |       5.7 |
+| 2012 |    61.2 |    44.1 |     -9.9 |       4.6 |
+| 2013 |    60.6 |    35.7 |     -0.5 |       4.2 |
+| 2014 |    53.1 |    36.9 |      6.2 |       3.8 |
+| 2015 |    51.6 |    30.0 |     15.0 |       3.5 |
+| 2016 |    52.3 |    29.1 |     15.1 |       3.4 |
+| 2017 |    55.0 |    28.6 |     12.9 |       3.5 |
+| 2018 |    54.3 |    30.1 |     11.3 |       4.2 |
+| 2019 |    52.7 |    29.1 |     14.4 |       3.8 |
+| 2020 |    52.7 |    29.6 |     13.8 |       3.9 |
+| 2021 |    53.1 |    31.5 |     11.2 |       4.2 |
+| 2022 |    59.6 |    32.1 |      3.1 |       5.2 |
+| 2023 |    55.5 |    30.3 |      9.9 |       4.4 |
+| 2024 |    54.2 |    28.4 |     12.7 |       4.7 |
+| 2025 |    54.0 |    28.0 |     12.5 |       5.5 |
 
 ## Referencias
 
