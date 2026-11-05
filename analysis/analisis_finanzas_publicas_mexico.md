@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-04
+2026-11-05
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -518,8 +518,7 @@ include_graphics("../figures/grafica_02_recaudacion_tributaria.png")
 <img src="../figures/grafica_02_recaudacion_tributaria.png" alt="Gráfica de líneas de la recaudación tributaria como porcentaje del PIB en México entre 1993 y 2025, desagregada en ISR, IVA, IEPS y otros."  />
 
 Los ingresos tributarios pasan de 8.7% del PIB en 1993 a 15.2% en 2025.
-En los últimos tres años superan el 14% y desde hace 11 años (2015-2025)
-superan el 12%.
+Entre 2023 y 2025 superan el 14% y entre 2015 y 2025 superan el 12%.
 
 **Máximos y mínimos (% del PIB)**
 
@@ -531,16 +530,17 @@ superan el 12%.
 | IEPS | 2.0% (2016) | −1.3% (2008); el valor positivo más bajo es 0.03% (2010) |
 | Otros | 1.3% (1993) | 0.4% (2012) |
 
-El ISR es el impuesto más relevante de los ingresos tributarios. En los
-33 años representan más del 40% y desde 2006 más del 50%, con un máximo
-de 63.0% en 2008. Pasa de 4.2% del PIB en 1993 a 8.2% en 2025. Desde
-2015 supera el 6.0% y en los últimos 2 años (2024 y 2025) ronda el 8.0%.
+El ISR es el impuesto más relevante de los ingresos tributarios. El ISR
+representa más del 40% de los ingresos tributarios en los 33 años y
+desde 2006 más del 50%, con un máximo de 63.0% en 2008. Pasa de 4.2% del
+PIB en 1993 a 8.2% en 2025. Desde 2015 supera el 6.0% y en los años 2024
+y 2025 ronda el 8.0%.
 
 El IVA es el segundo impuesto más relevante en todos los años. Pasa de
 2.0% del PIB en 1993 a 4.2% en 2025, supera el 3.0% desde 2003 y el 4.0%
-en los últimos seis años (2020-2025). Representa entre 23% y 46% de los
-ingresos tributarios, con su máximo en 2008 (46.0%), y entre 28% y 32%
-en 2016-2025.
+entre los años 2020 y 2025. Representa entre 23% y 46% de los ingresos
+tributarios, con su máximo en 2008 (46.0%), y entre 28% y 32% en
+2016-2025.
 
 El IEPS oscila entre -1.3% y 2.0% del PIB. Entre 2005 y 2014 no supera
 el 0.6% y tiene valores negativos en 2006 (-0.05%), 2007 (-0.06%), 2008
@@ -551,8 +551,8 @@ el IEPS gasolinas y diesel también es negativo (ver Notas de datos). En
 2008 el IEPS equivale a -16.9% de los ingresos tributarios, por lo que
 el ISR (63.0%) e IVA (46.0%) suman más del 100% ese año.
 
-Otros (ingresos tributarios distintos de ISR, IVA e IEPS) se mantienen
-en un rango estrecho de 0.4% a 1.3% del PIB y representa entre el 3.4% y
+Otros (ingresos tributarios distintos de ISR, IVA e IEPS) se mantiene en
+un rango estrecho de 0.4% a 1.3% del PIB y representa entre el 3.4% y
 15.0% de los ingresos tributarios.
 
 En 2025, ISR e IVA suman 12.4% del PIB y 82.0% de los ingresos
