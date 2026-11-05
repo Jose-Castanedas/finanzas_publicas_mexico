@@ -522,8 +522,16 @@ include_graphics("../figures/grafica_02_recaudacion_tributaria.png")
 
 <img src="../figures/grafica_02_recaudacion_tributaria.png" alt="Gráfica de líneas de la recaudación tributaria como porcentaje del PIB en México entre 1993 y 2025, desagregada en ISR, IVA, IEPS y otros."  />
 
-Los ingresos tributarios pasan de 8.7% del PIB en 1993 a 15.2% en 2025.
-Entre 2023 y 2025 superan el 14% y entre 2015 y 2025 superan el 12%.
+Los ingresos tributarios pasan de 8.7% del PIB en 1993 a 15.2% en 2025,
+un aumento de 6.49 puntos porcentuales: ISR +3.99, IVA +2.24, IEPS +0.73
+y Otros -0.47. De 1993 a 2013 la recaudación oscila entre 6.9% (1996) y
+9.3% (2002). Entre 2014 y 2015 sube de 9.97% a 12.28% (un aumento de
+2.31 puntos porcentuales), el mayor aumento anual de la serie; el
+siguiente, de 1.27 puntos, es el de 2023. Ese salto se compone de ISR
++1.04, IEPS +1.23, IVA 0.00 y Otros +0.05. Casi todo el aumento del IEPS
+corresponde al IEPS gasolinas y diesel, que pasa de -0.07% a 1.15% del
+PIB. De 2015 a 2025 la recaudación se mantiene entre 12.3% y 15.2%, y
+entre 2023 y 2025 supera el 14%.
 
 **Máximos y mínimos (% del PIB)**
 
