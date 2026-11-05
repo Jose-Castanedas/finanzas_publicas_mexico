@@ -447,6 +447,11 @@ recaudacion_tributaria <- base_completa %>%
 
 recaudacion_tributaria <- recaudacion_tributaria %>%
   mutate(otros = tributarios_gf_pct_pib - isr_pct_pib - iva_pct_pib - ieps_pct_pib)
+
+# Calcular participación de ISR, IVA, IEPS y Otros en los ingresos tributarios
+
+recaudacion_tributaria <- recaudacion_tributaria %>%
+  mutate(across(isr_pct_pib:otros, ~ .x / tributarios_gf_pct_pib * 100, .names = "{.col}_pct_tributarios"))
 ```
 
 ``` r
