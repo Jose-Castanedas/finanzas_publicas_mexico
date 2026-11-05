@@ -466,7 +466,8 @@ recaudacion_largo <- recaudacion_tributaria %>%
     isr_pct_pib = "ISR",
     iva_pct_pib = "IVA",
     ieps_pct_pib = "IEPS",
-    otros = "Otros"))
+    otros = "Otros"),
+    concepto_recaudacion = factor(concepto_recaudacion, levels = c("Tributarios", "ISR", "IVA", "IEPS", "Otros")))
 
 # 2. Configurar gráfico de líneas
 
