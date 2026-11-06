@@ -321,7 +321,7 @@ Los ingresos tributarios del Gobierno Federal son el componente más grande de l
 | Petroleros | 11.3% (2020) | 44.3% (2008) |
 | Tributarios | 34.8% (2008) | 66.1% (2024) |
 | Resto | 19.9% (2022) | 31.9% (1994) |
-*Nota: tabla completa de composición del ingreso en anexos.*
+*Nota: tabla completa de composición de los ingresos presupuestarios disponible en anexos.*
 
 Los ingresos tributarios representan más del 60% de los ingresos presupuestarios en los últimos tres años: 64.2% en 2023, 66.1% en 2024 y 65.0% en 2025. Superan el 50% de manera continua desde 2015.
 
@@ -435,6 +435,7 @@ Los ingresos tributarios pasan de 8.7% del PIB en 1993 a 15.2% en 2025, un aumen
 | IVA          | 4.3% (2023)                                               | 2.0% (1993)                                                  |
 | IEPS         | 2.0% (2016)                                               | −1.3% (2008); el valor positivo más bajo es 0.03% (2010)     |
 | Otros        | 1.3% (1993)                                               | 0.4% (2012)                                                  |
+*Nota: ver datos completos en la tabla "Participación de cada impuesto en los ingresos tributarios y su peso como porcentaje del PIB", disponible en anexos.*
 
 El ISR es el impuesto más relevante de los ingresos tributarios. El ISR representa más del 40% de los ingresos tributarios en los 33 años y desde 2006 más del 50%, con un máximo de 63.0% en 2008. Pasa de 4.2% del PIB en 1993 a 8.2% en 2025. Desde 2015 supera el 6.0% y en los años 2024 y 2025 ronda el 8.0%.
 

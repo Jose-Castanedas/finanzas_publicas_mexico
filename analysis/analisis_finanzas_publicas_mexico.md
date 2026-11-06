@@ -395,7 +395,8 @@ detalles).
 | Tributarios | 34.8% (2008) | 66.1% (2024) |
 | Resto       | 19.9% (2022) | 31.9% (1994) |
 
-*Nota: tabla completa de composición del ingreso en anexos.*
+*Nota: tabla completa de composición de los ingresos presupuestarios
+disponible en anexos.*
 
 Los ingresos tributarios representan más del 60% de los ingresos
 presupuestarios en los últimos tres años: 64.2% en 2023, 66.1% en 2024 y
@@ -542,6 +543,10 @@ entre 2023 y 2025 supera el 14%.
 | IVA | 4.3% (2023) | 2.0% (1993) |
 | IEPS | 2.0% (2016) | −1.3% (2008); el valor positivo más bajo es 0.03% (2010) |
 | Otros | 1.3% (1993) | 0.4% (2012) |
+
+*Nota: ver datos completos en la tabla “Participación de cada impuesto
+en los ingresos tributarios y su peso como porcentaje del PIB”,
+disponible en anexos.*
 
 El ISR es el impuesto más relevante de los ingresos tributarios. El ISR
 representa más del 40% de los ingresos tributarios en los 33 años y
