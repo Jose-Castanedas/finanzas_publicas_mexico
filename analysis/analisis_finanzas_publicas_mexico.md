@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-05
+2026-11-06
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -584,6 +584,21 @@ En 2025, ISR e IVA suman 12.4% del PIB y 82.0% de los ingresos
 tributarios. El 18.0% restante corresponde al IEPS (12.5% de los
 ingresos tributarios y 1.9% del PIB) y a Otros (5.5% y 0.8%,
 respectivamente).
+
+### 3. ¿Cómo cambió el gasto neto total como porcentaje del PIB entre 1993 y 2025, y cuál es su composición (corriente, capital y no programable)?
+
+``` r
+# Filtrar solo columnas a usar: anio, gasto total, programable, corriente, capital y no programable como % del PIB
+
+gasto_presupuestario <- base_completa %>%
+  select(anio, gasto_total_pct_pib, no_programable_pct_pib, programable_pct_pib, corriente_pct_pib, capital_pct_pib)
+
+# Calcular las pariticipaciones: 1) porgramable y no programable sobre gasto total y 2) corriente y capital sobre programable
+
+pct_gasto <- gasto_presupuestario %>%
+  mutate(across(no_programable_pct_pib:programable_pct_pib, ~ .x / gasto_total_pct_pib * 100, .names = "{.col}_gasto")) %>%
+  mutate(across(corriente_pct_pib:capital_pct_pib, ~ .x / programable_pct_pib * 100, .names = "{.col}_programable"))
+```
 
 ## Anexos
 
