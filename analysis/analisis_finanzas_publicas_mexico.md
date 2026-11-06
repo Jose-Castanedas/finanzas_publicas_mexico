@@ -175,6 +175,13 @@ en pensiones.
 - PIB a precios corrientes: millones de pesos corrientes. El BIE rotula
   la serie como “a precios de 2018”, pero los valores son corrientes.
 
+**Redondeo**
+
+Los porcentajes se muestran con un decimal, salvo que se indique otra
+preseción. Los cálculos usan los valores sin redondear, con todos los
+decimales. Por ello, las sumas y diferencias de cifras redondeadas
+puedan pueden diferir en una décima del valor calculado.
+
 **Notas por fuente**
 
 **Ingresos**
