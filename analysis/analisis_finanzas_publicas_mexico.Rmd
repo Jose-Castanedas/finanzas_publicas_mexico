@@ -603,6 +603,20 @@ pct_tributarios %>%
   )
 ```
 
+**Composición del Gasto Neto Presupuestario y su peso como porcentaje del PIB**
+
+```{r Composicion-del-gasto-neto.y-porcentaje-del-pib, echo=TRUE}
+# Mostrar tabla de composición del Gasto Neto Presupuestario
+
+pct_gasto %>%
+  select(anio:capital_pct_pib_programable) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "Gasto total (% del PIB)", "No programable (% del PIB)", "Programable (% del PIB)", "Corriente (% del PIB)", "Capital (% del PIB)", "No programable (% del Gasto)", "Programable (% del Gasto)", "Corriente (% del Programable)", "Capital (% del Programable)")
+  )
+```
+
+
 ## Referencias
 
 - Cámara de Diputados del H. Congreso de la Unión. (s. f.). Las finanzas públicas. Recuperado el 27 de octubre de 2026, de 
