@@ -600,6 +600,66 @@ pct_gasto <- gasto_presupuestario %>%
   mutate(across(corriente_pct_pib:capital_pct_pib, ~ .x / programable_pct_pib * 100, .names = "{.col}_programable"))
 ```
 
+``` r
+# Gráfica de la composición del gasto neto presupuestario
+
+# 1. Pasar a formato largo
+
+gasto_largo <- gasto_presupuestario %>%
+  select(anio, no_programable_pct_pib, corriente_pct_pib, capital_pct_pib) %>%
+  pivot_longer(
+    cols = -anio,
+    names_to = "composicion_gasto",
+    values_to = "pct_pib"
+  ) %>%
+  mutate(composicion_gasto = recode(composicion_gasto,
+    no_programable_pct_pib = "No programable",
+    corriente_pct_pib = "Corriente",
+    capital_pct_pib = "Capital"),
+    composicion_gasto = factor(composicion_gasto, levels = c("No programable", "Corriente", "Capital")))
+
+# 2. Configurar gráfica de áreas apiladas
+
+# 2.1. Definir colores
+
+gasto_colores <- c("No programable" = "#94A3B8", "Corriente" = "#1F4E78", "Capital" = "#0D9488")
+
+# 2.2. Configurar diseño de gráfica
+
+grafica_gasto <- ggplot(gasto_largo, aes(x = anio, y = pct_pib)) +
+  geom_area(aes(fill = composicion_gasto), position = "stack", alpha = 0.9) +
+  scale_fill_manual(values = gasto_colores) +
+  scale_x_continuous(breaks = seq(1993, 2025, 4)) +
+  scale_y_continuous(labels = scales::label_percent(scale = 1), expand = expansion(mult = c(0, 0.05))) +
+  labs(
+    title = "Composición del Gasto Neto Presupuestario, 1993-2025",
+    subtitle = "Porcentaje del PIB",
+    x = NULL,
+    y = "Porcentaje del PIB",
+    fill = NULL,
+    caption = "Fuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(hjust = 0, size = 8, color = "#0F172A"),
+    plot.caption.position = "plot"
+  )
+
+# 3. Guardar gráfica en el directorio figures/
+
+ggsave("../figures/grafica_03_composicion_gasto_neto.png",
+       plot = grafica_gasto,
+       width = 8, height = 5, dpi = 200)
+
+# 4. Mostrar gráfica
+
+include_graphics("../figures/grafica_03_composicion_gasto_neto.png")
+```
+
+![](../figures/grafica_03_composicion_gasto_neto.png)<!-- -->
+
 ## Anexos
 
 **Conceptos y renombres**
