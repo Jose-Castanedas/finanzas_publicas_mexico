@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-06
+2026-11-07
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -637,7 +637,7 @@ grafica_gasto <- ggplot(gasto_largo, aes(x = anio, y = pct_pib)) +
     x = NULL,
     y = "Porcentaje del PIB",
     fill = NULL,
-    caption = "Fuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+    caption = "Nota: Capital incluye en 2019 un apoyo extraordinario a Pemex de 97,131 millones. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
   ) +
   theme_minimal() +
   theme(
