@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-07
+2026-11-08
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -178,9 +178,9 @@ en pensiones.
 **Redondeo**
 
 Los porcentajes se muestran con un decimal, salvo que se indique otra
-preseción. Los cálculos usan los valores sin redondear, con todos los
+precisión. Los cálculos usan los valores sin redondear, con todos los
 decimales. Por ello, las sumas y diferencias de cifras redondeadas
-puedan pueden diferir en una décima del valor calculado.
+pueden diferir en una décima del valor calculado.
 
 **Notas por fuente**
 
@@ -593,7 +593,7 @@ respectivamente).
 gasto_presupuestario <- base_completa %>%
   select(anio, gasto_total_pct_pib, no_programable_pct_pib, programable_pct_pib, corriente_pct_pib, capital_pct_pib)
 
-# Calcular las pariticipaciones: 1) porgramable y no programable sobre gasto total y 2) corriente y capital sobre programable
+# Calcular las participaciones: 1) programable y no programable sobre gasto total y 2) corriente y capital sobre programable
 
 pct_gasto <- gasto_presupuestario %>%
   mutate(across(no_programable_pct_pib:programable_pct_pib, ~ .x / gasto_total_pct_pib * 100, .names = "{.col}_gasto")) %>%
@@ -661,10 +661,9 @@ include_graphics("../figures/grafica_03_composicion_gasto_neto.png")
 <img src="../figures/grafica_03_composicion_gasto_neto.png" alt="Gráfica de áreas apiladas que muestra el gasto corriente, no programable y de capital como porcentaje del PIB en México entre 1993 y 2025."  />
 
 El gasto neto total pasa de 17.1% del PIB en 1993 a 27.2% en 2025. Su
-máximo es 27.3% (2024) y su mínimo 16.3% (1998). Entre 2006 y 2025
-supera el 20% del PIB (con un decimal, 2003 también aparece como 20.0%;
-con dos decimales es 19.96%). Supera el 25% en 2015, 2016 y desde 2021,
-y en 2024 y 2025 alcanza el 27%.
+máximo es 27.3% (2024) y su mínimo 16.3% (1998). Desde 2006 supera el
+20% del PIB (2003 se acerca, con 19.96%). Supera el 25% en 2015, 2016 y
+desde 2021, y en 2024 y 2025 alcanza el 27%.
 
 El gasto programable pasa del 12.2% del PIB en 1993 a 19.6% en 2025, y
 el no programable, de 4.9% a 7.6%. El programable es la mayor parte del
@@ -698,7 +697,7 @@ Presupuestario y su peso como porcentaje del PIB” en anexos.* *2. En
 2019, el gasto de capital incluyó una aportación patrimonial del
 Gobierno Federal a Pemex por 97,131.0 millones de pesos en septiembre.
 Se registra como ingreso de Pemex y gasto del Gobierno Federal, sin
-afectar el balence público.*
+afectar el balance público.*
 
 ## Anexos
 

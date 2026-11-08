@@ -132,7 +132,7 @@ El PIB nominal es el denominador de la mayoría de los cálculos, por lo que el 
 
 **Redondeo**
 
-Los porcentajes se muestran con un decimal, salvo que se indique otra preseción. Los cálculos usan los valores sin redondear, con todos los decimales. Por ello, las sumas y diferencias de cifras redondeadas puedan pueden diferir en una décima del valor calculado.
+Los porcentajes se muestran con un decimal, salvo que se indique otra precisión. Los cálculos usan los valores sin redondear, con todos los decimales. Por ello, las sumas y diferencias de cifras redondeadas pueden diferir en una décima del valor calculado.
 
 **Notas por fuente**
 
@@ -458,7 +458,7 @@ En 2025, ISR e IVA suman 12.4% del PIB y 82.0% de los ingresos tributarios. El 1
 gasto_presupuestario <- base_completa %>%
   select(anio, gasto_total_pct_pib, no_programable_pct_pib, programable_pct_pib, corriente_pct_pib, capital_pct_pib)
 
-# Calcular las pariticipaciones: 1) porgramable y no programable sobre gasto total y 2) corriente y capital sobre programable
+# Calcular las participaciones: 1) programable y no programable sobre gasto total y 2) corriente y capital sobre programable
 
 pct_gasto <- gasto_presupuestario %>%
   mutate(across(no_programable_pct_pib:programable_pct_pib, ~ .x / gasto_total_pct_pib * 100, .names = "{.col}_gasto")) %>%
@@ -524,7 +524,7 @@ include_graphics("../figures/grafica_03_composicion_gasto_neto.png")
 
 ```
 
-El gasto neto total pasa de 17.1% del PIB en 1993 a 27.2% en 2025. Su máximo es 27.3% (2024) y su mínimo 16.3% (1998). Entre 2006 y 2025 supera el 20% del PIB (con un decimal, 2003 también aparece como 20.0%; con dos decimales es 19.96%). Supera el 25% en 2015, 2016 y desde 2021, y en 2024 y 2025 alcanza el 27%.
+El gasto neto total pasa de 17.1% del PIB en 1993 a 27.2% en 2025. Su máximo es 27.3% (2024) y su mínimo 16.3% (1998). Desde 2006 supera el 20% del PIB (2003 se acerca, con 19.96%). Supera el 25% en 2015, 2016 y desde 2021, y en 2024 y 2025 alcanza el 27%.
 
 El gasto programable pasa del 12.2% del PIB en 1993 a 19.6% en 2025, y el no programable, de 4.9% a 7.6%. El programable es la mayor parte del gasto neto total; representa más del 70% en 28 de los 33 años. En los cinco años restantes (1995, 1996, 1997, 1999 y 2000) el no programable representa más del 30%. En los 33 años el no programable representa más del 20% del gasto neto total. En 2025 el gasto programable equivale a 19.6% del PIB y 72.0% del gasto neto total, y el no programable, a 7.6% del PIB y 28.0%.
 
@@ -539,7 +539,7 @@ El gasto corriente pasa de 9.9% del PIB en 1993 a 16.0% en 2025, y el de capital
 | No programable   | 7.6% (2025)  | 4.5% (1994)  |
 | Corriente        | 16.1% (2024) | 9.1% (1995)  |
 | Capital          | 5.7% (2016)  | 2.0% (2001)  |
-*Notas: 1. ver datos completos en la tabla "Composición del Gasto Neto Presupuestario y su peso como porcentaje del PIB" en anexos.* *2. En 2019, el gasto de capital incluyó una aportación patrimonial del Gobierno Federal a Pemex por 97,131.0 millones de pesos en septiembre. Se registra como ingreso de Pemex y gasto del Gobierno Federal, sin afectar el balence público.*
+*Notas: 1. ver datos completos en la tabla "Composición del Gasto Neto Presupuestario y su peso como porcentaje del PIB" en anexos.* *2. En 2019, el gasto de capital incluyó una aportación patrimonial del Gobierno Federal a Pemex por 97,131.0 millones de pesos en septiembre. Se registra como ingreso de Pemex y gasto del Gobierno Federal, sin afectar el balance público.*
 
 ## Anexos
 
