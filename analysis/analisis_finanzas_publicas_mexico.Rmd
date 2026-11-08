@@ -465,7 +465,7 @@ pct_gasto <- gasto_presupuestario %>%
   mutate(across(corriente_pct_pib:capital_pct_pib, ~ .x / programable_pct_pib * 100, .names = "{.col}_programable"))
 ```
 
-```{r Pregunta-3-grafica, echo=TRUE}
+```{r Pregunta-3-grafica, echo=TRUE, fig.alt="Gráfica de áreas apiladas que muestra el gasto corriente, no programable y de capital como porcentaje del PIB en México entre 1993 y 2025."}
 # Gráfica de la composición del gasto neto presupuestario
 
 # 1. Pasar a formato largo

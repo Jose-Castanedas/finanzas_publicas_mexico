@@ -658,7 +658,7 @@ ggsave("../figures/grafica_03_composicion_gasto_neto.png",
 include_graphics("../figures/grafica_03_composicion_gasto_neto.png")
 ```
 
-![](../figures/grafica_03_composicion_gasto_neto.png)<!-- -->
+<img src="../figures/grafica_03_composicion_gasto_neto.png" alt="Gráfica de áreas apiladas que muestra el gasto corriente, no programable y de capital como porcentaje del PIB en México entre 1993 y 2025."  />
 
 El gasto neto total pasa de 17.1% del PIB en 1993 a 27.2% en 2025. Su
 máximo es 27.3% (2024) y su mínimo 16.3% (1998). Entre 2006 y 2025
