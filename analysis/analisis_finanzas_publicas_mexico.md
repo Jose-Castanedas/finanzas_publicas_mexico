@@ -660,7 +660,15 @@ include_graphics("../figures/grafica_03_composicion_gasto_neto.png")
 
 <img src="../figures/grafica_03_composicion_gasto_neto.png" alt="Gráfica de áreas apiladas que muestra el gasto corriente, no programable y de capital como porcentaje del PIB en México entre 1993 y 2025."  />
 
-El gasto neto total pasa de 17.1% del PIB en 1993 a 27.2% en 2025. Su
+El gasto neto total pasa de 17.1% del PIB en 1993 a 27.2% en 2025. De
+1993 a 2009 el gasto neto total sube 7.15 puntos del PIB (de 17.1% a
+24.2%): el programable aporta +6.90 (corriente +4.49 y capital +2.41) y
+el no programable +0.25. Los mayores aumentos anuales son +2.01 puntos
+en 2009 (corriente +1.37 y capital +0.64) y +1.83 en 2020. La mayor
+caída es de -2.76 puntos en 2017: el capital explica -2.18, el corriente
+-0.74 y el no programable suma +0.16. De 2009 a 2025 el gasto sube otros
+2.96 puntos, pero con un reparto distinto: el no programable aporta
++2.49 y el programable +0.47 (corriente +1.61 y capital -1.15). Su
 máximo es 27.3% (2024) y su mínimo 16.3% (1998). Desde 2006 supera el
 20% del PIB (2003 se acerca, con 19.96%). Supera el 25% en 2015, 2016 y
 desde 2021, y en 2024 y 2025 alcanza el 27%.
@@ -693,8 +701,9 @@ gasto programable, y el capital, a 3.6% del PIB y 18.4%. Entre 2023 y
 | Capital          | 5.7% (2016)  | 2.0% (2001)  |
 
 *Notas: 1. ver datos completos en la tabla “Composición del Gasto Neto
-Presupuestario y su peso como porcentaje del PIB” en anexos.* *2. En
-2019, el gasto de capital incluyó una aportación patrimonial del
+Presupuestario y su peso como porcentaje del PIB” en anexos.*
+
+*2. En 2019, el gasto de capital incluyó una aportación patrimonial del
 Gobierno Federal a Pemex por 97,131.0 millones de pesos en septiembre.
 Se registra como ingreso de Pemex y gasto del Gobierno Federal, sin
 afectar el balance público.*
