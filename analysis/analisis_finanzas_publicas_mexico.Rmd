@@ -649,6 +649,18 @@ pct_gasto %>%
   )
 ```
 
+**Participación de la inversión directa e indirecta en la inversión física y su peso como porcentaje del PIB**
+
+```{r Participacion-de-la-inversion-y-su-peso-como-porcentaje-del-pib, echo=TRUE}
+# Mostrar tabla de la participacion de la inversión física
+
+pct_inversion %>%
+  select(anio, inversion_fisica_pct_pib:inversion_indirecta_pct_pib_inversion) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "Inversión física (% del PIB)", "Directa (% del PIB)", "Indirecta (% del PIB)", "Directa (%)", "Indirecta (%)")
+  )
+```
 
 ## Referencias
 
