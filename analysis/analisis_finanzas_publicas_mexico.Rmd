@@ -557,6 +557,69 @@ pct_inversion <- inversion %>%
   mutate(across(inversion_directa_pct_pib:inversion_indirecta_pct_pib, ~ .x / inversion_fisica_pct_pib *100, .names = "{.col}_inversion"))
 ```
 
+```{r Pregunta-4-grafica, echo=TRUE}
+# Gráfica de la participación de la inversión física
+
+# 1. Pasar a formato largo
+
+inversion_largo <- inversion %>%
+  pivot_longer(
+    cols = -anio,
+    names_to = "concepto_inversion",
+    values_to = "pct_pib_inversion"
+  ) %>%
+  mutate(concepto_inversion = recode(concepto_inversion,
+    inversion_fisica_pct_pib = "Inversión física",
+    inversion_directa_pct_pib = "Directa",
+    inversion_indirecta_pct_pib = "Indirecta"),
+    concepto_inversion = factor(concepto_inversion, levels = c("Inversión física", "Directa", "Indirecta")))
+
+# 2. Configurar gráfico de líneas
+
+# 2.1. Definir colores y tipo de líneas
+
+colores_inversion <- c("Inversión física" = "#0F172A", "Directa" = "#1F4E78", "Indirecta" = "#0D9488")
+
+inversion_lineas <- c("Inversión física" = "dashed", "Directa" = "solid", "Indirecta" = "solid")
+
+# 2.2. Configurar diseño de gráfica
+
+grafica_inversion <- ggplot(inversion_largo, aes(x = anio, y = pct_pib_inversion, color = concepto_inversion, linetype = concepto_inversion)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2) +
+  scale_color_manual(values = colores_inversion) +
+  scale_linetype_manual(values = inversion_lineas) +
+  scale_x_continuous(breaks = seq(1993, 2025, 4)) +
+  scale_y_continuous(labels = scales::label_number(suffix = "%")) +
+  labs(
+    title = "Inversión física, 1993-2025",
+    subtitle = "Porcentaje del PIB",
+    x = NULL,
+    y = "Porcentaje del PIB",
+    color = NULL,
+    linetype = NULL,
+    caption = "Fuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(hjust = 0, size = 8, color = "#0F172A"),
+    plot.caption.position = "plot"
+  )
+
+# 3. Guardar gráfica en el directorio figures/
+
+ggsave("../figures/grafica_04_inversion_fisica.png",
+       plot = grafica_inversion,
+       width = 8, height = 5, dpi = 200)
+
+# 4. Mostrar gráfica
+
+include_graphics("../figures/grafica_04_inversion_fisica.png")
+```
+
+
 
 ## Anexos
 
