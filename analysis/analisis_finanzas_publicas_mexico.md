@@ -708,6 +708,20 @@ Gobierno Federal a Pemex por 97,131.0 millones de pesos en septiembre.
 Se registra como ingreso de Pemex y gasto del Gobierno Federal, sin
 afectar el balance público.*
 
+### 4. ¿Cómo cambió la inversión física como porcentaje del PIB entre 1993 y 2025, y qué parte corresponde a inversión directa e indirecta?
+
+``` r
+# Filtrar solo las columnas a usar: anio, inversión física, inversión directa e inversión indirecta como porcentaje del PIB
+
+inversion <- base_completa %>%
+  select(anio, inversion_fisica_pct_pib, inversion_directa_pct_pib, inversion_indirecta_pct_pib)
+
+# Calcular participación de la inversión directa y la inversión indirecta en la inversión física
+
+pct_inversion <- inversion %>%
+  mutate(across(inversion_directa_pct_pib:inversion_indirecta_pct_pib, ~ .x / inversion_fisica_pct_pib *100, .names = "{.col}_inversion"))
+```
+
 ## Anexos
 
 **Conceptos y renombres**
