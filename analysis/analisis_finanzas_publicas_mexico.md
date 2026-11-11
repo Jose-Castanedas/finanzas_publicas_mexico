@@ -784,7 +784,7 @@ ggsave("../figures/grafica_04_inversion_fisica.png",
 include_graphics("../figures/grafica_04_inversion_fisica.png")
 ```
 
-![](../figures/grafica_04_inversion_fisica.png)<!-- -->
+<img src="../figures/grafica_04_inversion_fisica.png" alt="Gráfica de líneas que muestra la inversión física, directa e indirecta como porcentaje del PIB entre 1993 y 2025."  />
 
 La inversión física pasa de 2.184% del PIB en 1993 a 2.182% en 2025
 (2.2% en ambos años), es decir, prácticamente no cambia entre los

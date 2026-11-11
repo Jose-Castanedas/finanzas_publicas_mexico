@@ -557,7 +557,7 @@ pct_inversion <- inversion %>%
   mutate(across(inversion_directa_pct_pib:inversion_indirecta_pct_pib, ~ .x / inversion_fisica_pct_pib *100, .names = "{.col}_inversion"))
 ```
 
-```{r Pregunta-4-grafica, echo=TRUE}
+```{r Pregunta-4-grafica, echo=TRUE, fig.alt="Gráfica de líneas que muestra la inversión física, directa e indirecta como porcentaje del PIB entre 1993 y 2025."}
 # Gráfica de la participación de la inversión física
 
 # 1. Pasar a formato largo
@@ -652,6 +652,9 @@ pct_pensiones <- pensiones %>%
   mutate(gasto_pensiones_pct_programable = gasto_pensiones_pct_pib / programable_pct_pib * 100)
 ```
 
+```{r Pregunta-5-grafica, echo=TRUE}
+
+```
 
 
 
