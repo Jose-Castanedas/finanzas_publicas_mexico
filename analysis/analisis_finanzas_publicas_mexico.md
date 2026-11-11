@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-10
+2026-11-11
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -793,7 +793,7 @@ extremos. Su mínimo es 1.9% (2002) y su máximo 4.5% (2014). Entre 2009 y
 y 3.5% y en los 7 años restantes (2009-2015) entre 4.0% y 4.5%. El mayor
 aumento anual es de +1.42 puntos en 2009 (de 2.9% a 4.3%): la directa
 aporta +1.55 y la indirecta -0.14. La mayor caída es de -0.98 puntos en
-2017 (de 3.5% a 2.5%): la directa aporta -0.77 y la indirecta -0.22. En
+2017 (de 3.5% a 2.5%): la directa aporta -0.77 y la indirecta -0.21. En
 2025 baja 0.90 puntos (de 3.1% en 2024 a 2.2%), con la directa en -0.37
 y la indirecta en -0.53.
 
@@ -801,15 +801,15 @@ La inversión directa pasa de 1.9% del PIB en 1993 a 1.2% en 2025. Su
 mínimo es 0.9% (2006) y su máximo 3.0% (2.998%) en 2010. En 2010 y 2011
 representa 3.0% del PIB. Entre 2009 y 2016 se mantiene entre 2.2% y
 3.0%, y entre 2017 y 2025 baja a valores de entre 1.2% y 1.7%. El mayor
-aumento anual es de +1.6 puntos en 2009 (de 1.3% a 2.8%) y la mayor
-caída, de -0.8 puntos en 2017 (de 2.2% a 1.4%). En 2025 baja 0.4 puntos
-(de 1.6% en 2024 a 1.2%).
+aumento anual es de +1.55 puntos en 2009 (de 1.3% a 2.8%) y la mayor
+caída, de -0.77 puntos en 2017 (de 2.2% a 1.4%). En 2025 baja 0.37
+puntos (de 1.6% en 2024 a 1.2%).
 
 La inversión indirecta pasa de 0.3% del PIB en 1993 a 0.9% en 2025. Su
 mínimo es 0.3% (1993) y su máximo 1.7% (2014). Supera el 1.0% del PIB en
-21 de los 33 años. El mayor aumento anual es de +0.5 puntos en 2022 (de
-1.0% a 1.5%) y la mayor caída, de -0.5 puntos en 2025 (de 1.5% en 2024 a
-0.9%).
+21 de los 33 años. El mayor aumento anual es de +0.47 puntos en 2022 (de
+1.0% a 1.5%) y la mayor caída, de -0.53 puntos en 2025 (de 1.5% en 2024
+a 0.9%).
 
 La inversión directa es la mayor parte de la inversión física en 26 de
 los 33 años. En los 7 años restantes (2001 y 2003-2008) la indirecta
@@ -818,7 +818,7 @@ indirecta 14.2%. En 2006 la indirecta alcanza su nivel más alto (62.3%)
 y la directa el más bajo (37.7%). Entre 2017 y 2025 la directa
 representa más del 50% y la indirecta más del 40%. La indirecta supera
 el 40% de la inversión física en dos periodos, 1999-2008 y 2017-2025; en
-2015 se quedan en 39.96%.
+2015 (39.96%) queda justo por debajo del 40%.
 
 **Máximos y mínimos (% del PIB)**
 
