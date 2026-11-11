@@ -756,6 +756,20 @@ pct_inversion %>%
   )
 ```
 
+**Participación del gasto de pensiones en el gasto programable y su peso como porcentaje del PIB**
+
+```{r Participacion-pensiones-en-gasto-programable-y-su-peso-como-porcentaje-del-pib, echo=TRUE}
+# Mostrar tabla de la participación del gasto de pensiones
+
+pct_pensiones %>%
+  select(anio, programable_pct_pib:gasto_pensiones_pct_programable) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (%)")
+  )
+```
+
+
 ## Referencias
 
 - Cámara de Diputados del H. Congreso de la Unión. (s. f.). Las finanzas públicas. Recuperado el 27 de octubre de 2026, de 

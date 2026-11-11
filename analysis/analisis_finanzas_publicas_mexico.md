@@ -1101,6 +1101,54 @@ pct_inversion %>%
 | 2024 | 3.1 | 1.6 | 1.5 | 52.0 | 48.0 |
 | 2025 | 2.2 | 1.2 | 0.9 | 56.5 | 43.5 |
 
+**Participación del gasto de pensiones en el gasto programable y su peso
+como porcentaje del PIB**
+
+``` r
+# Mostrar tabla de la participación del gasto de pensiones
+
+pct_pensiones %>%
+  select(anio, programable_pct_pib:gasto_pensiones_pct_programable) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (%)")
+  )
+```
+
+| Año | Programable (% del PIB) | Gasto de pensiones (% del PIB) | Gasto de pensiones (%) |
+|---:|---:|---:|---:|
+| 1995 | 11.6 | 0.8 | 6.7 |
+| 1996 | 12.0 | 0.8 | 6.3 |
+| 1997 | 12.4 | 0.8 | 6.3 |
+| 1998 | 11.7 | 0.9 | 7.9 |
+| 1999 | 11.6 | 1.0 | 8.3 |
+| 2000 | 12.1 | 1.0 | 8.1 |
+| 2001 | 12.4 | 1.1 | 8.7 |
+| 2002 | 13.6 | 1.6 | 11.6 |
+| 2003 | 14.7 | 1.7 | 11.7 |
+| 2004 | 14.2 | 1.6 | 11.2 |
+| 2005 | 14.6 | 1.8 | 12.1 |
+| 2006 | 14.9 | 1.8 | 12.2 |
+| 2007 | 15.7 | 1.9 | 12.2 |
+| 2008 | 17.1 | 2.0 | 11.5 |
+| 2009 | 19.1 | 2.3 | 11.9 |
+| 2010 | 18.7 | 2.5 | 13.1 |
+| 2011 | 18.7 | 2.5 | 13.5 |
+| 2012 | 18.8 | 2.6 | 13.8 |
+| 2013 | 19.6 | 2.8 | 14.1 |
+| 2014 | 19.7 | 2.9 | 14.7 |
+| 2015 | 19.9 | 3.1 | 15.4 |
+| 2016 | 20.0 | 3.1 | 15.6 |
+| 2017 | 17.1 | 3.1 | 18.3 |
+| 2018 | 16.8 | 3.3 | 19.5 |
+| 2019 | 16.8 | 3.5 | 20.7 |
+| 2020 | 18.5 | 4.0 | 21.4 |
+| 2021 | 19.2 | 3.9 | 20.5 |
+| 2022 | 19.2 | 4.0 | 20.8 |
+| 2023 | 18.5 | 4.1 | 22.1 |
+| 2024 | 20.0 | 4.3 | 21.6 |
+| 2025 | 19.6 | 4.6 | 23.3 |
+
 ## Referencias
 
 - Cámara de Diputados del H. Congreso de la Unión. (s. f.). Las finanzas
