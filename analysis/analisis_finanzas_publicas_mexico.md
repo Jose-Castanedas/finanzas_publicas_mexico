@@ -832,6 +832,21 @@ el 40% de la inversión física en dos periodos, 1999-2008 y 2017-2025; en
 directa e indirecta en la inversión física y su peso como porcentaje del
 PIB” en anexos.*
 
+### 5. ¿Cómo cambió el gasto en pensiones como porcentaje del PIB y del gasto programable entre 1995 y 2025?
+
+``` r
+# Seleccionar columnas a usar: gasto programable y gasto en pensiones
+
+pensiones <- base_completa %>%
+  select(anio, programable_pct_pib, gasto_pensiones_pct_pib) %>%
+  filter(between(anio, 1995, 2025))
+
+# Calcular la participación del gasto en pensiones en el gasto programable
+
+pct_pensiones <- pensiones %>%
+  mutate(gasto_pensiones_pct_programable = gasto_pensiones_pct_pib / programable_pct_pib * 100)
+```
+
 ## Anexos
 
 **Conceptos y renombres**

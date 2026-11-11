@@ -636,6 +636,21 @@ La inversión directa es la mayor parte de la inversión física en 26 de los 33
 | Indirecta | 1.7% (2014) | 0.3% (1993) |
 *Nota: ver datos completos en la tabla "Participación de la inversión directa e indirecta en la inversión física y su peso como porcentaje del PIB" en anexos.*
 
+### 5. ¿Cómo cambió el gasto en pensiones como porcentaje del PIB y del gasto programable entre 1995 y 2025?
+
+```{r Pregunta-5, echo=TRUE}
+# Seleccionar columnas a usar: gasto programable y gasto en pensiones
+
+pensiones <- base_completa %>%
+  select(anio, programable_pct_pib, gasto_pensiones_pct_pib) %>%
+  filter(between(anio, 1995, 2025))
+
+# Calcular la participación del gasto en pensiones en el gasto programable
+
+pct_pensiones <- pensiones %>%
+  mutate(gasto_pensiones_pct_programable = gasto_pensiones_pct_pib / programable_pct_pib * 100)
+```
+
 
 ## Anexos
 
