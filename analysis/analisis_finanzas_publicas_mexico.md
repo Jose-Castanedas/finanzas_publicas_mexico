@@ -883,7 +883,7 @@ ggsave("../figures/grafica_05_gasto_pensiones.png",
 include_graphics("../figures/grafica_05_gasto_pensiones.png")
 ```
 
-![](../figures/grafica_05_gasto_pensiones.png)<!-- -->
+<img src="../figures/grafica_05_gasto_pensiones.png" alt="Gráfica de líneas que muestra el gasto de pensiones como porcentaje del PIB en México entre 1995 y 2025."  />
 
 ## Anexos
 

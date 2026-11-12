@@ -652,7 +652,7 @@ pct_pensiones <- pensiones %>%
   mutate(gasto_pensiones_pct_programable = gasto_pensiones_pct_pib / programable_pct_pib * 100)
 ```
 
-```{r Pregunta-5-grafica, echo=TRUE}
+```{r Pregunta-5-grafica, echo=TRUE, fig.alt="Gráfica de líneas que muestra el gasto de pensiones como porcentaje del PIB en México entre 1995 y 2025."}
 # Gráfica gasto de pensiones como porcentaje del PIB
 
 # 1. Configurar gráfico de líneas
