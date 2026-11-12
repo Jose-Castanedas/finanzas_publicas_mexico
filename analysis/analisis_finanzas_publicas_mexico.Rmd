@@ -688,7 +688,20 @@ ggsave("../figures/grafica_05_gasto_pensiones.png",
 include_graphics("../figures/grafica_05_gasto_pensiones.png")
 ```
 
+**Máximos y mínimos**
 
+| Medida | Máximo | Mínimo |
+|:----------------------|:----------------|:------------------|
+| % del PIB | 4.6% (2025) | 0.8% (1996; 0.75%) |
+| % del gasto programable | 23.3% (2025) | 6.3% (1996) |
+
+*Nota: 1. ver datos completos en la tabla "Participación del gasto de pensiones en el gasto programable y su peso como porcentaje del PIB" en anexos.*
+
+*2. Excluye operaciones compensadas (subsidios, transferencias y aportaciones al ISSSTE). Véase nota completa en Notas por fuente, apartado Notas de datos.*
+
+El gasto de pensiones pasa de 0.8% del PIB en 1995 (0.78%) a 4.6% en 2025. Su mínimo es 0.8% (0.75%, en 1996) y su máximo 4.6% (2025). Crece de forma sostenida: aumenta en 27 de los 30 cambios anuales (21 si se comparan los valores con un decimal) y solo cae en 1996, 2004 y 2021. Supera el 1% desde 2001, el 2% desde 2009, el 3% desde 2015 y el 4% desde 2022 (en 2020 y 2021 es 3.96% y 3.93%). Los tres mayores aumentos anuales son +0.48 puntos en 2002 (de 1.1% a 1.6%), +0.47 en 2020 (de 3.5% a 4.0%) y +0.30 en 2009 (de 2.0% a 2.3%).
+
+El gasto de pensiones pasa de 6.7% del gasto programable en 1995 a 23.3% en 2025. Su mínimo es 6.3% (1996) y su máximo 23.3% (2025), el valor más alto de los 31 años. Entre 2002 y 2018 representa entre 11.2% y 19.5%, y desde 2019 supera el 20% (mínimo de 20.5% en 2021). En 2025 equivale a 4.6% del PIB y a 23.3% del gasto programable.
 
 ## Anexos
 
