@@ -667,7 +667,7 @@ grafica_pensiones <- ggplot(pensiones, aes(x = anio, y = gasto_pensiones_pct_pib
     subtitle = "Porcentaje del PIB",
     x = NULL,
     y = "Porcentaje del PIB",
-    caption = "Fuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+    caption = "Nota: Excluye operaciones compensadas; véase Notas por fuentes, Notas de datos. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
   ) +
   theme_minimal() +
   theme(
