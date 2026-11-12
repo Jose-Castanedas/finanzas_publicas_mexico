@@ -847,6 +847,44 @@ pct_pensiones <- pensiones %>%
   mutate(gasto_pensiones_pct_programable = gasto_pensiones_pct_pib / programable_pct_pib * 100)
 ```
 
+``` r
+# Gráfica gasto de pensiones como porcentaje del PIB
+
+# 1. Configurar gráfico de líneas
+
+grafica_pensiones <- ggplot(pensiones, aes(x = anio, y = gasto_pensiones_pct_pib)) +
+  geom_line(linewidth = 1, color = "#C05621") +
+  geom_point(size = 2, color = "#C05621") +
+  scale_x_continuous(breaks = seq(1995, 2025, 5)) +
+  scale_y_continuous(labels = scales::label_number(suffix = "%")) +
+  labs(
+    title = "Gasto de pensiones, 1995-2025",
+    subtitle = "Porcentaje del PIB",
+    x = NULL,
+    y = "Porcentaje del PIB",
+    caption = "Fuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(hjust = 0, size = 8, color = "#0F172A"),
+    plot.caption.position = "plot"
+  )
+
+# 2. Guardar gráfica en el directorio figures/
+
+ggsave("../figures/grafica_05_gasto_pensiones.png",
+       plot = grafica_pensiones,
+       width = 8, height = 5, dpi = 200)
+
+# 3. Mostrar gráfica
+
+include_graphics("../figures/grafica_05_gasto_pensiones.png")
+```
+
+![](../figures/grafica_05_gasto_pensiones.png)<!-- -->
+
 ## Anexos
 
 **Conceptos y renombres**
