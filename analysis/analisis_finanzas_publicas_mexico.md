@@ -882,7 +882,7 @@ grafica_pensiones <- ggplot(pensiones_largo, aes(x = anio, y = pct_pib_programab
     subtitle = "Dos formas de medir su peso en las finanzas públicas",
     x = NULL,
     y = NULL,
-    caption = "Nota: Excluye operaciones compensadas; véase Notas por fuentes, Notas de datos. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+    caption = "Nota: Excluye operaciones compensadas; véase Notas por fuente, Notas de datos. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
   ) +
   theme_minimal() +
   theme(
@@ -904,7 +904,7 @@ ggsave("../figures/grafica_05_gasto_pensiones.png",
 include_graphics("../figures/grafica_05_gasto_pensiones.png")
 ```
 
-<img src="../figures/grafica_05_gasto_pensiones.png" alt="Gráfica de líneas que muestra el gasto de pensiones como porcentaje del PIB en México entre 1995 y 2025."  />
+<img src="../figures/grafica_05_gasto_pensiones.png" alt="Gráfica de paneles laterales que muestra el gasto de pensiones como porcentaje del PIB y como porcentaje del gasto programable en México entre 1995 y 2025."  />
 
 **Máximos y mínimos**
 
