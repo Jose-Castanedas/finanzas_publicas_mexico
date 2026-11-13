@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-12
+2026-11-13
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -941,6 +941,90 @@ alto de los 31 años. Entre 2002 y 2018 representa entre 11.2% y 19.5%, y
 desde 2019 supera el 20% (mínimo de 20.5% en 2021). En 2025 equivale a
 4.6% del PIB y a 23.3% del gasto programable.
 
+### 6. ¿Cómo cambió el saldo histórico como porcentaje del PIB entre 2000 y 2025, y qué parte es interna y externa?
+
+``` r
+# Seleccionar columnas a usar: saldo histórico, saldo histórico interno y saldo histórico externo
+
+saldo_historico <- base_completa %>%
+  select(anio, shrfsp_pct_pib:shrfsp_externo_pct_pib) %>%
+  filter(between(anio, 2000, 2025))
+
+# Calcular la participación de los saldos interno y externo como porcentaje del saldo histórico
+
+pct_saldo <- saldo_historico %>%
+  mutate(across(shrfsp_interno_pct_pib:shrfsp_externo_pct_pib, ~ .x / shrfsp_pct_pib * 100, .names = "{.col}_saldo"))
+```
+
+``` r
+# Gráfica de los saldos interno y externo como porcentaje del saldo histórico
+
+# 1. Pasar a formato largo
+
+saldo_largo <- pct_saldo %>%
+  select(anio, shrfsp_interno_pct_pib:shrfsp_externo_pct_pib) %>%
+  pivot_longer(
+    cols = -anio,
+    names_to = "concepto_saldo",
+    values_to = "pct_pib_saldo"
+  ) %>%
+  mutate(concepto_saldo = recode(concepto_saldo,
+    shrfsp_interno_pct_pib = "Saldo interno",
+    shrfsp_externo_pct_pib = "Saldo externo"),
+    concepto_saldo = factor(concepto_saldo, levels = c("Saldo interno", "Saldo externo")))
+
+# 2. Configurar gráfica de barras apiladas
+
+# 2.1. Definir colores
+
+colores_saldo <- c("Saldo interno" = "#1F4E78", "Saldo externo" = "#0D9488")
+
+# 2.2. Configurar diseño de gráfica
+
+grafica_saldo <- ggplot(saldo_largo, aes(x = anio, y = pct_pib_saldo, fill = concepto_saldo)) +
+  geom_col(width = 0.95, position = position_stack(reverse = TRUE)) +
+  geom_label(
+    data = filter(saldo_largo, anio %in% c(2000, 2025)),
+    aes(label = paste0(round(pct_pib_saldo), "%")),
+    position = position_stack(vjust = 0.5, reverse = TRUE),
+    color = "white", size = 2.4, fontface = "bold",
+    linewidth = 0,
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = colores_saldo) +
+  scale_x_continuous(breaks = seq(2000, 2025, 5), expand = expansion(add = 1)) +
+  scale_y_continuous(labels = scales::label_percent(scale = 1), expand = expansion(mult = c(0, 0.05))) +
+  labs(
+    title = "Composición del Saldo histórico de los RFSP, 2000-2025",
+    subtitle = "Porcentaje del PIB",
+    x = NULL,
+    y = "Porcentaje del PIB",
+    fill = NULL,
+    caption = "Nota: RFSP = Requerimientos Financieros del Sector Público. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(hjust = 0, size = 8, color = "#0F172A"),
+    plot.caption.position = "plot"
+  )
+
+# 3. Guardar gráfica en directorio figures/
+
+ggsave("../figures/grafica_06_composicion_saldo.png",
+       plot = grafica_saldo,
+       width = 8, height = 5, dpi = 200)
+
+# 4. Mostrar gráfica
+
+include_graphics("../figures/grafica_06_composicion_saldo.png")
+```
+
+![](../figures/grafica_06_composicion_saldo.png)<!-- -->
+
 ## Anexos
 
 **Conceptos y renombres**
@@ -1205,11 +1289,11 @@ pct_pensiones %>%
   select(anio, programable_pct_pib:gasto_pensiones_pct_programable) %>%
   kable(
     digits = 1,
-    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (% del programable)")
+    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (% del Programable)")
   )
 ```
 
-| Año | Programable (% del PIB) | Gasto de pensiones (% del PIB) | Gasto de pensiones (% del programable) |
+| Año | Programable (% del PIB) | Gasto de pensiones (% del PIB) | Gasto de pensiones (% del Programable) |
 |---:|---:|---:|---:|
 | 1995 | 11.6 | 0.8 | 6.7 |
 | 1996 | 12.0 | 0.8 | 6.3 |
@@ -1242,6 +1326,49 @@ pct_pensiones %>%
 | 2023 | 18.5 | 4.1 | 22.1 |
 | 2024 | 20.0 | 4.3 | 21.6 |
 | 2025 | 19.6 | 4.6 | 23.3 |
+
+**Participación del saldo histórico interno y externo en el saldo
+histórico y su peso como porcentaje del PIB**
+
+``` r
+# Mostrar tabla de la participación del saldo histórico
+
+pct_saldo %>%
+  select(anio, shrfsp_pct_pib:shrfsp_externo_pct_pib_saldo) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "Saldo histórico (% del PIB)", "Saldo interno (% del PIB)", "Saldo externo (% del PIB)", "Saldo interno (% del Saldo)", "Saldo externo (% del Saldo)" )
+  )
+```
+
+| Año | Saldo histórico (% del PIB) | Saldo interno (% del PIB) | Saldo externo (% del PIB) | Saldo interno (% del Saldo) | Saldo externo (% del Saldo) |
+|---:|---:|---:|---:|---:|---:|
+| 2000 | 29.2 | 18.5 | 10.7 | 63.3 | 36.7 |
+| 2001 | 29.4 | 19.6 | 9.8 | 66.7 | 33.3 |
+| 2002 | 31.6 | 20.2 | 11.4 | 63.9 | 36.1 |
+| 2003 | 33.2 | 20.5 | 12.7 | 61.7 | 38.3 |
+| 2004 | 30.9 | 19.0 | 11.9 | 61.4 | 38.6 |
+| 2005 | 29.7 | 19.7 | 10.0 | 66.3 | 33.7 |
+| 2006 | 28.2 | 20.1 | 8.1 | 71.2 | 28.8 |
+| 2007 | 27.5 | 20.3 | 7.2 | 73.7 | 26.3 |
+| 2008 | 31.4 | 23.2 | 8.2 | 73.8 | 26.2 |
+| 2009 | 34.4 | 25.1 | 9.3 | 73.0 | 27.0 |
+| 2010 | 34.5 | 25.6 | 8.9 | 74.2 | 25.8 |
+| 2011 | 35.7 | 25.6 | 10.1 | 71.7 | 28.3 |
+| 2012 | 35.6 | 26.4 | 9.3 | 74.0 | 26.0 |
+| 2013 | 38.4 | 28.6 | 9.7 | 74.6 | 25.4 |
+| 2014 | 41.1 | 29.7 | 11.3 | 72.5 | 27.5 |
+| 2015 | 44.9 | 31.0 | 13.9 | 69.1 | 30.9 |
+| 2016 | 47.2 | 30.0 | 17.2 | 63.5 | 36.5 |
+| 2017 | 44.5 | 28.1 | 16.4 | 63.1 | 36.9 |
+| 2018 | 43.6 | 27.7 | 16.0 | 63.5 | 36.5 |
+| 2019 | 43.3 | 28.4 | 14.9 | 65.7 | 34.3 |
+| 2020 | 50.2 | 32.2 | 17.9 | 64.2 | 35.8 |
+| 2021 | 49.1 | 32.6 | 16.5 | 66.4 | 33.6 |
+| 2022 | 47.6 | 33.7 | 14.0 | 70.7 | 29.3 |
+| 2023 | 46.6 | 35.5 | 11.2 | 76.1 | 23.9 |
+| 2024 | 51.9 | 38.8 | 13.0 | 74.9 | 25.1 |
+| 2025 | 52.6 | 40.7 | 11.9 | 77.4 | 22.6 |
 
 ## Referencias
 

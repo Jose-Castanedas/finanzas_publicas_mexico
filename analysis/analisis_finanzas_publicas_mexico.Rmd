@@ -728,6 +728,89 @@ El gasto de pensiones pasa de 0.8% del PIB en 1995 (0.78%) a 4.6% en 2025. Su m�
 
 El gasto de pensiones pasa de 6.7% del gasto programable en 1995 a 23.3% en 2025. Su mínimo es 6.3% (1996) y su máximo 23.3% (2025), el valor más alto de los 31 años. Entre 2002 y 2018 representa entre 11.2% y 19.5%, y desde 2019 supera el 20% (mínimo de 20.5% en 2021). En 2025 equivale a 4.6% del PIB y a 23.3% del gasto programable.
 
+### 6. ¿Cómo cambió el saldo histórico como porcentaje del PIB entre 2000 y 2025, y qué parte es interna y externa?
+
+```{r Pregunta-6, echo=TRUE}
+# Seleccionar columnas a usar: saldo histórico, saldo histórico interno y saldo histórico externo
+
+saldo_historico <- base_completa %>%
+  select(anio, shrfsp_pct_pib:shrfsp_externo_pct_pib) %>%
+  filter(between(anio, 2000, 2025))
+
+# Calcular la participación de los saldos interno y externo como porcentaje del saldo histórico
+
+pct_saldo <- saldo_historico %>%
+  mutate(across(shrfsp_interno_pct_pib:shrfsp_externo_pct_pib, ~ .x / shrfsp_pct_pib * 100, .names = "{.col}_saldo"))
+```
+
+```{r Pregunta-6-grafica, echo=TRUE}
+# Gráfica de los saldos interno y externo como porcentaje del saldo histórico
+
+# 1. Pasar a formato largo
+
+saldo_largo <- pct_saldo %>%
+  select(anio, shrfsp_interno_pct_pib:shrfsp_externo_pct_pib) %>%
+  pivot_longer(
+    cols = -anio,
+    names_to = "concepto_saldo",
+    values_to = "pct_pib_saldo"
+  ) %>%
+  mutate(concepto_saldo = recode(concepto_saldo,
+    shrfsp_interno_pct_pib = "Saldo interno",
+    shrfsp_externo_pct_pib = "Saldo externo"),
+    concepto_saldo = factor(concepto_saldo, levels = c("Saldo interno", "Saldo externo")))
+
+# 2. Configurar gráfica de barras apiladas
+
+# 2.1. Definir colores
+
+colores_saldo <- c("Saldo interno" = "#1F4E78", "Saldo externo" = "#0D9488")
+
+# 2.2. Configurar diseño de gráfica
+
+grafica_saldo <- ggplot(saldo_largo, aes(x = anio, y = pct_pib_saldo, fill = concepto_saldo)) +
+  geom_col(width = 0.95, position = position_stack(reverse = TRUE)) +
+  geom_label(
+    data = filter(saldo_largo, anio %in% c(2000, 2025)),
+    aes(label = paste0(round(pct_pib_saldo), "%")),
+    position = position_stack(vjust = 0.5, reverse = TRUE),
+    color = "white", size = 2.4, fontface = "bold",
+    linewidth = 0,
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = colores_saldo) +
+  scale_x_continuous(breaks = seq(2000, 2025, 5), expand = expansion(add = 1)) +
+  scale_y_continuous(labels = scales::label_percent(scale = 1), expand = expansion(mult = c(0, 0.05))) +
+  labs(
+    title = "Composición del Saldo histórico de los RFSP, 2000-2025",
+    subtitle = "Porcentaje del PIB",
+    x = NULL,
+    y = "Porcentaje del PIB",
+    fill = NULL,
+    caption = "Nota: RFSP = Requerimientos Financieros del Sector Público. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(hjust = 0, size = 8, color = "#0F172A"),
+    plot.caption.position = "plot"
+  )
+
+# 3. Guardar gráfica en directorio figures/
+
+ggsave("../figures/grafica_06_composicion_saldo.png",
+       plot = grafica_saldo,
+       width = 8, height = 5, dpi = 200)
+
+# 4. Mostrar gráfica
+
+include_graphics("../figures/grafica_06_composicion_saldo.png")
+```
+
+
 ## Anexos
 
 **Conceptos y renombres**
@@ -841,7 +924,20 @@ pct_pensiones %>%
   select(anio, programable_pct_pib:gasto_pensiones_pct_programable) %>%
   kable(
     digits = 1,
-    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (% del programable)")
+    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (% del Programable)")
+  )
+```
+
+**Participación del saldo histórico interno y externo en el saldo histórico y su peso como porcentaje del PIB**
+
+```{r Participacion-del-saldo-interno-y-externo-en-el-saldo-historico-y-su-peso-como-porcentaje-del-pib, echo=TRUE}
+# Mostrar tabla de la participación del saldo histórico
+
+pct_saldo %>%
+  select(anio, shrfsp_pct_pib:shrfsp_externo_pct_pib_saldo) %>%
+  kable(
+    digits = 1,
+    col.names = c("Año", "Saldo histórico (% del PIB)", "Saldo interno (% del PIB)", "Saldo externo (% del PIB)", "Saldo interno (% del Saldo)", "Saldo externo (% del Saldo)" )
   )
 ```
 
