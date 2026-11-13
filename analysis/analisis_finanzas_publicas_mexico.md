@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-11
+2026-11-12
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -850,35 +850,56 @@ pct_pensiones <- pensiones %>%
 ``` r
 # Gráfica gasto de pensiones como porcentaje del PIB
 
-# 1. Configurar gráfico de líneas
+# 1. Pasar a formato largo
 
-grafica_pensiones <- ggplot(pensiones, aes(x = anio, y = gasto_pensiones_pct_pib)) +
+pensiones_largo <- pct_pensiones %>%
+  select(anio, gasto_pensiones_pct_pib:gasto_pensiones_pct_programable) %>%
+  pivot_longer(
+    cols = -anio,
+    names_to = "concepto_pensiones",
+    values_to = "pct_pib_programable"
+  ) %>%
+  mutate(
+    concepto_pensiones = factor(
+      concepto_pensiones,
+      levels = c("gasto_pensiones_pct_pib", "gasto_pensiones_pct_programable"),
+      labels = c("Porcentaje del PIB", "Porcentaje del gasto programable")
+    )
+  )
+
+# 2. Configurar gráfica de paneles
+
+# 2.1. Configurar diseño de gráfica
+
+grafica_pensiones <- ggplot(pensiones_largo, aes(x = anio, y = pct_pib_programable)) +
   geom_line(linewidth = 1, color = "#C05621") +
   geom_point(size = 2, color = "#C05621") +
-  scale_x_continuous(breaks = seq(1995, 2025, 5)) +
+  facet_wrap(~ concepto_pensiones, ncol = 2, scales = "free_y") +
+  scale_x_continuous(breaks = seq(1995, 2025, 10)) +
   scale_y_continuous(labels = scales::label_number(suffix = "%")) +
   labs(
     title = "Gasto de pensiones, 1995-2025",
-    subtitle = "Porcentaje del PIB",
+    subtitle = "Dos formas de medir su peso en las finanzas públicas",
     x = NULL,
-    y = "Porcentaje del PIB",
+    y = NULL,
     caption = "Nota: Excluye operaciones compensadas; véase Notas por fuentes, Notas de datos. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
   ) +
   theme_minimal() +
   theme(
-    legend.position = "bottom",
     plot.title = element_text(face = "bold"),
+    strip.text = element_text(face = "bold", hjust = 0),
+    panel.spacing = unit(1.5, "lines"),
     plot.caption = element_text(hjust = 0, size = 8, color = "#0F172A"),
     plot.caption.position = "plot"
   )
 
-# 2. Guardar gráfica en el directorio figures/
+# 3. Guardar gráfica en el directorio figures/
 
 ggsave("../figures/grafica_05_gasto_pensiones.png",
        plot = grafica_pensiones,
-       width = 8, height = 5, dpi = 200)
+       width = 11, height = 5, dpi = 200)
 
-# 3. Mostrar gráfica
+# 4. Mostrar gráfica
 
 include_graphics("../figures/grafica_05_gasto_pensiones.png")
 ```
