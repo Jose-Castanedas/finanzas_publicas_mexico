@@ -688,7 +688,7 @@ grafica_pensiones <- ggplot(pensiones_largo, aes(x = anio, y = pct_pib_programab
     subtitle = "Dos formas de medir su peso en las finanzas públicas",
     x = NULL,
     y = NULL,
-    caption = "Nota: Excluye operaciones compensadas; véase Notas por fuente, Notas de datos. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+    caption = "Nota: El cuadro excluye las operaciones compensadas del gasto programable; no indica si la serie de pensiones las excluye. Véase Notas por fuente, Notas de datos. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
   ) +
   theme_minimal() +
   theme(
@@ -720,7 +720,7 @@ include_graphics("../figures/grafica_05_gasto_pensiones.png")
 
 *Nota: 1. ver datos completos en la tabla "Participación del gasto de pensiones en el gasto programable y su peso como porcentaje del PIB" en anexos.*
 
-*2. Excluye operaciones compensadas (subsidios, transferencias y aportaciones al ISSSTE). Véase nota completa en Notas por fuente, apartado Notas de datos.*
+*2. El cuadro excluye las operaciones compensadas del gasto programable; no indica si la serie de pensiones las excluye. Véase nota completa en Notas por fuente, apartado Notas de datos.*
 
 El gasto de pensiones pasa de 0.8% del PIB en 1995 (0.78%) a 4.6% en 2025. Su mínimo es 0.8% (0.75%, en 1996) y su máximo 4.6% (2025). Crece de forma sostenida: aumenta en 27 de los 30 cambios anuales (21 si se comparan los valores con un decimal) y solo cae en 1996, 2004 y 2021. Supera el 1% desde 2001, el 2% desde 2009, el 3% desde 2015 y el 4% desde 2022 (en 2020 y 2021 es 3.96% y 3.93%). Los tres mayores aumentos anuales son +0.48 puntos en 2002 (de 1.1% a 1.6%), +0.47 en 2020 (de 3.5% a 4.0%) y +0.30 en 2009 (de 2.0% a 2.3%).
 
@@ -839,7 +839,7 @@ pct_pensiones %>%
   select(anio, programable_pct_pib:gasto_pensiones_pct_programable) %>%
   kable(
     digits = 1,
-    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (%)")
+    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (% del programable)")
   )
 ```
 

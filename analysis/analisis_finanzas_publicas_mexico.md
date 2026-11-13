@@ -883,7 +883,7 @@ grafica_pensiones <- ggplot(pensiones_largo, aes(x = anio, y = pct_pib_programab
     subtitle = "Dos formas de medir su peso en las finanzas públicas",
     x = NULL,
     y = NULL,
-    caption = "Nota: Excluye operaciones compensadas; véase Notas por fuente, Notas de datos. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
+    caption = "Nota: El cuadro excluye las operaciones compensadas del gasto programable; no indica si la serie de pensiones las excluye. Véase Notas por fuente, Notas de datos. \nFuente: Elaboración propia con datos de la SHCP, Estadísticas Oportunas."
   ) +
   theme_minimal() +
   theme(
@@ -919,9 +919,9 @@ include_graphics("../figures/grafica_05_gasto_pensiones.png")
 pensiones en el gasto programable y su peso como porcentaje del PIB” en
 anexos.*
 
-*2. Excluye operaciones compensadas (subsidios, transferencias y
-aportaciones al ISSSTE). Véase nota completa en Notas por fuente,
-apartado Notas de datos.*
+*2. El cuadro excluye las operaciones compensadas del gasto programable;
+no indica si la serie de pensiones las excluye. Véase nota completa en
+Notas por fuente, apartado Notas de datos.*
 
 El gasto de pensiones pasa de 0.8% del PIB en 1995 (0.78%) a 4.6% en
 2025. Su mínimo es 0.8% (0.75%, en 1996) y su máximo 4.6% (2025). Crece
@@ -1202,11 +1202,11 @@ pct_pensiones %>%
   select(anio, programable_pct_pib:gasto_pensiones_pct_programable) %>%
   kable(
     digits = 1,
-    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (%)")
+    col.names = c("Año", "Programable (% del PIB)", "Gasto de pensiones (% del PIB)", "Gasto de pensiones (% del programable)")
   )
 ```
 
-| Año | Programable (% del PIB) | Gasto de pensiones (% del PIB) | Gasto de pensiones (%) |
+| Año | Programable (% del PIB) | Gasto de pensiones (% del PIB) | Gasto de pensiones (% del programable) |
 |---:|---:|---:|---:|
 | 1995 | 11.6 | 0.8 | 6.7 |
 | 1996 | 12.0 | 0.8 | 6.3 |
