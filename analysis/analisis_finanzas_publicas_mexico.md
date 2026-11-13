@@ -68,6 +68,9 @@ causas.
 5.  ¿Cómo cambió el gasto en pensiones como porcentaje del PIB y del
     gasto programable entre 1995 y 2025?
 
+6.  ¿Cómo cambió el saldo histórico como porcentaje del PIB entre 2000 y
+    2025, y qué parte es interna y externa?
+
 ## Fuente
 
 **Instituciones y fuentes:**
