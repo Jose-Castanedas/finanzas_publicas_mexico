@@ -1067,6 +1067,66 @@ y 2014, más del 30% entre 2015 y 2021 y más del 22% entre 2022 y 2025.
 En 2025 el saldo interno equivale a 40.7% del PIB y 77.4% del saldo
 histórico, y el externo, a 11.9% del PIB y 22.6% del saldo histórico.
 
+### Sexenios
+
+``` r
+# Tabla de sexenios
+
+# 1. Filtrar años 1995-2024, definir sexenios y calcular el gasto de pensiones como % del gasto programable
+
+sexenios <- base_completa %>%
+  filter(between(anio, 1995, 2024)) %>%
+  mutate(
+    sexenio = case_when(
+      between(anio, 1995, 2000) ~ "1995-2000",
+      between(anio, 2001, 2006) ~ "2001-2006",
+      between(anio, 2007, 2012) ~ "2007-2012",
+      between(anio, 2013, 2018) ~ "2013-2018",
+      between(anio, 2019, 2024) ~ "2019-2024"
+    ),
+    pensiones_pct_programable = gasto_pensiones_pct_pib / programable_pct_pib * 100
+  )
+
+# 2. Promedio simple por sexenio
+
+tabla_sexenios <- sexenios %>%
+  group_by(sexenio) %>%
+  summarise(
+    across(
+      c(tributarios_gf_pct_pib,
+        isr_pct_pib,
+        iva_pct_pib,
+        ieps_pct_pib,
+        gasto_total_pct_pib,
+        inversion_fisica_pct_pib,
+        gasto_pensiones_pct_pib,
+        pensiones_pct_programable),
+      ~ mean(.x, na.rm = TRUE)
+    ),
+    .groups = "drop"
+  )
+
+# 3. Mostrar tabla
+
+tabla_sexenios %>%
+  kable(
+    digits = 1,
+    col.names = c("Sexenio", "Tributarios", "ISR", "IVA", "IEPS", "Gasto neto total", "Inversión física", "Pensiones", "Pensiones (% del Programable)"),
+    caption = "Notas: 1. Promedio por sexenio. 2. La mayoría de las columnas son porcentaje del PIB, salvo la última columna."
+  )
+```
+
+| Sexenio | Tributarios | ISR | IVA | IEPS | Gasto neto total | Inversión física | Pensiones | Pensiones (% del Programable) |
+|:---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1995-2000 | 7.7 | 3.3 | 2.4 | 1.2 | 17.3 | 2.2 | 0.9 | 7.3 |
+| 2001-2006 | 8.6 | 3.9 | 3.1 | 1.0 | 19.2 | 2.1 | 1.6 | 11.3 |
+| 2007-2012 | 8.4 | 4.8 | 3.5 | -0.4 | 23.1 | 3.8 | 2.3 | 12.7 |
+| 2013-2018 | 11.6 | 6.3 | 3.6 | 1.2 | 24.5 | 3.6 | 3.0 | 16.3 |
+| 2019-2024 | 13.6 | 7.4 | 4.1 | 1.5 | 25.3 | 2.8 | 4.0 | 21.2 |
+
+Notas: 1. Promedio por sexenio. 2. La mayoría de las columnas son
+porcentaje del PIB, salvo la última columna.
+
 ## Anexos
 
 **Conceptos y renombres**
