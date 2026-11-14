@@ -820,7 +820,7 @@ include_graphics("../figures/grafica_06_composicion_saldo.png")
 
 *Nota: ver datos completos en la tabla "Participación del saldo histórico interno y externo en el saldo histórico y su peso como porcentaje del PIB" en anexos.*
 
-El saldo histórico pasa de 29.2% del PIB en 2000 a 52.6% en 2025. Su mínimo es 27.3% (2007) y su máximo 52.6% (2025). Desde 2014 supera el 40% del PIB, y en 2020, 2024, y 2025 supera el 50%. Aumenta en 14 de los 25 cambios anuales. Los cuatro mayores aumentos son +6.89 puntos en 2020, +5.24 en 2024, +3.92 en 2008 y +3.85 en 2015, y las dos mayores caídas, -2.68 en 2017 y -2.29 en 2004. En 2025 sube 0.74 puntos respecto de 2024 (interno +1.88 y externo -1.13).
+El saldo histórico pasa de 29.2% del PIB en 2000 a 52.6% en 2025. Su mínimo es 27.5% (2007) y su máximo 52.6% (2025). Desde 2014 supera el 40% del PIB, y en 2020, 2024, y 2025 supera el 50%. Aumenta en 14 de los 25 cambios anuales. Los cuatro mayores aumentos son +6.89 puntos en 2020, +5.24 en 2024, +3.92 en 2008 y +3.85 en 2015, y las dos mayores caídas, -2.68 en 2017 y -2.29 en 2004. En 2025 sube 0.74 puntos respecto de 2024 (interno +1.88 y externo -1.13).
 
 El saldo interno pasa de 18.5% del PIB en el 2000 a 40.7% en 2025. Su mínimo es 18.5% (2000) y su máximo 40.7% (2025). Supera el 30% del PIB en 2015 y desde 2020. Aumenta en 21 de los 25 cambios anuales; los tres mayores aumentos son +3.80 puntos en 2020, +3.37 en 2024 y +2.91 en 2008. Cae en cuatro años: -1.88 en 2017, -1.49 en 2004, -1.06 en 2016 y -0.38 en 2018.
 
@@ -883,7 +883,7 @@ tabla_sexenios %>%
 
 La tabla presenta el promedio de cada sexenio (años calendario completos, de 1995-2000 a 2019-2024), calculado con las proporciones anuales.
 
-El gasto neto total sube en cada sexenio: de 0.86% a 3.97% del PIB y de 7.3% a 21.2% del gasto programable. El ISR y el IVA suben en cada sexenio, el ISR de 3.3% a 7.4% del PIB y el IVA de 2.4% a 4.1%.
+El gasto neto total sube en cada sexenio (de 17.3% a 25.3% del PIB), igual que el gasto de pensiones (de 0.86% a 3.97% del PIB y de 7.3% a 21.2% del gasto programable).
 
 La recaudación tributaria sube en tres de los cuatro cambios; la excepción es 2007-2012 (8.39%, frente a 8.64% en 2001-2006). En ese sexenio el ISR (+0.83 puntos) y el IVA (+0.40) suben, pero el IEPS baja 1.37 puntos, de 1.00% a -0.37%, por sus valores negativos (ver Notas de datos). La inversión física sube de 2.12% en 2001-2006 a 3.78% en 2007-2012 y baja en los dos sexenios siguientes (3.58% y 2.76%).
 

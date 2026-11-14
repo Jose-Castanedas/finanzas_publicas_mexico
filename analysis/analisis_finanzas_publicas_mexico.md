@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-13
+2026-11-14
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -1038,7 +1038,7 @@ histórico interno y externo en el saldo histórico y su peso como
 porcentaje del PIB” en anexos.*
 
 El saldo histórico pasa de 29.2% del PIB en 2000 a 52.6% en 2025. Su
-mínimo es 27.3% (2007) y su máximo 52.6% (2025). Desde 2014 supera el
+mínimo es 27.5% (2007) y su máximo 52.6% (2025). Desde 2014 supera el
 40% del PIB, y en 2020, 2024, y 2025 supera el 50%. Aumenta en 14 de los
 25 cambios anuales. Los cuatro mayores aumentos son +6.89 puntos en
 2020, +5.24 en 2024, +3.92 en 2008 y +3.85 en 2015, y las dos mayores
@@ -1132,9 +1132,9 @@ La tabla presenta el promedio de cada sexenio (años calendario
 completos, de 1995-2000 a 2019-2024), calculado con las proporciones
 anuales.
 
-El gasto neto total sube en cada sexenio: de 0.86% a 3.97% del PIB y de
-7.3% a 21.2% del gasto programable. El ISR y el IVA suben en cada
-sexenio, el ISR de 3.3% a 7.4% del PIB y el IVA de 2.4% a 4.1%.
+El gasto neto total sube en cada sexenio (de 17.3% a 25.3% del PIB),
+igual que el gasto de pensiones (de 0.86% a 3.97% del PIB y de 7.3% a
+21.2% del gasto programable).
 
 La recaudación tributaria sube en tres de los cuatro cambios; la
 excepción es 2007-2012 (8.39%, frente a 8.64% en 2001-2006). En ese
