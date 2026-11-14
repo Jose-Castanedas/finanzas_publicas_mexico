@@ -167,7 +167,8 @@ Los datos incluyen el total de periodos disponibles en cada fuente:
 El PIB nominal es el denominador de la mayoría de los cálculos, por lo
 que el análisis abarca 1993-2025, periodo con PIB nominal anual
 disponible. La pregunta 5 inicia en 1995, primer año con datos de gasto
-en pensiones.
+en pensiones, la pregunta 6 inicia en 2000, primer año con datos del
+saldo histórico.
 
 **Cifras**
 
