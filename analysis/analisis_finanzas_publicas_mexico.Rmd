@@ -743,7 +743,7 @@ pct_saldo <- saldo_historico %>%
   mutate(across(shrfsp_interno_pct_pib:shrfsp_externo_pct_pib, ~ .x / shrfsp_pct_pib * 100, .names = "{.col}_saldo"))
 ```
 
-```{r Pregunta-6-grafica, echo=TRUE}
+```{r Pregunta-6-grafica, echo=TRUE, fig.alt="Barras apiladas con la composición porcentual del Saldo histórico de los RFSP de México entre 2000 y 2025: saldo interno y externo, como porcentaje del PIB."}
 # Gráfica de los saldos interno y externo como porcentaje del saldo histórico
 
 # 1. Pasar a formato largo

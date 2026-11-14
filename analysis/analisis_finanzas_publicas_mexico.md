@@ -1023,7 +1023,7 @@ ggsave("../figures/grafica_06_composicion_saldo.png",
 include_graphics("../figures/grafica_06_composicion_saldo.png")
 ```
 
-![](../figures/grafica_06_composicion_saldo.png)<!-- -->
+<img src="../figures/grafica_06_composicion_saldo.png" alt="Barras apiladas con la composición porcentual del Saldo histórico de los RFSP de México entre 2000 y 2025: saldo interno y externo, como porcentaje del PIB."  />
 
 **Máximos y mínimos (% del PIB)**
 
