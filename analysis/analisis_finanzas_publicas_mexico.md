@@ -1111,8 +1111,7 @@ tabla_sexenios <- sexenios %>%
 tabla_sexenios %>%
   kable(
     digits = 1,
-    col.names = c("Sexenio", "Tributarios", "ISR", "IVA", "IEPS", "Gasto neto total", "Inversión física", "Pensiones", "Pensiones (% del Programable)"),
-    caption = "Notas: 1. Promedio por sexenio. 2. La mayoría de las columnas son porcentaje del PIB, salvo la última columna."
+    col.names = c("Sexenio", "Tributarios", "ISR", "IVA", "IEPS", "Gasto neto total", "Inversión física", "Pensiones", "Pensiones (% del Programable)")
   )
 ```
 
@@ -1124,8 +1123,10 @@ tabla_sexenios %>%
 | 2013-2018 | 11.6 | 6.3 | 3.6 | 1.2 | 24.5 | 3.6 | 3.0 | 16.3 |
 | 2019-2024 | 13.6 | 7.4 | 4.1 | 1.5 | 25.3 | 2.8 | 4.0 | 21.2 |
 
-Notas: 1. Promedio por sexenio. 2. La mayoría de las columnas son
-porcentaje del PIB, salvo la última columna.
+*Notas: 1. Promedio simple de las operaciones anuales de cada sexenio.*
+
+*2. Todas las columnas son porcentaje del PIB, salvo la última
+(porcentaje del gasto programable).*
 
 La tabla presenta el promedio de cada sexenio (años calendario
 completos, de 1995-2000 a 2019-2024), calculado con las proporciones
