@@ -878,6 +878,13 @@ tabla_sexenios %>%
 
 ```
 
+La tabla presenta el promedio de cada sexenio (años calendario completos, de 1995-2000 a 2019-2024), calculado con las proporciones anuales.
+
+El gasto neto total sube en cada sexenio: de 0.86% a 3.97% del PIB y de 7.3% a 21.2% del gasto programable. El ISR y el IVA suben en cada sexenio, el ISR de 3.3% a 7.4% del PIB y el IVA de 2.4% a 4.1%.
+
+La recaudación tributaria sube en tres de los cuatro cambios; la excepción es 2007-2012 (8.39%, frente a 8.64% en 2001-2006). En ese sexenio el ISR (+0.83 puntos) y el IVA (+0.40) suben, pero el IEPS baja 1.37 puntos, de 1.00% a -0.37%, por sus valores negativos (ver Notas de datos). La inversión física sube de 2.12% en 2001-2006 a 3.78% en 2007-2012 y baja en los dos sexenios siguientes (3.58% y 2.76%).
+
+El promedio de un sexenio oculta sus variaciones anuales. La meseta de la inversión física de 2009 a 2015 abarca dos sexenios, y el salto de la recaudación en 2015 queda en medio de 2013-2018.
 
 ## Anexos
 
