@@ -45,9 +45,9 @@ cobro de impuestos y los recursos generados por el petróleo, que son sus
 principales fuentes de financiamiento (INEGI, 2026, p.3).
 
 El objetivo del análisis es describir cómo cambian, entre 1993 y 2025,
-la composición de los ingresos, del gasto y de la inversión física, y el
-peso del gasto en pensiones. El enfoque es descriptivo y no establece
-causas.
+la composición de los ingresos, del gasto y de la inversión física, el
+peso del gasto en pensiones, y el saldo hitórico de los RFSP. El enfoque
+es descriptivo y no establece causas.
 
 **Preguntas de investigación**
 
