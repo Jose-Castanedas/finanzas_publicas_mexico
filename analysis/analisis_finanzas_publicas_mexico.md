@@ -958,7 +958,7 @@ pct_saldo <- saldo_historico %>%
 ```
 
 ``` r
-# Gráfica de los saldos interno y externo como porcentaje del saldo histórico
+# Gráfica del saldo interno y externo como porcentaje del PIB
 
 # 1. Pasar a formato largo
 
@@ -1040,21 +1040,21 @@ porcentaje del PIB” en anexos.*
 
 El saldo histórico pasa de 29.2% del PIB en 2000 a 52.6% en 2025. Su
 mínimo es 27.5% (2007) y su máximo 52.6% (2025). Desde 2014 supera el
-40% del PIB, y en 2020, 2024, y 2025 supera el 50%. Aumenta en 14 de los
+40% del PIB, y en 2020, 2024 y 2025 supera el 50%. Aumenta en 14 de los
 25 cambios anuales. Los cuatro mayores aumentos son +6.89 puntos en
 2020, +5.24 en 2024, +3.92 en 2008 y +3.85 en 2015, y las dos mayores
 caídas, -2.68 en 2017 y -2.29 en 2004. En 2025 sube 0.74 puntos respecto
 de 2024 (interno +1.88 y externo -1.13).
 
-El saldo interno pasa de 18.5% del PIB en el 2000 a 40.7% en 2025. Su
+El saldo interno pasa de 18.5% del PIB en 2000 a 40.7% en 2025. Su
 mínimo es 18.5% (2000) y su máximo 40.7% (2025). Supera el 30% del PIB
-en 2015 y desde 2020. Aumenta en 21 de los 25 cambios anuales; los tres
-mayores aumentos son +3.80 puntos en 2020, +3.37 en 2024 y +2.91 en
-2008. Cae en cuatro años: -1.88 en 2017, -1.49 en 2004, -1.06 en 2016 y
--0.38 en 2018.
+en 2015 (2016: 29.95%) y desde 2020. Aumenta en 21 de los 25 cambios
+anuales; los tres mayores aumentos son +3.80 puntos en 2020, +3.37 en
+2024 y +2.91 en 2008. Cae en cuatro años: -1.88 en 2017, -1.49 en 2004,
+-1.06 en 2016 y -0.38 en 2018.
 
-El saldo externo pasa de 10.7% del PIB en el 2000 a 11.9% en 2025. Su
-mínimo es 7.2% (2007) y su máxima 17.9% (2020). Supera el 10% en 18 de
+El saldo externo pasa de 10.7% del PIB en 2000 a 11.9% en 2025. Su
+mínimo es 7.2% (2007) y su máximo 17.9% (2020). Supera el 10% en 18 de
 los 26 años; en los 8 restantes (2001, 2006-2010, 2012 y 2013) se
 mantiene entre 7.2% y 9.8%. Los tres mayores aumentos son +3.35 puntos
 en 2016, +3.09 en 2020 y +2.59 en 2015, y las cuatro mayores caídas,
@@ -1124,14 +1124,13 @@ tabla_sexenios %>%
 | 2013-2018 | 11.6 | 6.3 | 3.6 | 1.2 | 24.5 | 3.6 | 3.0 | 16.3 |
 | 2019-2024 | 13.6 | 7.4 | 4.1 | 1.5 | 25.3 | 2.8 | 4.0 | 21.2 |
 
-*Notas: 1. Promedio simple de las operaciones anuales de cada sexenio.*
+*Notas: 1. Promedio simple de los valores anuales de cada sexenio.*
 
 *2. Todas las columnas son porcentaje del PIB, salvo la última
 (porcentaje del gasto programable).*
 
 La tabla presenta el promedio de cada sexenio (años calendario
-completos, de 1995-2000 a 2019-2024), calculado con las proporciones
-anuales.
+completos, de 1995-2000 a 2019-2024), calculado con los valores anuales.
 
 El gasto neto total sube en cada sexenio (de 17.3% a 25.3% del PIB),
 igual que el gasto de pensiones (de 0.86% a 3.97% del PIB y de 7.3% a
