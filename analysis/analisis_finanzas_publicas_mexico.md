@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-14
+2026-11-15
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -1146,6 +1146,96 @@ datos). La inversión física sube de 2.12% en 2001-2006 a 3.78% en
 El promedio de un sexenio oculta sus variaciones anuales. La meseta de
 la inversión física de 2009 a 2015 abarca dos sexenios, y el salto de la
 recaudación en 2015 queda en medio de 2013-2018.
+
+## Conclusiones
+
+**Por pregunta**
+
+1.  Composición de los ingresos presupuestarios. Los ingresos
+    tributarios son el componente más grande en 30 de los 33 años. Pasan
+    de 49.3% a 65.0% del total entre 1993 y 2025 (+15.8 puntos). Los
+    petroleros bajan de 21.6% a 14.8% y el resto, de 29.1% a 20.1%. Los
+    petroleros superan a los tributarios solo en 2006, 2008 y 2012, con
+    un máximo de 44.3% en 2008. La composición pasa por tres etapas:
+    1993-2003 con tributarios predominantes, 2004-2014 con mayor peso
+    petrolero y 2015-2025 con un predominio tributario. Esta última
+    etapa coincide con el cambio en la composición del concepto
+    Petroleros (ver Notas de datos).
+
+2.  Recaudación tributaria. Los ingresos tributarios pasan de 8.7% a
+    15.2% del PIB (+6.49 puntos): ISR +3.99, IVA +2.24, IEPS +0.73 y
+    Otros -0.47. De 1993 a 2013 la recaudación oscila entre 6.9% y 9.3%.
+    El mayor aumento anual ocurre entre 2014 y 2015 (+2.31 puntos), y
+    casi todo el aumento del IEPS ese año corresponde a gasolinas y
+    diesel. El ISR es el impuesto de mayor peso, con 8.2% del PIB en
+    2025, y el IVA le sigue con 4.2%. Juntos suman 82.0% de los ingresos
+    tributarios en 2025. El IEPS es el que más cambia de un año a otro,
+    con valores negativos en seis años (2006-2008 y 2011-2013).
+
+3.  Gasto neto total. El gasto sube de 17.1% a 27.2% del PIB. De 1993 a
+    2009 el aumento (+7.15 puntos) corresponde casi todo al gasto
+    programable (+6.90). De 2009 a 2025 el patrón cambia: el no
+    programable aporta +2.49 de los +2.96 puntos. El programable pasa de
+    12.2% a 19.6% del PIB y el no programable, de 4.9% a 7.6%. Dentro
+    del programable domina el gasto corriente (más de 71% en todos los
+    años), que pasa de 9.9% a 16.0% del PIB. El de capital pasa de 2.3%
+    a 3.6%.
+
+4.  Inversión física. Casi no cambia entre los extremos del periodo
+    (2.184% en 1993 y 2.182% en 2025), pero en el camino registro una
+    meseta alta de 2009 a 2015 (4.0% a 4.5%) y una caída posterior. Por
+    componentes, la directa baja de 1.9% a 1.2% del PIB y la indirecta
+    sube de 0.3% a 0.9%. De 2017 a 2025 la indirecta representa más de
+    40% de la inversión física, frente a 14.2% en 1993.
+
+5.  Pensiones. Es el rubro de crecimiento más sostenido entre los
+    analizados: aumenta en 27 de los 30 cambios anuales y pasa de 0.8% a
+    4.6% del PIB entre 1995 y 2025, y de 6.7% a 23.3% del gasto
+    programable. Supera 4% del PIB desde 2022 y 20% del programable
+    desde 2019. En 2025 alcanza su máximo en ambas medidas.
+
+6.  Saldo histórico de los RFSP. Pasa de 29.2% a 52.6% del PIB entre
+    2000 y 2025, con un mínimo de 27.5% en 2007. Supera 40% desde 2014 y
+    50% en 2020, 2024 y 2025. El componente interno pasa de 18.5% a
+    40.7% del PIB y llega a 77.4% del saldo en 2025. El externo se
+    mantiene en un rango más estrecho (10.7% en 2000 y 11.9% en 2025) y
+    su máximo es 17.9% en 2020.
+
+**Por sexenio**
+
+Los promedios muestran un patrón claro. El gasto neto total sube en cada
+sexenio, de 17.3% a 25.3% del PIB, y el gasto en pensiones pasa de 0.9%
+a 4.0% del PIB (de 7.3% a 21.2% del gasto programable). La recaudación
+tributaria sube en tres de los cuatro cambios y avanza de 7.7% a 13.6%
+del PIB; la excepción es 2007-2012 (8.4% frente a 8.6%), sexenio en que
+el IEPS promedia -0.4%. La inversión física sube a 3.8% en 2007-2012 y
+baja en los dos sexenios siguientes (3.6% y 2.8%).
+
+El saldo histórico no está en la tabla de sexenios, pero al cierre de
+cada uno es 29.2% del PIB en 2000, 28.2% en 2006, 35.6% en 2012, 43.6%
+en 2018 y 51.9% en 2024. Baja 1.0 puntos en 2001-2006 y sube en los tres
+sexenios siguientes (+7.4, +8.0 y +8.2 puntos), con el mayor aumento en
+2019-2024. Es un dato de fin de periodo y no un promedio, porque el
+saldo es una acumulación.
+
+Como el promedio sexenal oculta variaciones anuales, dos hechos cruzan
+sexenios: la meseta de inversión de 2009-2015 y el salto recaudatorio de
+2015, que queda a la mitad de 2013-2018.
+
+**Conclusión general**
+
+Entre 1993 y 2025, los ingresos tributarios ganan peso en los ingresos
+presupuestarios (de 49.3% a 65.0%, o de 8.7% a 15.2% del PIB), con el
+ISR como el impuesto de mayor peso, mientras los petroleros pierden (de
+21.6% a 14.8%) tras un periodo intermedio (2004-2014) de mayor peso
+petrolero. Al mismo tiempo, el gasto crece más que la recaudación: +10.1
+puntos del PIB el gasto neto total frente a +6.5 los ingresos
+tributarios (+5.7 los ingresos tributarios totales). En esa expansión
+pesan las pensiones (+3.8 de los 9.9 puntos que sube el gasto entre 1995
+y 2025) y el gasto corriente (+6.8). La inversión física termina donde
+empezó y el saldo histórico sube de 29.2% a 52.6% del PIB, sobre todo
+por el componente interno. Como el análisis es descriptivo, estas cifras
+muestran qué cambió y cuándo, pero no por qué.
 
 ## Anexos
 
