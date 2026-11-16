@@ -152,8 +152,8 @@ El análisis se desarrolla en R Markdown y se ejecuta desde RStudio.
 
 | Herramienta | Versión |
 |---|---|
-| R | [VERSIÓN_DE_R] |
-| tidyverse | [VERSIÓN_DE_TIDYVERSE] |
+| R | 4.6.2 |
+| tidyverse | 2.0.0 |
 
 El análisis también usa `knitr` y `rmarkdown`.
 
