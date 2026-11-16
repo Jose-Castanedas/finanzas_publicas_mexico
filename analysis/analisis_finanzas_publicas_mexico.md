@@ -1652,6 +1652,9 @@ pct_saldo %>%
 - Instituto Nacional de Estadística y Geografía. (2026). ABC de las
   finanzas públicas estatales y municipales.
   <https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/889463929697.pdf>
+- Instituto Nacional de Estadística y Geografía. (s. f.). Banco de
+  Información Económica (BIE): indicadores económicos de coyuntura
+  \[Base de datos\]. <https://www.inegi.org.mx/app/indicadores/?tm=3>
 - Secretaría de Hacienda y Crédito Público. (2019, abril). Balance
   fiscal en México: Definición y metodología.
   <https://gaceta.diputados.gob.mx/Gaceta/64/2019/may/SHCP_BF-20190521.pdf>
@@ -1659,3 +1662,6 @@ pct_saldo %>%
   los requerimientos financieros del sector público (SHRFSP), deuda
   amplia, 2000–2014 \[Conjunto de datos\]. Datos.gob.mx.
   <https://www.datos.gob.mx/dataset/saldo_historico_requerimientos_financieros_sector_publico_shrfsp_deuda_amplia_2000_2014>
+- Secretaría de Hacienda y Crédito Público. (s. f.). Estadísticas
+  Oportunas de Finanzas Públicas \[Base de datos\].
+  <http://presto.hacienda.gob.mx/EstoporLayout/estadisticas.jsp>
