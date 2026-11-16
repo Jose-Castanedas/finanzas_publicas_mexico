@@ -46,8 +46,8 @@ principales fuentes de financiamiento (INEGI, 2026, p.3).
 
 El objetivo del análisis es describir cómo cambian, entre 1993 y 2025,
 la composición de los ingresos, del gasto y de la inversión física, el
-peso del gasto en pensiones, y el saldo hitórico de los RFSP. El enfoque
-es descriptivo y no establece causas.
+peso del gasto en pensiones, y el saldo histórico de los RFSP. El
+enfoque es descriptivo y no establece causas.
 
 **Preguntas de investigación**
 
@@ -1182,7 +1182,7 @@ recaudación en 2015 queda en medio de 2013-2018.
     a 3.6%.
 
 4.  Inversión física. Casi no cambia entre los extremos del periodo
-    (2.184% en 1993 y 2.182% en 2025), pero en el camino registro una
+    (2.184% en 1993 y 2.182% en 2025), pero en el camino registró una
     meseta alta de 2009 a 2015 (4.0% a 4.5%) y una caída posterior. Por
     componentes, la directa baja de 1.9% a 1.2% del PIB y la indirecta
     sube de 0.3% a 0.9%. De 2017 a 2025 la indirecta representa más de
@@ -1230,12 +1230,13 @@ ISR como el impuesto de mayor peso, mientras los petroleros pierden (de
 21.6% a 14.8%) tras un periodo intermedio (2004-2014) de mayor peso
 petrolero. Al mismo tiempo, el gasto crece más que la recaudación: +10.1
 puntos del PIB el gasto neto total frente a +6.5 los ingresos
-tributarios (+5.7 los ingresos tributarios totales). En esa expansión
-pesan las pensiones (+3.8 de los 9.9 puntos que sube el gasto entre 1995
-y 2025) y el gasto corriente (+6.8). La inversión física termina donde
-empezó y el saldo histórico sube de 29.2% a 52.6% del PIB, sobre todo
-por el componente interno. Como el análisis es descriptivo, estas cifras
-muestran qué cambió y cuándo, pero no por qué.
+tributarios (+5.7 los ingresos presupuestarios totales). En esa
+expansión pesan las pensiones (+3.8 de los 9.9 puntos que sube el gasto
+entre 1995 y 2025) y el gasto corriente (+6.8), las pensiones forman
+parte del gasto corriente; las cifras no se suman. La inversión física
+termina donde empezó y el saldo histórico sube de 29.2% a 52.6% del PIB,
+sobre todo por el componente interno. Como el análisis es descriptivo,
+estas cifras muestran qué cambió y cuándo, pero no por qué.
 
 ## Limitaciones
 
