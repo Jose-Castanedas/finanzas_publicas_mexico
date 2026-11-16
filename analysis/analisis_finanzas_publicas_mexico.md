@@ -1,7 +1,7 @@
 Análisis finanzas públicas de México, 1993-2025
 ================
 Jose Guadalupe Castañeda Soto
-2026-11-15
+2026-11-16
 
 Las finanzas públicas comprenden el conjunto de ingresos, gastos y deuda
 del sector público, con el que el Estado cumple sus objetivos y
@@ -1236,6 +1236,64 @@ y 2025) y el gasto corriente (+6.8). La inversión física termina donde
 empezó y el saldo histórico sube de 29.2% a 52.6% del PIB, sobre todo
 por el componente interno. Como el análisis es descriptivo, estas cifras
 muestran qué cambió y cuándo, pero no por qué.
+
+## Limitaciones
+
+**Cobertura y definiciones**
+
+- Los ingresos y el gasto cubren el sector público presupuestario
+  (Gobierno Federal, IMSS, ISSSTE, Pemex y CFE; SHCP, 2019, p.9). No
+  incluyen gobiernos estatales ni municipales. El saldo histórico de los
+  RFSP tiene una cobertura más amplia, que incluye obligaciones de
+  entidades fuera del presupuesto, como el IPAB, el FONADIN y la banca
+  de desarrollo.
+
+- La definición de los ingresos petroleros cambia en 2015 (hasta 2014,
+  derechos sobre hidrocarburos; desde 2015, transferencias del FMP e ISR
+  de contratistas y asignatarios), por lo que la comparación entre
+  etapas no es estricta.
+
+- Los ingresos tributarios y no tributarios son los del Gobierno Federal
+  y no suman el total. El resto se obtiene por diferencia.
+
+- La fuente no define “gasto de pensiones” ni “inversión directa e
+  indirecta”, y el análisis reporta sus cifras sin interpretar su
+  alcance. Tampoco indica si la serie de pensiones excluye las
+  operaciones compensadas, por lo que su razón con el gasto programable
+  podría mezclar bases.
+
+- El gasto de capital de 2019 incluye un apoyo extraordinario del
+  Gobierno Federal a Pemex por 97,131 millones de pesos (0.39 puntos del
+  PIB).
+
+**Medición**
+
+- Los porcentajes usan el PIB nominal de INEGI (base 2018, promedio de
+  cuatro trimestres) y pueden diferir de los que publica SHCP. Por
+  ejemplo, el saldo de 2018 es 43.6% con el análisis y 44.8% en SHCP
+  (2019).
+
+- El IEPS es negativo en seis años (2006-2008 y 2011-2013). En esos años
+  la composición tributaria se distorsiona (en 2008, ISR e IVA suman
+  109% de los ingresos tributarios), por lo que el análisis privilegia
+  el porcentaje del PIB.
+
+- El saldo histórico es un saldo a diciembre y empieza en 2000. Sus
+  cambios incluyen revalorizaciones y otros ajustes que no se pueden
+  separar con estos datos (SHCP, 2019, p.22).
+
+- Las cifras pueden revisarse (consulta del 22 de octubre de 2026).
+
+**Interpretación**
+
+- El análisis es descriptivo: muestra qué cambió y cuándo, no por qué.
+
+- El análisis define los cortes de las tres etapas de la pregunta 1
+  (2004 y 2015) a partir del peso de los petroleros.
+
+- Los sexenios usan años calendario completos (1995-2024), sin 1993-1994
+  ni 2025. El promedio oculta variaciones anuales. Los petroleros no
+  entran en esa tabla, y no se atribuyen resultados a administraciones.
 
 ## Anexos
 
