@@ -1130,7 +1130,9 @@ tabla_sexenios %>%
 (porcentaje del gasto programable).*
 
 La tabla presenta el promedio de cada sexenio (años calendario
-completos, de 1995-2000 a 2019-2024), calculado con los valores anuales.
+completos, de 1995-2000 a 2019-2024), calculado con los valores anuales;
+la división temporal es una elaboración propia con fines analíticos y no
+sigue el orden de los sexenios presidenciales.
 
 El gasto neto total sube en cada sexenio (de 17.3% a 25.3% del PIB),
 igual que el gasto de pensiones (de 0.86% a 3.97% del PIB y de 7.3% a
@@ -1231,12 +1233,13 @@ ISR como el impuesto de mayor peso, mientras los petroleros pierden (de
 petrolero. Al mismo tiempo, el gasto crece más que la recaudación: +10.1
 puntos del PIB el gasto neto total frente a +6.5 los ingresos
 tributarios (+5.7 los ingresos presupuestarios totales). En esa
-expansión pesan las pensiones (+3.8 de los 9.9 puntos que sube el gasto
-entre 1995 y 2025) y el gasto corriente (+6.8), las pensiones forman
-parte del gasto corriente; las cifras no se suman. La inversión física
-termina donde empezó y el saldo histórico sube de 29.2% a 52.6% del PIB,
-sobre todo por el componente interno. Como el análisis es descriptivo,
-estas cifras muestran qué cambió y cuándo, pero no por qué.
+expansión pesa el gasto corriente (+6.8). Según la clasificación
+económica de SHCP (2019, p.40), las pensiones y jubilaciones forman
+parte del gasto corriente; si el gasto de pensiones del cuadro
+corresponde a ese concepto (+3.8), las cifras no se suman. La inversión
+física termina donde empezó y el saldo histórico sube de 29.2% a 52.6%
+del PIB, sobre todo por el componente interno. Como el análisis es
+descriptivo, estas cifras muestran qué cambió y cuándo, pero no por qué.
 
 ## Limitaciones
 
