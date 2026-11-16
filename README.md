@@ -160,7 +160,7 @@ El análisis también usa `knitr` y `rmarkdown`.
 1. Clona el repositorio y abre el archivo `.Rproj` en RStudio:
 
    ```bash
-   git clone https://github.com/[USUARIO]/[NOMBRE_DEL_REPOSITORIO].git
+   git clone https://github.com/Jose-Castanedas/finanzas_publicas_mexico.git
    ```
 
 2. Instala los paquetes:
