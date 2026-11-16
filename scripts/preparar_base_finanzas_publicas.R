@@ -10,7 +10,7 @@ library(readxl)
 
 gasto <- read_excel("data/raw/gasto_neto_presupuestario.xlsx", skip = 2, na = "n.d.")
 ingreso <- read_excel("data/raw/ingreso_presupuestario.xlsx", skip = 2, na = "n.d.")
-saldo <- read_excel("data/raw/saldo_rquerimientos_financieros.xlsx", skip = 2, na = "n.d.")
+saldo <- read_excel("data/raw/saldo_requerimientos_financieros.xlsx", skip = 2, na = "n.d.")
 
 # Parte 1. Gasto Neto Presupuestario
 
