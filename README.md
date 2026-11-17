@@ -2,7 +2,7 @@
 
 Este proyecto describe cómo cambiaron entre 1993 y 2025 la composición de los ingresos presupuestarios, la recaudación tributaria, el gasto neto, la inversión física, el gasto en pensiones y el saldo histórico de los requerimientos financieros del sector público (SHRFSP). Usa las Estadísticas Oportunas de Finanzas Públicas de la SHCP y el PIB trimestral de INEGI, y expresa las series como porcentaje del PIB nominal. Es un análisis descriptivo: muestra qué cambió y cuándo, no por qué.
 
-El análisis completo está en `analisis/analisis_finanzas_publicas_mexico.md`; este README es un resumen.
+El análisis completo está en `analysis/analisis_finanzas_publicas_mexico.md`; este README es un resumen.
 
 ## Contenido
 
@@ -170,7 +170,7 @@ El análisis también usa `knitr` y `rmarkdown`.
    ```
 
 3. Opcional: ejecuta los scripts de `scripts/` desde la raíz del proyecto para regenerar los archivos de `data/processed/` a partir de `data/raw/`.
-4. Abre `analisis/analisis_finanzas_publicas_mexico.Rmd` y renderízalo con **Knit**. El análisis lee los archivos procesados con rutas relativas (`../data/processed/`) y guarda las gráficas en `../figures/`.
+4. Abre `analysis/analisis_finanzas_publicas_mexico.Rmd` y renderízalo con **Knit**. El análisis lee los archivos procesados con rutas relativas (`../data/processed/`) y guarda las gráficas en `../figures/`.
 
 ## Limitaciones
 
@@ -187,17 +187,10 @@ El análisis también usa `knitr` y `rmarkdown`.
 
 ## Referencias
 
-- Cámara de Diputados del H. Congreso de la Unión. (s. f.). Las finanzas públicas. Recuperado el 27 de octubre de 2026, de 
-https://www.diputados.gob.mx/bibliot/publica/inveyana/econycom/reportes/finpubli.htm
-- Heath, J. (2012). Lo que indican los indicadores: cómo utilizar la información estadística para entender la realidad económica de México. Instituto Nacional de Estadística y Geografía (INEGI).
-- Instituto Nacional de Estadística y Geografía. (2026). ABC de las finanzas públicas estatales y municipales.
-https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/889463929697.pdf
-- Instituto Nacional de Estadística y Geografía. (s. f.). Banco de Información Económica (BIE): indicadores económicos de coyuntura [Base de datos]. https://www.inegi.org.mx/app/indicadores/?tm=3
-- Secretaría de Hacienda y Crédito Público. (2019, abril). Balance fiscal en México: Definición y metodología. 
-https://gaceta.diputados.gob.mx/Gaceta/64/2019/may/SHCP_BF-20190521.pdf
-- Secretaría de Hacienda y Crédito Público. (2026). Saldo histórico de los requerimientos financieros del sector público (SHRFSP), deuda amplia, 2000–2014 [Conjunto de datos]. Datos.gob.mx. 
-https://www.datos.gob.mx/dataset/saldo_historico_requerimientos_financieros_sector_publico_shrfsp_deuda_amplia_2000_2014
-- Secretaría de Hacienda y Crédito Público. (s. f.). Estadísticas Oportunas de Finanzas Públicas [Base de datos]. http://presto.hacienda.gob.mx/EstoporLayout/estadisticas.jsp
+- Heath, J. (2012). *Lo que indican los indicadores: cómo utilizar la información estadística para entender la realidad económica de México*. Instituto Nacional de Estadística y Geografía (INEGI).
+- Instituto Nacional de Estadística y Geografía. (s. f.). *Banco de Información Económica (BIE): indicadores económicos de coyuntura* [Base de datos]. <https://www.inegi.org.mx/app/indicadores/?tm=3>
+- Secretaría de Hacienda y Crédito Público. (2019, abril). *Balance fiscal en México: Definición y metodología*. SHCP.
+- Secretaría de Hacienda y Crédito Público. (s. f.). *Estadísticas Oportunas de Finanzas Públicas* [Base de datos]. <http://presto.hacienda.gob.mx/EstoporLayout/estadisticas.jsp>
 
 ## Autoría y licencia
 
