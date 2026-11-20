@@ -4,8 +4,17 @@ Este proyecto describe cómo cambiaron entre 1993 y 2025 la composición de los 
 
 El análisis completo está en `analysis/analisis_finanzas_publicas_mexico.md`; este README es un resumen.
 
+## Abstract
+
+This project describes Mexico's public finance from 1993 to 2025. It is a descriptive analysis: it shows what changed and when, not why. I used annual data from SHCP (budget revenue, net expenditure and historical balance of public sector borrowing requirements, SHRFSP) and nominal GDP from INEGI. I used R (tidyverse) with scripts to prepare the data, and I calculated each series as a percentage of GDP.
+
+Tax revenue rose from 49.3% to 65.0% of budget revenue between 1993 and 2025, and from 8.7% to 15.2% of GDP. It was the largest source of revenue in 30 of 33 years. Net expenditure rose from 17.1% to 27.2% of GDP. Physical investment was 2.2% of GDP in both 1993 and 2025. The SHRFSP rose from 29.2% of GDP in 2000 to 52.6% in 2025; its domestic part was 77.4% of the total in 2025.
+
+Limitations: the definition of oil revenue changed in 2015, so comparisons across that year are not strict. My percentages of GDP can differ from those published by SHCP.
+
 ## Contenido
 
+- [Abstract](#abstract)
 - [Preguntas que responde](#preguntas-que-responde)
 - [Resultados principales](#resultados-principales)
 - [Alcance](#alcance)
